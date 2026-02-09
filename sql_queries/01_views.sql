@@ -1,7 +1,7 @@
 /*
 ===============================================================================
 ARCHIVO: 02_views.sql
-DESCRIPCIÓN: Creación de vistas (VIEWS) para simplificar el modelo de datos.
+DESCRIPCIÓN: Creación de vistas para simplificar el modelo de datos.
 ===============================================================================
 */
 
@@ -45,7 +45,8 @@ SELECT
 FROM reviews r
 JOIN order_items oi ON r.order_id = oi.order_id
 JOIN products p ON oi.product_id = p.product_id
-LEFT JOIN name_category t ON p.product_category_name = t.category_name;
+LEFT JOIN name_category t ON p.product_category_name = t.category_name
+ORDER BY r.review_score DESC;
 
 -- Verificación rápida de la vista creada
 SELECT * FROM v_customer_satisfaction LIMIT 5;
@@ -70,3 +71,21 @@ WHERE order_status = 'delivered'
 
 -- Verificación rápida de la vista creada
 SELECT * FROM v_logistics_efficiency LIMIT 5;
+
+-- ----------------------------------------------------------------------------
+-- 4. VISTA: v_clean_geolocation
+-- Objetivo: Limpiar la tabla de geolocalización para tener un solo punto por código postal.
+-- ----------------------------------------------------------------------------
+
+CREATE OR REPLACE VIEW v_clean_geolocation AS
+SELECT 
+    geolocation_zip_code_prefix,
+    AVG(geolocation_lat) AS latitude,
+    AVG(geolocation_lng) AS longitude,
+    INITCAP(MAX(geolocation_city)) AS city,
+    UPPER(MAX(geolocation_state)) AS state
+FROM geolocation
+GROUP BY geolocation_zip_code_prefix;
+
+-- Verificación rápida de la vista creada
+SELECT * FROM v_clean_geolocation LIMIT 10;

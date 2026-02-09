@@ -18,7 +18,7 @@ CREATE DATABASE olist_analytics
 -- y conectarte a 'olist_analytics' para ejecutar el script de las tablas (01_schema_and_load.sql).
 
 -- ----------------------------------------------------------------------------
--- 1. TABLAS INDEPENDIENTES (DIMENSIONES)
+-- 1. TABLAS INDEPENDIENTES
 -- Estas tablas se crean primero porque no dependen de ninguna otra.
 -- ----------------------------------------------------------------------------
 
@@ -59,7 +59,6 @@ CREATE TABLE IF NOT EXISTS name_category (
 );
 
 -- Datos de geolocalización por código postal
--- Nota: No se asigna PK aquí debido a duplicados en el dataset original de Olist.
 CREATE TABLE IF NOT EXISTS geolocation (
     geolocation_zip_code_prefix INT,
     geolocation_lat FLOAT,
@@ -69,7 +68,7 @@ CREATE TABLE IF NOT EXISTS geolocation (
 );
 
 -- ----------------------------------------------------------------------------
--- 2. TABLAS DEPENDIENTES (HECHOS Y TRANSACCIONES)
+-- 2. TABLAS DEPENDIENTES
 -- Se crean siguiendo el orden de integridad referencial.
 -- ----------------------------------------------------------------------------
 
@@ -86,7 +85,7 @@ CREATE TABLE IF NOT EXISTS orders (
     FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
 );
 
--- Detalle de productos por pedido (Tabla de Hechos Central)
+-- Detalle de productos por pedido
 -- Se usa PK Compuesta porque un pedido puede tener múltiples productos.
 CREATE TABLE IF NOT EXISTS order_items (
     order_id VARCHAR(50),
@@ -102,7 +101,7 @@ CREATE TABLE IF NOT EXISTS order_items (
     FOREIGN KEY (seller_id) REFERENCES sellers(seller_id)
 );
 
--- Métodos de pago (Un pedido puede tener múltiples formas de pago)
+-- Métodos de pago por pedido
 CREATE TABLE IF NOT EXISTS order_payments (
     order_id VARCHAR(50),
     payment_sequential INT,
@@ -122,18 +121,17 @@ CREATE TABLE IF NOT EXISTS reviews (
     review_comment_message TEXT,
     review_creation_date TIMESTAMP,
     review_answer_timestamp TIMESTAMP,
-    PRIMARY KEY (review_id, order_id), -- PK Compuesta por duplicados en IDs de reseñas
+    PRIMARY KEY (review_id, order_id),
     FOREIGN KEY (order_id) REFERENCES orders(order_id)
 );
 
 -- ----------------------------------------------------------------------------
--- 3. INGESTA DE DATOS (COMANDOS COPY)
--- Importante: El orden de carga debe respetar las llaves foráneas.
+-- 3. INGESTA DE DATOS
 -- ----------------------------------------------------------------------------
 
 /*
 INSTRUCCIONES: Asegúrate de que los archivos CSV estén en una ruta accesible
-para el servidor de PostgreSQL (ej. C:/tmp/).
+para el servidor de PostgreSQL.
 */
 
 COPY customers FROM 'C:\datos\data\olist_customers_dataset.csv' WITH (FORMAT csv, HEADER true, ENCODING 'utf8');
