@@ -43,11 +43,11 @@ A continuación se presenta la arquitectura lógica de la base de datos de Olist
 
 ## 3) Fase 2: Pre-procesamiento y Calidad de Datos (02_pre_processing_analysis.sql) 🔍
 
-Antes de generar métricas de negocio, se ejecutó un análisis de integridad en este script. Este paso es fundamental para asegurar que las visualizaciones en Power BI no contengan sesgos por datos ruidosos.
+Antes de generar métricas de negocio, se ejecutó un análisis de integridad exhaustivo. Este paso es fundamental para asegurar que las visualizaciones en Power BI no contengan sesgos por datos ruidosos o reglas de negocio no identificadas.
 
-### 2.1 Auditoría de Flujo Logístico 🧪
+### 2.1 Auditoría de Flujo Logístico (Nulos en Fechas) 🧪
 
-Tras auditar los estados de las órdenes frente a sus fechas de cumplimiento, se obtuvieron los siguientes resultados:
+Tras auditar los estados de las órdenes frente a sus fechas de cumplimiento, se obtuvieron los siguientes resultados que validan la consistencia del dataset:
 
 | Estado del Pedido | Total Pedidos | Fechas Nulas | Conclusión de Calidad |
 | :--- | :--- | :--- | :--- |
@@ -55,24 +55,31 @@ Tras auditar los estados de las órdenes frente a sus fechas de cumplimiento, se
 | **shipped** | 1,107 | 1,107 | **Consistencia Lógica:** Pedidos en tránsito correctamente sin fecha final. |
 | **canceled** | 625 | 619 | **Excepción:** 6 pedidos cancelados reportan entrega (posible retorno). |
 
+### 2.2 Resolución de Conflictos Geográficos (Duplicados) 📍
 
-### 2.2 Resolución de Conflictos Geográficos 📍
+Se validó la cardinalidad de la tabla `geolocation` para prevenir errores de duplicidad en reportes espaciales.
+* **Hallazgo:** El campo `geolocation_zip_code_prefix` presenta múltiples registros de latitud/longitud por cada código postal.
+* **Impacto en el Modelo:** Esta duplicidad impide el uso del código postal como Primary Key. Se documenta que cualquier JOIN con esta tabla debe realizarse tras un proceso de agregación (promedio de coordenadas) para evitar el efecto de "explosión de filas" (*fan-out effect*).
 
-Se validó la cardinalidad de la tabla `geolocation`.
-* **Hallazgo:** El campo `geolocation_zip_code_prefix` presenta múltiples registros por código postal (coordenadas redundantes).
-* **Impacto en el Modelo:** Esta duplicidad impide el uso del código postal como Primary Key. Se documenta que cualquier JOIN con esta tabla debe realizarse tras un proceso de agregación (promedio de latitud/longitud) para evitar la explosión de filas.
+### 2.3 Auditoría de Integridad Financiera e Intereses 💰
 
-### 2.3 Perfilado Estadístico Financiero 💰
+Se realizó una validación cruzada entre el monto esperado (Precio + Flete) y el monto efectivamente pagado en la pasarela de pagos, dividida en dos etapas:
 
-Se aplicaron funciones de agregación para entender la distribución de precios en `order_items`:
-* **Métricas Evaluadas:** Mínimos, Máximos, Promedios y Desviación Estándar.
-* **Insight:** La alta desviación estándar detectada confirma la heterogeneidad del catálogo de Olist. Esto justifica la necesidad de segmentar los reportes por categorías para que los promedios de venta no se vean distorsionados por artículos de lujo o de muy bajo costo.
+* **Fase A (Identificación de Diferencias):** Se detectaron discrepancias donde el pago real superaba el valor del carrito. Se estableció un umbral de tolerancia de 0.1 para ignorar errores mínimos por redondeo.
+* **Fase B (Validación de Hipótesis):** Se cruzaron las diferencias con el número de cuotas (`payment_installments`). 
+* **Conclusión de Negocio:** Se confirmó que el dataset de Olist incluye **costos de financiamiento**. El excedente de pago corresponde a intereses que crecen proporcionalmente al número de cuotas elegidas por el cliente.
 
-| Métrica | Valor Analizado | Implicación de Negocio |
+![Resultados de Auditoría Financiera](../assets/financial_audit_results.png) 
+
+*Figura 2: Detalle de pedidos con intereses por cuotas, confirmando el costo de financiamiento.*
+
+| Métrica Analizada | Hallazgo Técnico | Implicación de Negocio |
 | :--- | :--- | :--- |
-| **Nulos en Fechas** | Detectados en `delivered` | Afecta la medición de satisfacción del cliente. |
-| **Duplicados Geo** | Alta frecuencia por prefijo | Requiere limpieza antes de mapeo espacial. |
-| **Outliers de Precio** | Identificados mediante STDDEV | Necesidad de filtrado de valores atípicos. |
+| **Diferencia de Montos** | `actual_payment > expected_total` | Identificación de ingresos por financiamiento vs. venta. |
+| **Costo por Cuotas** | `interest_per_installment` > 0 | Validación de la lógica de intereses del marketplace. |
+| **Umbral de Tolerancia** | 0.1 (BRL) | Eliminación de ruido por precisión decimal en PostgreSQL. |
+
+> **💡 Insight de Portafolio:** Esta auditoría demuestra que el modelo no presenta errores de duplicidad financiera, sino que refleja fielmente la realidad del crédito al consumo en el mercado brasileño.
 
 ## 4) Guía de Ejecución ⚙️
 1. **Preparación:** Crear la base de datos `olist_analytics` y asegurar la conexión.
