@@ -1,6 +1,6 @@
 /*
 ===============================================================================
-ARCHIVO: business_logic.sql
+ARCHIVO: 02_business_logic.sql
 DESCRIPCIÓN: Consultas de alto nivel para extraer insights de negocio, 
              uniones complejas y métricas de rendimiento.
 ===============================================================================

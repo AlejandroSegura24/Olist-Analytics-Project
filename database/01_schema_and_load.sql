@@ -127,12 +127,8 @@ CREATE TABLE IF NOT EXISTS reviews (
 
 -- ----------------------------------------------------------------------------
 -- 3. INGESTA DE DATOS
+-- INSTRUCCIONES: Asegúrate de que los archivos CSV estén en una ruta accesible para el servidor de PostgreSQL.
 -- ----------------------------------------------------------------------------
-
-/*
-INSTRUCCIONES: Asegúrate de que los archivos CSV estén en una ruta accesible
-para el servidor de PostgreSQL.
-*/
 
 COPY customers FROM 'C:\datos\data\olist_customers_dataset.csv' WITH (FORMAT csv, HEADER true, ENCODING 'utf8');
 COPY products FROM 'C:\datos\data\olist_products_dataset.csv' WITH (FORMAT csv, HEADER true, ENCODING 'utf8');

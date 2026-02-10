@@ -1,12 +1,13 @@
 /*
 ===============================================================================
-ARCHIVO: exploratory.sql
-DESCRIPCIÓN: Consultas iniciales para validación de calidad de datos y 
-             limpieza de valores atípicos (outliers) o nulos.
+ARCHIVO: 02_pre_processing_analysis.sql
+DESCRIPCIÓN: Consultas iniciales para validación de calidad de datos, vista
+             de valores atípicos (outliers) o nulos.
 ===============================================================================
 */
 
 -- 1. Verificación de valores nulos en fechas críticas de entrega
+
 SELECT 
     order_status, 
     COUNT(*) AS total_volume,
@@ -16,6 +17,7 @@ GROUP BY order_status
 ORDER BY total_volume ASC;
 
 -- 2. Detección de duplicados en la tabla Geolocation
+
 SELECT
     geolocation_zip_code_prefix,
     COUNT(*) AS duplicated_records,
@@ -27,7 +29,6 @@ ORDER BY duplicated_records DESC
 LIMIT 15;
 
 -- 3. Auditoría de integridad financiera: Análisis de diferencias y cuotas
-
 -------------------------------------------------------------------------------
 -- FASE A: Identificación de Diferencias (El "Problema")
 -- Objetivo: Listar los pedidos donde el monto pagado no coincide con el carrito.
