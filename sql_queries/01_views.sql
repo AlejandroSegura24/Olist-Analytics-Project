@@ -110,7 +110,9 @@ FROM order_totals ot
 JOIN payment_totals pt ON ot.order_id = pt.order_id;
 
 -- Verificación rápida de la vista creada
-SELECT * FROM v_order_finance_details LIMIT 10;
+SELECT * FROM v_order_finance_details 
+WHERE interests > 0
+LIMIT 10;
 
 -- ----------------------------------------------------------------------------
 -- 5. VISTA: v_clean_geolocation
