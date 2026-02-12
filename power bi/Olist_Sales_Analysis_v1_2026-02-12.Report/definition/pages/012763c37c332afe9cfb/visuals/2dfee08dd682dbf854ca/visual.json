@@ -1,0 +1,122 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "2dfee08dd682dbf854ca",
+  "position": {
+    "x": 591.87858900738308,
+    "y": 557.4241181296145,
+    "z": 8000,
+    "height": 242.41181296144381,
+    "width": 887.202625102543,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "areaChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Satisfacción (reviews)"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "date_of_review"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Año"
+                }
+              },
+              "queryRef": "Satisfacción (reviews).date_of_review.Variación.Jerarquía de fechas.Año",
+              "nativeQueryRef": "date_of_review Año",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Satisfacción (reviews)"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "date_of_review"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Mes"
+                }
+              },
+              "queryRef": "Satisfacción (reviews).date_of_review.Variación.Jerarquía de fechas.Mes",
+              "nativeQueryRef": "date_of_review Mes",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Satisfacción (reviews)"
+                        }
+                      },
+                      "Property": "order_id"
+                    }
+                  },
+                  "Function": 2
+                }
+              },
+              "queryRef": "CountNonNull(Satisfacción (reviews).order_id)",
+              "nativeQueryRef": "Recuento de order_id1"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Satisfacción (reviews)"
+                        }
+                      },
+                      "Property": "review_score"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(Satisfacción (reviews).review_score)",
+              "nativeQueryRef": "Promedio de review_score"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

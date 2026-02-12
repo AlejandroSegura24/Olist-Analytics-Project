@@ -62,8 +62,11 @@ SELECT
     r.order_id,
     r.review_score,
     COALESCE(t.category_name_english, p.product_category_name) AS category_name,
-    r.review_creation_date AS date_of_review
+    r.review_creation_date AS date_of_review,
+    c.customer_state
 FROM reviews r
+JOIN orders o ON r.order_id = o.order_id
+JOIN customers c ON o.customer_id = c.customer_id
 JOIN order_items oi ON r.order_id = oi.order_id
 JOIN products p ON oi.product_id = p.product_id
 LEFT JOIN name_category t ON p.product_category_name = t.category_name

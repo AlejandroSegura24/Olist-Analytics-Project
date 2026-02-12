@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Olist_Sales_Analysis_v1_2026-02-12"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "042dc866-69ac-4902-a12d-0f4e312e1ad8"
+  }
+}

@@ -1,0 +1,86 @@
+table 'Logística y Entregas'
+	lineageTag: f789019c-532e-4f3a-bce6-9b76e163b2f2
+
+	measure 'Semaforo Logistico' =
+			
+			SWITCH(
+			    TRUE(),
+			    AVERAGE('Logística y Entregas'[delivery_time_days]) <= 15, "🟢 Entrega a Tiempo",
+			    AVERAGE('Logística y Entregas'[delivery_time_days]) <= 30, "🟡 Riesgo de Insatisfacción",
+			    "🔴 Crítico - Pérdida de Cliente"
+			)
+		lineageTag: 889b3e6a-bd0b-4339-8e6c-0651099aee38
+
+	column order_id
+		dataType: string
+		lineageTag: 352b47c1-bc3c-45da-ad7b-754076004213
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_id
+		dataType: string
+		lineageTag: bacced90-3854-481d-824a-12ccc22e727e
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_status
+		dataType: string
+		lineageTag: 396cb9c5-1fad-4c30-91e1-2e6946757e8c
+		summarizeBy: none
+		sourceColumn: order_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f3840773-ae2b-4d7b-8e8d-acae468f2282
+		summarizeBy: none
+		sourceColumn: order_date
+
+		variation Variación
+			isDefault
+			relationship: 62bf4b50-7d52-45ca-9c5d-0611470f95a9
+			defaultHierarchy: LocalDateTable_abfb00fb-a062-4cd6-91ce-9c97b66df88d.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column delivery_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: d677bef9-89ec-4d89-a03a-cc51be193f9b
+		summarizeBy: none
+		sourceColumn: delivery_date
+
+		variation Variación
+			isDefault
+			relationship: 261741e2-4736-498b-ba40-22b1a93873cb
+			defaultHierarchy: LocalDateTable_14bd1e45-a60e-481b-905b-1165d2302fc3.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column delivery_time_days
+		dataType: double
+		lineageTag: 710cfa04-9bad-434f-805a-824679d54a12
+		summarizeBy: sum
+		sourceColumn: delivery_time_days
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'Logística y Entregas' = m
+		mode: import
+		source =
+				let
+				    Origen = PostgreSQL.Database("localhost", "olist_analytics"),
+				    public_v_orders_cleaned = Origen{[Schema="public",Item="v_orders_cleaned"]}[Data]
+				in
+				    public_v_orders_cleaned
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,27 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-CO
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Resumen de Ventas","Logística y Entregas","Finanzas y Cuotas","Satisfacción (reviews)","Ubicaciones por Ciudad"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'Resumen de Ventas'
+ref table DateTableTemplate_d1f1d339-1737-4e2c-a421-7c28ab033797
+ref table LocalDateTable_c09359a1-16f1-4877-8e4c-d78aa3b9851c
+ref table 'Logística y Entregas'
+ref table LocalDateTable_abfb00fb-a062-4cd6-91ce-9c97b66df88d
+ref table LocalDateTable_14bd1e45-a60e-481b-905b-1165d2302fc3
+ref table 'Finanzas y Cuotas'
+ref table 'Satisfacción (reviews)'
+ref table LocalDateTable_85f36177-54bf-433e-adae-82c0c7009e5e
+ref table 'Ubicaciones por Ciudad'
+
+ref cultureInfo es-ES
+

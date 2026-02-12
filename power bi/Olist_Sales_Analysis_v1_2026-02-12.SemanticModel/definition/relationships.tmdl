@@ -1,0 +1,42 @@
+relationship e8a0fefb-f5f0-4797-8c49-0958e34ac25c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Resumen de Ventas'.order_date
+	toColumn: LocalDateTable_c09359a1-16f1-4877-8e4c-d78aa3b9851c.Date
+
+relationship 62bf4b50-7d52-45ca-9c5d-0611470f95a9
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Logística y Entregas'.order_date
+	toColumn: LocalDateTable_abfb00fb-a062-4cd6-91ce-9c97b66df88d.Date
+
+relationship 261741e2-4736-498b-ba40-22b1a93873cb
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Logística y Entregas'.delivery_date
+	toColumn: LocalDateTable_14bd1e45-a60e-481b-905b-1165d2302fc3.Date
+
+relationship d5f4f237-138e-4d5e-bbe4-04ff40ce0a6c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Satisfacción (reviews)'.date_of_review
+	toColumn: LocalDateTable_85f36177-54bf-433e-adae-82c0c7009e5e.Date
+
+relationship AutoDetected_bc79f49b-a094-4d09-9309-c0c8400240cc
+	fromColumn: 'Resumen de Ventas'.order_id
+	toColumn: 'Finanzas y Cuotas'.order_id
+
+relationship AutoDetected_c8a4e6e4-5d45-41ef-8375-9bced851f716
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'Logística y Entregas'.order_id
+	toColumn: 'Finanzas y Cuotas'.order_id
+
+relationship AutoDetected_bc42818f-5123-4efb-af7c-6d0a50d7fd6f
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'Satisfacción (reviews)'.order_id
+	toColumn: 'Finanzas y Cuotas'.order_id
+
+relationship 0530823b-557e-6b96-d292-e55288c34206
+	crossFilteringBehavior: bothDirections
+	securityFilteringBehavior: bothDirections
+	toCardinality: many
+	fromColumn: 'Ubicaciones por Ciudad'.state
+	toColumn: 'Satisfacción (reviews)'.customer_state
+

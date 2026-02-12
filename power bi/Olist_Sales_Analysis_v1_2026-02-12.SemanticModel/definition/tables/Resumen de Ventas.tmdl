@@ -1,0 +1,92 @@
+table 'Resumen de Ventas'
+	lineageTag: edfadd81-3842-47e5-834c-141a5a566b1a
+
+	column order_id
+		dataType: string
+		lineageTag: 96f39393-c7cc-4a76-8225-ffc3f1e22b71
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column product_id
+		dataType: string
+		lineageTag: 0413abbb-b69e-44b1-b543-edd6b851a3b0
+		summarizeBy: none
+		sourceColumn: product_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: b58488d4-63a7-4f72-a035-9d8a763e02ee
+		summarizeBy: none
+		sourceColumn: order_date
+
+		variation Variación
+			isDefault
+			relationship: e8a0fefb-f5f0-4797-8c49-0958e34ac25c
+			defaultHierarchy: LocalDateTable_c09359a1-16f1-4877-8e4c-d78aa3b9851c.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_name
+		dataType: string
+		lineageTag: 2989de8c-1f3b-46b6-a072-bb2c1c9519e4
+		summarizeBy: none
+		sourceColumn: category_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column price
+		dataType: double
+		lineageTag: 1a0593d7-f7b3-4629-9900-db81b239d0df
+		summarizeBy: sum
+		sourceColumn: price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column freight_value
+		dataType: double
+		lineageTag: 965eb690-2586-4786-b1fc-9612db223363
+		summarizeBy: sum
+		sourceColumn: freight_value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column customer_state
+		dataType: string
+		lineageTag: 85738858-f706-48f0-a6f4-32d20e0c5434
+		summarizeBy: none
+		sourceColumn: customer_state
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column seller_state
+		dataType: string
+		lineageTag: 74a91e10-4d07-4e63-8158-e6d6ce15ce8b
+		summarizeBy: none
+		sourceColumn: seller_state
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Resumen de Ventas' = m
+		mode: import
+		source =
+				let
+				    Origen = PostgreSQL.Database("localhost", "olist_analytics"),
+				    public_v_order_summary = Origen{[Schema="public",Item="v_order_summary"]}[Data]
+				in
+				    public_v_order_summary
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

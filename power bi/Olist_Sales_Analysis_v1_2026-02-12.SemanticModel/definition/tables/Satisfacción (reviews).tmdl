@@ -1,0 +1,69 @@
+table 'Satisfacción (reviews)'
+	lineageTag: 6eafd7af-5d1f-4c45-80aa-a98c9452a3fe
+
+	column review_id
+		dataType: string
+		lineageTag: 8765b9dc-73c3-46c0-854e-4fd9a2c30f4d
+		summarizeBy: none
+		sourceColumn: review_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_id
+		dataType: string
+		lineageTag: 65175cb3-c2be-4158-abeb-345695e54f00
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column review_score
+		dataType: int64
+		formatString: 0
+		lineageTag: 171edbcd-0505-403e-81da-cf2994ba64b2
+		summarizeBy: sum
+		sourceColumn: review_score
+
+		annotation SummarizationSetBy = Automatic
+
+	column category_name
+		dataType: string
+		lineageTag: 6f603938-43ee-4259-b1bd-29431036a7ad
+		summarizeBy: none
+		sourceColumn: category_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_of_review
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 26ea9ed1-c869-4bd7-b238-5545d076ca1c
+		summarizeBy: none
+		sourceColumn: date_of_review
+
+		variation Variación
+			isDefault
+			relationship: d5f4f237-138e-4d5e-bbe4-04ff40ce0a6c
+			defaultHierarchy: LocalDateTable_85f36177-54bf-433e-adae-82c0c7009e5e.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_state
+		dataType: string
+		lineageTag: 4472bf01-94bc-49eb-8ae6-0ae4d8f5b999
+		summarizeBy: none
+		sourceColumn: customer_state
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Satisfacción (reviews)' = m
+		mode: import
+		source =
+				let
+				    Origen = PostgreSQL.Database("localhost", "olist_analytics"),
+				    public_v_customer_satisfaction = Origen{[Schema="public",Item="v_customer_satisfaction"]}[Data]
+				in
+				    public_v_customer_satisfaction
+
+	annotation PBI_ResultType = Table
+

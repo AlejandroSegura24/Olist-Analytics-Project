@@ -1,0 +1,86 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "e36fee7f2b570681cc6c",
+  "position": {
+    "x": 1036.0951599671862,
+    "y": 226.41509433962264,
+    "z": 7000,
+    "height": 327.3174733388023,
+    "width": 442.98605414274,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "scatterChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Satisfacción (reviews)"
+                    }
+                  },
+                  "Property": "customer_state"
+                }
+              },
+              "queryRef": "Satisfacción (reviews).customer_state",
+              "nativeQueryRef": "customer_state",
+              "active": true
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Logística y Entregas"
+                        }
+                      },
+                      "Property": "delivery_time_days"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(Logística y Entregas.delivery_time_days)",
+              "nativeQueryRef": "Promedio de delivery_time_days",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Satisfacción (reviews)"
+                        }
+                      },
+                      "Property": "review_score"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(Satisfacción (reviews).review_score)",
+              "nativeQueryRef": "Promedio de review_score"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

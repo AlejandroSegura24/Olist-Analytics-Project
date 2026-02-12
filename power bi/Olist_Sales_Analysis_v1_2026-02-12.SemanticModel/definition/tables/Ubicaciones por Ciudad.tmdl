@@ -1,0 +1,65 @@
+table 'Ubicaciones por Ciudad'
+	lineageTag: 5636e0e3-0eb4-4df1-a760-6d2ad2bae4c5
+
+	column geolocation_zip_code_prefix
+		dataType: int64
+		formatString: 0
+		lineageTag: 73b8bf81-9f41-4ad9-aabe-7b437e706ea7
+		summarizeBy: sum
+		sourceColumn: geolocation_zip_code_prefix
+
+		annotation SummarizationSetBy = Automatic
+
+	column latitude
+		dataType: double
+		lineageTag: f09e6083-fa16-476b-8dc1-82fe7b7b805b
+		dataCategory: Latitude
+		summarizeBy: none
+		sourceColumn: latitude
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column longitude
+		dataType: double
+		lineageTag: 6f8aff1a-a1ba-4ed3-83b5-a0b98b0f45ef
+		dataCategory: Longitude
+		summarizeBy: none
+		sourceColumn: longitude
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column city
+		dataType: string
+		lineageTag: 68c0fd93-60d8-4033-afad-b58e8ab6905d
+		dataCategory: City
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column state
+		dataType: string
+		lineageTag: 5f2b4718-c2d2-46d2-9a66-f8c72d999718
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: state
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Ubicaciones por Ciudad' = m
+		mode: import
+		source =
+				let
+				    Origen = PostgreSQL.Database("localhost", "olist_analytics"),
+				    public_v_clean_geolocation = Origen{[Schema="public",Item="v_clean_geolocation"]}[Data]
+				in
+				    public_v_clean_geolocation
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

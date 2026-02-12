@@ -1,0 +1,87 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 76.505132890123264
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 50,
+            "y": 0
+          },
+          "nodeIndex": "Resumen de Ventas",
+          "nodeLineageTag": "edfadd81-3842-47e5-834c-141a5a566b1a",
+          "size": {
+            "height": 341,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 391.43483849509187,
+            "y": 93
+          },
+          "nodeIndex": "Finanzas y Cuotas",
+          "nodeLineageTag": "4e049a7e-8e3b-48cf-867d-c66ea2446cb0",
+          "size": {
+            "height": 280,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 777.56379763985092,
+            "y": 272.00000000000006
+          },
+          "nodeIndex": "Logística y Entregas",
+          "nodeLineageTag": "f789019c-532e-4f3a-bce6-9b76e163b2f2",
+          "size": {
+            "height": 284,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 383,
+            "y": 461.50513289012304
+          },
+          "nodeIndex": "Satisfacción (reviews)",
+          "nodeLineageTag": "6eafd7af-5d1f-4c45-80aa-a98c9452a3fe",
+          "size": {
+            "height": 266,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 56.042790482727014,
+            "y": 429.01728513487393
+          },
+          "nodeIndex": "Ubicaciones por Ciudad",
+          "nodeLineageTag": "5636e0e3-0eb4-4df1-a760-6d2ad2bae4c5",
+          "size": {
+            "height": 239,
+            "width": 234
+          },
+          "zIndex": 5
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 100.00000000000003,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}
