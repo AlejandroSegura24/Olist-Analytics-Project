@@ -18,13 +18,19 @@ SELECT
     order_purchase_timestamp AS order_date,
     order_delivered_customer_date AS delivery_date,
     -- Calculamos el tiempo de entrega en días (si existe la fecha)
-    EXTRACT(DAY FROM (order_delivered_customer_date - order_purchase_timestamp)) AS delivery_time_days
-FROM orders
+    EXTRACT(DAY FROM (order_delivered_customer_date - order_purchase_timestamp)) AS delivery_time_days,
+    CASE 
+        WHEN o.order_delivered_customer_date <= o.order_estimated_delivery_date THEN 1 
+        ELSE 0 
+    END AS is_on_time
+FROM orders o
 WHERE order_status = 'delivered' 
   AND order_delivered_customer_date IS NOT NULL;
 
 -- Verificación rápida de la vista creada
-SELECT * FROM v_orders_cleaned LIMIT 10;
+SELECT * FROM v_orders_cleaned 
+WHERE is_on_time = 0
+LIMIT 10;
 
 -- ----------------------------------------------------------------------------
 -- 2. VISTA: v_order_summary

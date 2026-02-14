@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "cf90138076846ea05801",
   "position": {
-    "x": 591.87858900738308,
-    "y": 226.41509433962264,
+    "x": 614.28571428571433,
+    "y": 242.85714285714286,
     "z": 6000,
-    "height": 327.3174733388023,
-    "width": 433.14191960623464,
+    "height": 290,
+    "width": 464.28571428571433,
     "tabOrder": 6000
   },
   "visual": {
@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Resumen de Ventas"
+                      "Entity": "Satisfacción (reviews)"
                     }
                   },
                   "Property": "category_name"
                 }
               },
-              "queryRef": "Resumen de Ventas.category_name",
+              "queryRef": "Satisfacción (reviews).category_name",
               "nativeQueryRef": "category_name",
               "active": true
             }
@@ -41,17 +41,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Resumen de Ventas"
+                          "Entity": "Satisfacción (reviews)"
                         }
                       },
-                      "Property": "price"
+                      "Property": "review_score"
                     }
                   },
-                  "Function": 0
+                  "Function": 1
                 }
               },
-              "queryRef": "Sum(Resumen de Ventas.price)",
-              "nativeQueryRef": "Suma de price"
+              "queryRef": "Sum(Satisfacción (reviews).review_score)",
+              "nativeQueryRef": "Promedio de review_score"
             }
           ]
         }
@@ -65,13 +65,13 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "Resumen de Ventas"
+                        "Entity": "Satisfacción (reviews)"
                       }
                     },
-                    "Property": "price"
+                    "Property": "review_score"
                   }
                 },
-                "Function": 0
+                "Function": 1
               }
             },
             "direction": "Descending"
@@ -80,17 +80,195 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "zoom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "start": {
+              "expr": {
+                "Literal": {
+                  "Value": "3.5D"
+                }
+              }
+            },
+            "end": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top 10 Categorías por Ingresos'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "0e82aad69f46a366b368",
+        "name": "068362c65aad267e29f0",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Resumen de Ventas"
+                "Entity": "Satisfacción (reviews)"
               }
             },
             "Property": "category_name"
@@ -108,8 +286,8 @@
                     "Version": 2,
                     "From": [
                       {
-                        "Name": "r",
-                        "Entity": "Resumen de Ventas",
+                        "Name": "s",
+                        "Entity": "Satisfacción (reviews)",
                         "Type": 0
                       }
                     ],
@@ -118,7 +296,7 @@
                         "Column": {
                           "Expression": {
                             "SourceRef": {
-                              "Source": "r"
+                              "Source": "s"
                             }
                           },
                           "Property": "category_name"
@@ -135,13 +313,13 @@
                               "Column": {
                                 "Expression": {
                                   "SourceRef": {
-                                    "Source": "r"
+                                    "Source": "s"
                                   }
                                 },
-                                "Property": "order_id"
+                                "Property": "review_score"
                               }
                             },
-                            "Function": 2
+                            "Function": 1
                           }
                         }
                       }
@@ -153,8 +331,8 @@
               "Type": 2
             },
             {
-              "Name": "r",
-              "Entity": "Resumen de Ventas",
+              "Name": "s",
+              "Entity": "Satisfacción (reviews)",
               "Type": 0
             }
           ],
@@ -167,7 +345,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "r"
+                            "Source": "s"
                           }
                         },
                         "Property": "category_name"
@@ -181,6 +359,13 @@
                   }
                 }
               }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {}
             }
           ]
         }

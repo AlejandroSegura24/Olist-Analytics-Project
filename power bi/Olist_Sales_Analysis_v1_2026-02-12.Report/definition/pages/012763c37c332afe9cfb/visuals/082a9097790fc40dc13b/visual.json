@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "082a9097790fc40dc13b",
   "position": {
-    "x": 1124.6923707957342,
-    "y": 9.844134536505333,
+    "x": 29.992790194664746,
+    "y": 11.535688536409518,
     "z": 5000,
-    "height": 125.512715340443,
-    "width": 354.38884331419194,
+    "height": 124.58543619322279,
+    "width": 354.14563806777221,
     "tabOrder": 5000
   },
   "visual": {
@@ -32,7 +32,8 @@
                 }
               },
               "queryRef": "Min(Satisfacción (reviews).order_id)",
-              "nativeQueryRef": "Recuento de order_id"
+              "nativeQueryRef": "Pedidos Totales",
+              "displayName": "Pedidos Totales"
             }
           ]
         }
@@ -61,6 +62,44 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryLabels": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {
@@ -88,7 +127,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "100D"
                 }
               }
             }
@@ -102,6 +141,13 @@
               "expr": {
                 "Literal": {
                   "Value": "1D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

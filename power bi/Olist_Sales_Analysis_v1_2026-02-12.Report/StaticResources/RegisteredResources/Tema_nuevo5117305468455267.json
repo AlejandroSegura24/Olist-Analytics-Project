@@ -1,0 +1,75 @@
+{
+  "name": "Tema nuevo",
+  "dataColors": [
+    "#10B981",
+    "#34D399",
+    "#94A3B8",
+    "#59A472",
+    "#0F3A69",
+    "#0E94FF",
+    "#0B2623",
+    "#59A472"
+  ],
+  "foreground": "#121212",
+  "background": "#FFFFFF",
+  "foregroundNeutralSecondary": "#6C6966",
+  "backgroundLight": "#E5E0DA",
+  "foregroundNeutralTertiary": "#ABA7A2",
+  "backgroundNeutral": "#C6C2BE",
+  "tableAccent": "#4E9466",
+  "maximum": "#0B2F54",
+  "center": "#59A472",
+  "minimum": "#0E94FF",
+  "bad": "#F87171",
+  "neutral": "#94A3B8",
+  "good": "#10B981",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#1E293B"
+              }
+            }
+          }
+        ],
+        "border": [
+          {
+            "color": {
+              "solid": {
+                "color": "#334155"
+              }
+            },
+            "show": true
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "transparency": 100
+          }
+        ],
+        "outspace": [
+          {
+            "color": {
+              "solid": {
+                "color": "#0F172A"
+              }
+            },
+            "transparency": 0
+          }
+        ]
+      }
+    }
+  }
+}

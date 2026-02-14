@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "0e3131c36cd8c7ac708c",
   "position": {
-    "x": 750.61525840853164,
-    "y": 9.844134536505333,
+    "x": 425.66690699351119,
+    "y": 10.382119682768566,
     "z": 2000,
-    "height": 125.512715340443,
-    "width": 354.38884331419194,
+    "height": 124.58543619322279,
+    "width": 354.14563806777221,
     "tabOrder": 2000
   },
   "visual": {
@@ -32,7 +32,9 @@
                 }
               },
               "queryRef": "Sum(Logística y Entregas.delivery_time_days)",
-              "nativeQueryRef": "Promedio de delivery_time_days"
+              "nativeQueryRef": "Promedio de Días de Entrega",
+              "displayName": "Promedio de Días de Entrega",
+              "format": "0"
             }
           ]
         }
@@ -61,6 +63,44 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryLabels": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {
@@ -85,10 +125,21 @@
                 }
               }
             },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1E293B'"
+                    }
+                  }
+                }
+              }
+            },
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "100D"
                 }
               }
             }
@@ -98,6 +149,24 @@
       "border": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#334155'"
+                    }
+                  }
+                }
+              }
+            },
             "width": {
               "expr": {
                 "Literal": {

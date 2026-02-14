@@ -41,27 +41,26 @@ table 'Resumen de Ventas'
 
 	column price
 		dataType: double
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 1a0593d7-f7b3-4629-9900-db81b239d0df
 		summarizeBy: sum
 		sourceColumn: price
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column freight_value
 		dataType: double
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 965eb690-2586-4786-b1fc-9612db223363
 		summarizeBy: sum
 		sourceColumn: freight_value
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column customer_state
 		dataType: string
 		lineageTag: 85738858-f706-48f0-a6f4-32d20e0c5434
+		dataCategory: StateOrProvince
 		summarizeBy: none
 		sourceColumn: customer_state
 
@@ -72,6 +71,7 @@ table 'Resumen de Ventas'
 	column seller_state
 		dataType: string
 		lineageTag: 74a91e10-4d07-4e63-8158-e6d6ce15ce8b
+		dataCategory: StateOrProvince
 		summarizeBy: none
 		sourceColumn: seller_state
 

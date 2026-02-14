@@ -51,6 +51,7 @@ table 'Satisfacción (reviews)'
 	column customer_state
 		dataType: string
 		lineageTag: 4472bf01-94bc-49eb-8ae6-0ae4d8f5b999
+		dataCategory: StateOrProvince
 		summarizeBy: none
 		sourceColumn: customer_state
 

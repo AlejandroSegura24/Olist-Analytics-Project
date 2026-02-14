@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "38ffbe22eed247c7e8c1",
   "position": {
-    "x": 378.99917965545529,
-    "y": 9.844134536505333,
+    "x": 1213.5544340302813,
+    "y": 9.2285508291276148,
     "z": 4000,
-    "height": 125.512715340443,
-    "width": 354.38884331419194,
+    "height": 124.58543619322279,
+    "width": 354.14563806777221,
     "tabOrder": 4000
   },
   "visual": {
@@ -32,7 +32,8 @@
                 }
               },
               "queryRef": "Sum(Resumen de Ventas.price)",
-              "nativeQueryRef": "Suma de price"
+              "nativeQueryRef": "Volumen de Negocio ($)",
+              "displayName": "Volumen de Negocio ($)"
             }
           ]
         }
@@ -61,6 +62,44 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryLabels": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {
@@ -85,10 +124,21 @@
                 }
               }
             },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1E293B'"
+                    }
+                  }
+                }
+              }
+            },
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "100D"
                 }
               }
             }
@@ -98,6 +148,24 @@
       "border": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#334155'"
+                    }
+                  }
+                }
+              }
+            },
             "width": {
               "expr": {
                 "Literal": {

@@ -11,6 +11,17 @@ table 'Logística y Entregas'
 			)
 		lineageTag: 889b3e6a-bd0b-4339-8e6c-0651099aee38
 
+	measure '% Entregas a Tiempo' = ```
+			
+			DIVIDE(
+			    SUM('Logística y Entregas'[is_on_time]), 
+			    COUNT('Logística y Entregas'[order_id])
+			)
+			```
+		lineageTag: aa14c84d-1719-4b49-9a92-12e34fd9ba4e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column order_id
 		dataType: string
 		lineageTag: 352b47c1-bc3c-45da-ad7b-754076004213
@@ -72,6 +83,15 @@ table 'Logística y Entregas'
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column is_on_time
+		dataType: int64
+		formatString: 0
+		lineageTag: d921ea71-0920-456e-9f8f-ea479779d1b8
+		summarizeBy: sum
+		sourceColumn: is_on_time
+
+		annotation SummarizationSetBy = Automatic
 
 	partition 'Logística y Entregas' = m
 		mode: import

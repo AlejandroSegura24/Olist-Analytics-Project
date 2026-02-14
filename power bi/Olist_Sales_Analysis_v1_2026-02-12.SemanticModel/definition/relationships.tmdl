@@ -19,6 +19,7 @@ relationship d5f4f237-138e-4d5e-bbe4-04ff40ce0a6c
 	toColumn: LocalDateTable_85f36177-54bf-433e-adae-82c0c7009e5e.Date
 
 relationship AutoDetected_bc79f49b-a094-4d09-9309-c0c8400240cc
+	crossFilteringBehavior: bothDirections
 	fromColumn: 'Resumen de Ventas'.order_id
 	toColumn: 'Finanzas y Cuotas'.order_id
 

@@ -11,43 +11,39 @@ table 'Finanzas y Cuotas'
 
 	column items_value
 		dataType: double
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: a3c5f83a-4add-4e52-b3e6-a03390831356
 		summarizeBy: sum
 		sourceColumn: items_value
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column shipping_value
 		dataType: double
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 4da459e4-9788-4cc0-ae7f-929e61e150db
 		summarizeBy: sum
 		sourceColumn: shipping_value
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column expected_order_total
 		dataType: double
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 8eba4e1f-810b-425d-b2da-9d837a10273e
 		summarizeBy: sum
 		sourceColumn: expected_order_total
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column total_paid
 		dataType: double
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 1e5d0db0-f489-4571-aca8-ff3c64e0b2e2
 		summarizeBy: sum
 		sourceColumn: total_paid
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column max_installments
 		dataType: int64
@@ -60,13 +56,12 @@ table 'Finanzas y Cuotas'
 
 	column interests
 		dataType: double
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 19bc10c5-ddc8-49a8-9ce6-1661ac85dc1f
 		summarizeBy: sum
 		sourceColumn: interests
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition 'Finanzas y Cuotas' = m
 		mode: import
