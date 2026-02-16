@@ -1,6 +1,19 @@
 table 'Resumen de Ventas'
 	lineageTag: edfadd81-3842-47e5-834c-141a5a566b1a
 
+	measure 'Promedio Score por Categoria' =
+			
+			CALCULATE (
+			    AVERAGE ( 'Satisfacción (reviews)'[review_score] ),
+			    TREATAS (
+			        VALUES ( 'Resumen de Ventas'[order_id] ),
+			        'Satisfacción (reviews)'[order_id]
+			    )
+			)
+		lineageTag: 6e30a503-e353-4fb6-b65b-ee3b43bef0a8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column order_id
 		dataType: string
 		lineageTag: 96f39393-c7cc-4a76-8225-ffc3f1e22b71

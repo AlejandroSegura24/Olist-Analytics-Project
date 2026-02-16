@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Satisfacción (reviews)"
+                      "Entity": "Resumen de Ventas"
                     }
                   },
                   "Property": "category_name"
                 }
               },
-              "queryRef": "Satisfacción (reviews).category_name",
+              "queryRef": "Resumen de Ventas.category_name",
               "nativeQueryRef": "Categoría",
               "active": true,
               "displayName": "Categoría"
@@ -78,6 +78,13 @@
                   "Value": "true"
                 }
               }
+            },
+            "strictSingleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -122,6 +129,24 @@
                     "ThemeDataColor": {
                       "ColorId": 8,
                       "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "pendingChangesIcon": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0.4
                     }
                   }
                 }

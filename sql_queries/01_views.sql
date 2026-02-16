@@ -42,7 +42,7 @@ SELECT
     oi.order_id,
     p.product_id,
     o.order_date,
-    COALESCE(t.category_name_english, p.product_category_name) AS category_name,
+    COALESCE(t.category_name_english, p.product_category_name, 'Uncategorized') AS category_name,
     oi.price,
     oi.freight_value,
     c.customer_state,
@@ -55,7 +55,7 @@ JOIN sellers s ON oi.seller_id = s.seller_id
 LEFT JOIN name_category t ON p.product_category_name = t.category_name;
 
 -- Verificación rápida de la vista creada
-SELECT * FROM v_order_summary LIMIT 10;
+SELECT * FROM v_order_summary LIMIT 20;
 
 -- ----------------------------------------------------------------------------
 -- 3. VISTA: v_customer_satisfaction
@@ -63,20 +63,15 @@ SELECT * FROM v_order_summary LIMIT 10;
 -- ----------------------------------------------------------------------------
 
 CREATE OR REPLACE VIEW v_customer_satisfaction AS
-SELECT 
+SELECT
     r.review_id,
     r.order_id,
     r.review_score,
-    COALESCE(t.category_name_english, p.product_category_name) AS category_name,
     r.review_creation_date AS date_of_review,
     c.customer_state
 FROM reviews r
 JOIN orders o ON r.order_id = o.order_id
-JOIN customers c ON o.customer_id = c.customer_id
-JOIN order_items oi ON r.order_id = oi.order_id
-JOIN products p ON oi.product_id = p.product_id
-LEFT JOIN name_category t ON p.product_category_name = t.category_name
-ORDER BY r.review_score DESC;
+JOIN customers c ON o.customer_id = c.customer_id;
 
 -- Verificación rápida de la vista creada
 SELECT * FROM v_customer_satisfaction LIMIT 10;
@@ -119,9 +114,7 @@ FROM order_totals ot
 JOIN payment_totals pt ON ot.order_id = pt.order_id;
 
 -- Verificación rápida de la vista creada
-SELECT * FROM v_order_finance_details 
-WHERE interests > 0
-LIMIT 10;
+SELECT * FROM v_order_finance_details LIMIT 10;
 
 -- ----------------------------------------------------------------------------
 -- 5. VISTA: v_clean_geolocation
@@ -140,3 +133,11 @@ GROUP BY geolocation_zip_code_prefix;
 
 -- Verificación rápida de la vista creada
 SELECT * FROM v_clean_geolocation LIMIT 10;
+
+-- ----------------------------------------------------------------------------
+-- 6. VISTA: v_dim_orders
+-- Objetivo: IDs unicos por orden.
+-- ----------------------------------------------------------------------------
+CREATE OR REPLACE VIEW v_dim_orders AS
+SELECT DISTINCT order_id
+FROM orders;

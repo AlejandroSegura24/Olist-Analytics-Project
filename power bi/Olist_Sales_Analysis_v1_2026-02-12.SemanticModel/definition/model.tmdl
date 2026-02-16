@@ -8,7 +8,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["Resumen de Ventas","Logística y Entregas","Finanzas y Cuotas","Satisfacción (reviews)","Ubicaciones por Ciudad"]
+annotation PBI_QueryOrder = ["Resumen de Ventas","Logística y Entregas","Finanzas y Cuotas","Satisfacción (reviews)","Ubicaciones por Ciudad","pagos de pedidos","ID ordenes"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -22,6 +22,9 @@ ref table 'Finanzas y Cuotas'
 ref table 'Satisfacción (reviews)'
 ref table LocalDateTable_85f36177-54bf-433e-adae-82c0c7009e5e
 ref table 'Ubicaciones por Ciudad'
+ref table 'pagos de pedidos'
+ref table 'ID ordenes'
+ref table DimEstado
 
 ref cultureInfo es-ES
 

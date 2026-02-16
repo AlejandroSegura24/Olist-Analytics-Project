@@ -11,7 +11,7 @@
       "type": "SharedResources"
     },
     "customTheme": {
-      "name": "Tema_nuevo5117305468455267.json",
+      "name": "Tema_nuevo22375904525593882.json",
       "reportVersionAtImport": {
         "visual": "2.5.0",
         "report": "3.1.0",
@@ -65,8 +65,8 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "Tema_nuevo5117305468455267.json",
-          "path": "Tema_nuevo5117305468455267.json",
+          "name": "Tema_nuevo22375904525593882.json",
+          "path": "Tema_nuevo22375904525593882.json",
           "type": "CustomTheme"
         }
       ]

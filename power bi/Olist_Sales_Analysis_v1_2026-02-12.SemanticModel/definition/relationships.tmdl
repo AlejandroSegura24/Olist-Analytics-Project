@@ -18,26 +18,38 @@ relationship d5f4f237-138e-4d5e-bbe4-04ff40ce0a6c
 	fromColumn: 'Satisfacción (reviews)'.date_of_review
 	toColumn: LocalDateTable_85f36177-54bf-433e-adae-82c0c7009e5e.Date
 
-relationship AutoDetected_bc79f49b-a094-4d09-9309-c0c8400240cc
-	crossFilteringBehavior: bothDirections
+relationship AutoDetected_d2471cc1-9925-4129-afc3-0d683e69becb
 	fromColumn: 'Resumen de Ventas'.order_id
-	toColumn: 'Finanzas y Cuotas'.order_id
+	toColumn: 'ID ordenes'.order_id
 
-relationship AutoDetected_c8a4e6e4-5d45-41ef-8375-9bced851f716
-	crossFilteringBehavior: bothDirections
-	fromCardinality: one
+relationship AutoDetected_7a6f5453-2f99-48ad-8e94-64fd82bc7487
+	isActive: false
 	fromColumn: 'Logística y Entregas'.order_id
-	toColumn: 'Finanzas y Cuotas'.order_id
+	toColumn: 'ID ordenes'.order_id
 
-relationship AutoDetected_bc42818f-5123-4efb-af7c-6d0a50d7fd6f
-	crossFilteringBehavior: bothDirections
+relationship AutoDetected_fd6fe0d1-6ce1-413b-9941-03fe4ddb571d
+	isActive: false
 	fromColumn: 'Satisfacción (reviews)'.order_id
-	toColumn: 'Finanzas y Cuotas'.order_id
+	toColumn: 'ID ordenes'.order_id
 
-relationship 0530823b-557e-6b96-d292-e55288c34206
-	crossFilteringBehavior: bothDirections
-	securityFilteringBehavior: bothDirections
-	toCardinality: many
+relationship AutoDetected_81a55439-bb19-4374-bf92-33116d4dffd1
+	fromColumn: 'pagos de pedidos'.order_id
+	toColumn: 'ID ordenes'.order_id
+
+relationship f29fffa5-ea43-a06b-e079-535935a756a8
+	isActive: false
+	fromColumn: 'Finanzas y Cuotas'.order_id
+	toColumn: 'ID ordenes'.order_id
+
+relationship eec2f7da-ff5f-f63c-5fd1-10d16e62844d
+	fromColumn: 'Resumen de Ventas'.customer_state
+	toColumn: DimEstado.state
+
+relationship d7e7f4f2-cefe-5d50-6bf4-90b7106d35f7
 	fromColumn: 'Ubicaciones por Ciudad'.state
-	toColumn: 'Satisfacción (reviews)'.customer_state
+	toColumn: DimEstado.state
+
+relationship ce39e410-2ead-291c-29fd-b1f9dd268f6e
+	fromColumn: 'Satisfacción (reviews)'.customer_state
+	toColumn: DimEstado.state
 

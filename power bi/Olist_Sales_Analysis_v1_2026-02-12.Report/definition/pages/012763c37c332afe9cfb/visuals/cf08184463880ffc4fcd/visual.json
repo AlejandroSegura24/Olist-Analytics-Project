@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Ubicaciones por Ciudad"
+                      "Entity": "DimEstado"
                     }
                   },
                   "Property": "state"
                 }
               },
-              "queryRef": "Ubicaciones por Ciudad.state",
-              "nativeQueryRef": "Estado",
-              "active": true,
-              "displayName": "Estado"
+              "queryRef": "DimEstado.state",
+              "nativeQueryRef": "state",
+              "active": true
             }
           ]
         }

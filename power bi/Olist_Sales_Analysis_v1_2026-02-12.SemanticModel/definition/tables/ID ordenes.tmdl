@@ -1,0 +1,22 @@
+table 'ID ordenes'
+	lineageTag: 766335c8-8708-4bcd-8623-1c858fc0ec54
+
+	column order_id
+		dataType: string
+		lineageTag: 8882816d-13ff-44a1-904e-b9b41d0641a4
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'ID ordenes' = m
+		mode: import
+		source =
+				let
+				    Origen = PostgreSQL.Database("localhost", "olist_analytics"),
+				    public_v_dim_orders = Origen{[Schema="public",Item="v_dim_orders"]}[Data]
+				in
+				    public_v_dim_orders
+
+	changedProperty = Name
+

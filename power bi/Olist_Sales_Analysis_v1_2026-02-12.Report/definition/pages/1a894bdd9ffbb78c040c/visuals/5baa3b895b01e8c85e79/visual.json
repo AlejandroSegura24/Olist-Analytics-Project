@@ -1,0 +1,76 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "5baa3b895b01e8c85e79",
+  "position": {
+    "x": 656.66666666666663,
+    "y": 453.33333333333331,
+    "z": 3,
+    "height": 146.66666666666666,
+    "width": 601.11111111111109,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "pagos de pedidos"
+                    }
+                  },
+                  "Property": "payment_type"
+                }
+              },
+              "queryRef": "pagos de pedidos.payment_type",
+              "nativeQueryRef": "payment_type"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pagos de pedidos"
+                        }
+                      },
+                      "Property": "order_id"
+                    }
+                  },
+                  "Function": 2
+                }
+              },
+              "queryRef": "pagos de pedidos.order_id",
+              "nativeQueryRef": "Recuento de order_id"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pagos de pedidos"
+                        }
+                      },
+                      "Property": "payment_value"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(pagos de pedidos.payment_value)",
+              "nativeQueryRef": "Suma de payment_value"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

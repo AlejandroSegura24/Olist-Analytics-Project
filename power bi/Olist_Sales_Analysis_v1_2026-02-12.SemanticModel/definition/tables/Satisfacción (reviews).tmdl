@@ -26,14 +26,6 @@ table 'Satisfacción (reviews)'
 
 		annotation SummarizationSetBy = Automatic
 
-	column category_name
-		dataType: string
-		lineageTag: 6f603938-43ee-4259-b1bd-29431036a7ad
-		summarizeBy: none
-		sourceColumn: category_name
-
-		annotation SummarizationSetBy = Automatic
-
 	column date_of_review
 		dataType: dateTime
 		formatString: General Date

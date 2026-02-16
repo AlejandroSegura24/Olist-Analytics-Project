@@ -11,75 +11,6 @@
   },
   "visual": {
     "visualType": "clusteredBarChart",
-    "query": {
-      "queryState": {
-        "Category": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Satisfacción (reviews)"
-                    }
-                  },
-                  "Property": "category_name"
-                }
-              },
-              "queryRef": "Satisfacción (reviews).category_name",
-              "nativeQueryRef": "category_name",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Satisfacción (reviews)"
-                        }
-                      },
-                      "Property": "review_score"
-                    }
-                  },
-                  "Function": 1
-                }
-              },
-              "queryRef": "Sum(Satisfacción (reviews).review_score)",
-              "nativeQueryRef": "Promedio de review_score"
-            }
-          ]
-        }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Satisfacción (reviews)"
-                      }
-                    },
-                    "Property": "review_score"
-                  }
-                },
-                "Function": 1
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
-      }
-    },
     "objects": {
       "zoom": [
         {
@@ -362,6 +293,7 @@
             }
           ]
         },
+        "howCreated": "User",
         "objects": {
           "general": [
             {
