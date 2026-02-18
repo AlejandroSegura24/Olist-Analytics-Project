@@ -22,7 +22,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Satisfacción (reviews)"
+                          "Entity": "public fact_orders_bridge"
                         }
                       },
                       "Property": "order_id"
@@ -31,9 +31,8 @@
                   "Function": 2
                 }
               },
-              "queryRef": "Min(Satisfacción (reviews).order_id)",
-              "nativeQueryRef": "Pedidos Totales",
-              "displayName": "Pedidos Totales"
+              "queryRef": "Min(public fact_orders_bridge.order_id)",
+              "nativeQueryRef": "Recuento de order_id"
             }
           ]
         }
@@ -47,7 +46,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "Satisfacción (reviews)"
+                        "Entity": "public fact_orders_bridge"
                       }
                     },
                     "Property": "order_id"

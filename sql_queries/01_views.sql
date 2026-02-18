@@ -10,7 +10,7 @@ DESCRIPCIÓN: Creación de vistas para simplificar el modelo de datos.
 -- Objetivo: Comparar el tiempo de entrega real vs el estimado con los pedidos entregados.
 -- ----------------------------------------------------------------------------
 
-CREATE OR REPLACE VIEW v_orders_cleaned AS
+CREATE OR REPLACE VIEW v_orders_cleaned AS -- Logistica y Entregas
 SELECT 
     order_id,
     customer_id,
@@ -37,7 +37,7 @@ LIMIT 10;
 -- Objetivo: Consolidar el detalle de cada venta con su categoría, cliente y lugar.
 -- ----------------------------------------------------------------------------
 
-CREATE OR REPLACE VIEW v_order_summary AS
+CREATE OR REPLACE VIEW v_order_summary AS  -- Resumen Ventas
 SELECT
     oi.order_id,
     p.product_id,
@@ -62,7 +62,7 @@ SELECT * FROM v_order_summary LIMIT 20;
 -- Objetivo: Analizar la relación entre el puntaje de reseña y los productos.
 -- ----------------------------------------------------------------------------
 
-CREATE OR REPLACE VIEW v_customer_satisfaction AS
+CREATE OR REPLACE VIEW v_customer_satisfaction AS -- Satisfaccion (reviews)
 SELECT
     r.review_id,
     r.order_id,
@@ -81,7 +81,7 @@ SELECT * FROM v_customer_satisfaction LIMIT 10;
 -- Objetivo: Separar el valor real de la venta (precio + envio) de los intereses.
 -- ----------------------------------------------------------------------------
 
-CREATE OR REPLACE VIEW v_order_finance_details AS
+CREATE OR REPLACE VIEW v_order_finance_details AS -- Finanzas y Cuotas
 WITH order_totals AS (
     SELECT 
         order_id,
@@ -117,27 +117,35 @@ JOIN payment_totals pt ON ot.order_id = pt.order_id;
 SELECT * FROM v_order_finance_details LIMIT 10;
 
 -- ----------------------------------------------------------------------------
--- 5. VISTA: v_clean_geolocation
+-- 5. VISTA: dim_geography
 -- Objetivo: Limpiar la tabla de geolocalización para tener un solo punto por código postal.
 -- ----------------------------------------------------------------------------
 
-CREATE OR REPLACE VIEW v_clean_geolocation AS
+CREATE OR REPLACE VIEW dim_geography AS -- Ubicaciones por Ciudad
 SELECT 
-    geolocation_zip_code_prefix,
+    geolocation_zip_code_prefix AS zip_code_id,
     AVG(geolocation_lat) AS latitude,
     AVG(geolocation_lng) AS longitude,
-    INITCAP(MAX(geolocation_city)) AS city,
-    UPPER(MAX(geolocation_state)) AS state
+    INITCAP(MAX(geolocation_city)) AS city_name,
+    UPPER(MAX(geolocation_state)) AS state_id
 FROM geolocation
 GROUP BY geolocation_zip_code_prefix;
 
 -- Verificación rápida de la vista creada
-SELECT * FROM v_clean_geolocation LIMIT 10;
+SELECT * FROM dim_geography LIMIT 10;
 
 -- ----------------------------------------------------------------------------
--- 6. VISTA: v_dim_orders
+-- 6. VISTA: fact_sales
 -- Objetivo: IDs unicos por orden.
 -- ----------------------------------------------------------------------------
-CREATE OR REPLACE VIEW v_dim_orders AS
-SELECT DISTINCT order_id
-FROM orders;
+CREATE OR REPLACE VIEW fact_orders_bridge AS
+SELECT 
+    o.order_id,
+    o.customer_id,
+    c.customer_zip_code_prefix AS zip_code_id, -- Para conectar con tu mapa
+    o.order_status,
+    o.order_purchase_timestamp AS order_date
+FROM orders o
+INNER JOIN customers c ON o.customer_id = c.customer_id;
+
+SELECT COUNT(*) FROM fact_orders_bridge LIMIT 5

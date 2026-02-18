@@ -917,6 +917,9 @@ cultureInfo es-ES
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "customer state": {
@@ -1152,6 +1155,9 @@ cultureInfo es-ES
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "order id": {
@@ -2194,6 +2200,9 @@ cultureInfo es-ES
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "order id": {
@@ -4028,6 +4037,9 @@ cultureInfo es-ES
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "state": {
@@ -4098,16 +4110,6 @@ cultureInfo es-ES
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.714
-			          }
-			        },
-			        {
-			          "Estado": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ],
@@ -4972,192 +4974,458 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "ID_ordene": {
+			    "resumen_de_venta.promedio_score_por_categoria": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "ID ordenes"
+			          "ConceptualEntity": "Resumen de Ventas",
+			          "ConceptualProperty": "Promedio Score por Categoria"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "ID ordene": {
+			          "promedio score por categoria": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "identification ordene": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "identity ordene": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "identifier ordene": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "credential ordene": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
 			          }
 			        }
 			      ]
 			    },
-			    "ID_ordene.order_id": {
+			    "dim_estado": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "ID ordenes",
-			          "ConceptualProperty": "order_id"
+			          "ConceptualEntity": "DimEstado"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "order id": {
+			          "dim estado": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "order_id": {
+			          "DimEstado": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "order": {
+			          "estado": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
-			        },
+			        }
+			      ]
+			    },
+			    "dim_estado.state": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimEstado",
+			          "ConceptualProperty": "state"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
 			        {
-			          "order identification": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
+			          "state": {
+			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "order identity": {
+			          "location": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.75
+			            "Weight": 0.736
 			          }
 			        },
 			        {
-			          "order identifier": {
+			          "province": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.75
+			            "Weight": 0.736
 			          }
 			        },
 			        {
-			          "order credential": {
+			          "territory": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.727
+			            "Weight": 0.736
 			          }
 			        },
 			        {
-			          "instruction": {
+			          "nation": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.491
+			            "Weight": 0.736
 			          }
 			        },
 			        {
-			          "direction": {
+			          "condition": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.491
+			            "Weight": 0.714
 			          }
 			        },
 			        {
-			          "edict": {
+			          "country": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "command": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "directive": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "demand": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
+			            "Weight": 0.714
 			          }
 			        }
 			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "satisfacción_reviews_date_of_review_jerarquía_de_fecha_has_satisfacción_reviews_date_of_review_año": {
+			      "Binding": {
+			        "ConceptualEntity": "Satisfacción (reviews)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "satisfacción_reviews.date_of_review.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews.date_of_review.jerarquía_de_fecha"
+			          }
+			        },
+			        "satisfacción_reviews.date_of_review.año": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews.date_of_review.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "satisfacción_reviews.date_of_review.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "satisfacción_reviews.date_of_review.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años"
+			        }
+			      ]
+			    },
+			    "satisfacción_reviews_date_of_review_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "Satisfacción (reviews)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "satisfacción_reviews.date_of_review": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews.date_of_review"
+			          }
+			        },
+			        "satisfacción_reviews.date_of_review.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews.date_of_review.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "satisfacción_reviews.date_of_review"
+			            },
+			            "Object": {
+			              "Role": "satisfacción_reviews.date_of_review.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_of_review_have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
+			    "logística_y_entrega_delivery_date_me_has_logística_y_entrega_delivery_date_día": {
+			      "Binding": {
+			        "ConceptualEntity": "Logística y Entregas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "logística_y_entrega.delivery_date.me": {
+			          "Target": {
+			            "Entity": "logística_y_entrega.delivery_date.me"
+			          }
+			        },
+			        "logística_y_entrega.delivery_date.día": {
+			          "Target": {
+			            "Entity": "logística_y_entrega.delivery_date.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "logística_y_entrega.delivery_date.me"
+			            },
+			            "Object": {
+			              "Role": "logística_y_entrega.delivery_date.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "logística_y_entrega.delivery_date.día"
+			            },
+			            "Object": {
+			              "Role": "logística_y_entrega.delivery_date.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "logística_y_entrega.delivery_date.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "logística_y_entrega.delivery_date.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me2"
+			        }
+			      ]
+			    },
+			    "logística_y_entrega_delivery_date_trimestre_has_logística_y_entrega_delivery_date_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Logística y Entregas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "logística_y_entrega.delivery_date.trimestre": {
+			          "Target": {
+			            "Entity": "logística_y_entrega.delivery_date.trimestre"
+			          }
+			        },
+			        "logística_y_entrega.delivery_date.me": {
+			          "Target": {
+			            "Entity": "logística_y_entrega.delivery_date.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "logística_y_entrega.delivery_date.trimestre"
+			            },
+			            "Object": {
+			              "Role": "logística_y_entrega.delivery_date.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "logística_y_entrega.delivery_date.me"
+			            },
+			            "Object": {
+			              "Role": "logística_y_entrega.delivery_date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "logística_y_entrega.delivery_date.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "logística_y_entrega.delivery_date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres2"
+			        }
+			      ]
+			    },
+			    "logística_y_entrega_delivery_date_año_has_logística_y_entrega_delivery_date_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Logística y Entregas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "logística_y_entrega.delivery_date.año": {
+			          "Target": {
+			            "Entity": "logística_y_entrega.delivery_date.año"
+			          }
+			        },
+			        "logística_y_entrega.delivery_date.trimestre": {
+			          "Target": {
+			            "Entity": "logística_y_entrega.delivery_date.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "logística_y_entrega.delivery_date.año"
+			            },
+			            "Object": {
+			              "Role": "logística_y_entrega.delivery_date.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "logística_y_entrega.delivery_date.trimestre"
+			            },
+			            "Object": {
+			              "Role": "logística_y_entrega.delivery_date.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "logística_y_entrega.delivery_date.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "logística_y_entrega.delivery_date.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años2"
+			        }
+			      ]
+			    },
+			    "logística_y_entrega_delivery_date_jerarquía_de_fecha_has_logística_y_entrega_delivery_date_día": {
+			      "Binding": {
+			        "ConceptualEntity": "Logística y Entregas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "logística_y_entrega.delivery_date.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "logística_y_entrega.delivery_date.jerarquía_de_fecha"
+			          }
+			        },
+			        "logística_y_entrega.delivery_date.día": {
+			          "Target": {
+			            "Entity": "logística_y_entrega.delivery_date.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "logística_y_entrega.delivery_date.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "logística_y_entrega.delivery_date.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días"
+			        }
+			      ]
+			    },
+			    "logística_y_entrega_delivery_date_jerarquía_de_fecha_has_logística_y_entrega_delivery_date_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Logística y Entregas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "logística_y_entrega.delivery_date.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "logística_y_entrega.delivery_date.jerarquía_de_fecha"
+			          }
+			        },
+			        "logística_y_entrega.delivery_date.me": {
+			          "Target": {
+			            "Entity": "logística_y_entrega.delivery_date.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "logística_y_entrega.delivery_date.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "logística_y_entrega.delivery_date.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me"
+			        }
+			      ]
+			    },
 			    "logística_y_entrega_delivery_date_jerarquía_de_fecha_has_logística_y_entrega_delivery_date_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "Logística y Entregas"
@@ -5220,7 +5488,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años"
+			          "ID": "jerarquía_de_fechas_have_años1"
 			        }
 			      ]
 			    },
@@ -5286,7 +5554,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días"
+			          "ID": "me_have_días1"
 			        },
 			        {
 			          "Attribute": {
@@ -5299,7 +5567,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me"
+			          "ID": "días_have_me1"
 			        },
 			        {
 			          "Preposition": {
@@ -5352,7 +5620,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me"
+			          "ID": "trimestres_have_me1"
 			        },
 			        {
 			          "Attribute": {
@@ -5365,7 +5633,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres"
+			          "ID": "me_have_trimestres1"
 			        },
 			        {
 			          "Preposition": {
@@ -5418,7 +5686,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "años_have_trimestres"
+			          "ID": "años_have_trimestres1"
 			        },
 			        {
 			          "Attribute": {
@@ -5431,7 +5699,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_años"
+			          "ID": "trimestres_have_años1"
 			        },
 			        {
 			          "Preposition": {
@@ -5484,7 +5752,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días"
+			          "ID": "jerarquía_de_fechas_have_días1"
 			        }
 			      ]
 			    },
@@ -5517,7 +5785,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me"
+			          "ID": "jerarquía_de_fechas_have_me1"
 			        }
 			      ]
 			    },
@@ -5583,7 +5851,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años1"
+			          "ID": "jerarquía_de_fechas_have_años2"
 			        }
 			      ]
 			    },
@@ -5649,7 +5917,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días1"
+			          "ID": "me_have_días2"
 			        },
 			        {
 			          "Attribute": {
@@ -5662,7 +5930,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me1"
+			          "ID": "días_have_me2"
 			        },
 			        {
 			          "Preposition": {
@@ -5715,7 +5983,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me1"
+			          "ID": "trimestres_have_me2"
 			        },
 			        {
 			          "Attribute": {
@@ -5728,7 +5996,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres1"
+			          "ID": "me_have_trimestres2"
 			        },
 			        {
 			          "Preposition": {
@@ -5781,7 +6049,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "años_have_trimestres1"
+			          "ID": "años_have_trimestres2"
 			        },
 			        {
 			          "Attribute": {
@@ -5794,7 +6062,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_años1"
+			          "ID": "trimestres_have_años2"
 			        },
 			        {
 			          "Preposition": {
@@ -5847,7 +6115,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días1"
+			          "ID": "jerarquía_de_fechas_have_días2"
 			        }
 			      ]
 			    },
@@ -5880,7 +6148,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me1"
+			          "ID": "jerarquía_de_fechas_have_me2"
 			        }
 			      ]
 			    },
@@ -5946,7 +6214,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años2"
+			          "ID": "jerarquía_de_fechas_have_años3"
 			        }
 			      ]
 			    },
@@ -6029,74 +6297,41 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "pagos_de_pedido_has_finanzas_y_cuota": {
+			    "ubicaciones_por_ciudad_has_dim_estado": {
 			      "Binding": {
-			        "ConceptualEntity": "pagos de pedidos"
+			        "ConceptualEntity": "Ubicaciones por Ciudad"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "pagos_de_pedido": {
-			          "Target": {
-			            "Entity": "pagos_de_pedido"
-			          }
-			        },
-			        "finanzas_y_cuota": {
-			          "Target": {
-			            "Entity": "finanzas_y_cuota"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "pagos_de_pedido"
-			            },
-			            "Object": {
-			              "Role": "finanzas_y_cuota"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "pagos_de_pedidos_have_finanzas_y_cuotas"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "finanzas_y_cuota"
-			            },
-			            "Object": {
-			              "Role": "pagos_de_pedido"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "finanzas_y_cuotas_have_pagos_de_pedidos"
-			        }
-			      ]
-			    },
-			    "satisfacción_reviews_has_ubicaciones_por_ciudad": {
-			      "Binding": {
-			        "ConceptualEntity": "Satisfacción (reviews)"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "satisfacción_reviews": {
-			          "Target": {
-			            "Entity": "satisfacción_reviews"
-			          }
-			        },
 			        "ubicaciones_por_ciudad": {
 			          "Target": {
 			            "Entity": "ubicaciones_por_ciudad"
 			          }
+			        },
+			        "dim_estado": {
+			          "Target": {
+			            "Entity": "dim_estado"
+			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "satisfacción_reviews"
+			              "Role": "ubicaciones_por_ciudad"
+			            },
+			            "Object": {
+			              "Role": "dim_estado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ubicaciones_por_ciudad_have_dim_estado"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_estado"
 			            },
 			            "Object": {
 			              "Role": "ubicaciones_por_ciudad"
@@ -6104,11 +6339,11 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "satisfacción_reviews_have_ubicaciones_por_ciudad"
+			          "ID": "dim_estado_have_ubicaciones_por_ciudad"
 			        }
 			      ]
 			    },
-			    "satisfacción_reviews_has_finanzas_y_cuota": {
+			    "satisfacción_reviews_has_dim_estado": {
 			      "Binding": {
 			        "ConceptualEntity": "Satisfacción (reviews)"
 			      },
@@ -6119,9 +6354,9 @@ cultureInfo es-ES
 			            "Entity": "satisfacción_reviews"
 			          }
 			        },
-			        "finanzas_y_cuota": {
+			        "dim_estado": {
 			          "Target": {
-			            "Entity": "finanzas_y_cuota"
+			            "Entity": "dim_estado"
 			          }
 			        }
 			      },
@@ -6132,17 +6367,17 @@ cultureInfo es-ES
 			              "Role": "satisfacción_reviews"
 			            },
 			            "Object": {
-			              "Role": "finanzas_y_cuota"
+			              "Role": "dim_estado"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "satisfacción_reviews_have_finanzas_y_cuotas"
+			          "ID": "satisfacción_reviews_have_dim_estado"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "finanzas_y_cuota"
+			              "Role": "dim_estado"
 			            },
 			            "Object": {
 			              "Role": "satisfacción_reviews"
@@ -6150,7 +6385,191 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "finanzas_y_cuotas_have_satisfacción_reviews"
+			          "ID": "dim_estado_have_satisfacción_reviews"
+			        }
+			      ]
+			    },
+			    "satisfacción_reviews_has_ID_ordene": {
+			      "Binding": {
+			        "ConceptualEntity": "Satisfacción (reviews)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "satisfacción_reviews": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews"
+			          }
+			        },
+			        "ID_ordene": {
+			          "Target": {
+			            "Entity": "ID_ordene"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "satisfacción_reviews"
+			            },
+			            "Object": {
+			              "Role": "ID_ordene"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "satisfacción_reviews_have_ID_ordenes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ID_ordene"
+			            },
+			            "Object": {
+			              "Role": "satisfacción_reviews"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ID_ordenes_have_satisfacción_reviews"
+			        }
+			      ]
+			    },
+			    "finanzas_y_cuota_has_ID_ordene": {
+			      "Binding": {
+			        "ConceptualEntity": "Finanzas y Cuotas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "finanzas_y_cuota": {
+			          "Target": {
+			            "Entity": "finanzas_y_cuota"
+			          }
+			        },
+			        "ID_ordene": {
+			          "Target": {
+			            "Entity": "ID_ordene"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "finanzas_y_cuota"
+			            },
+			            "Object": {
+			              "Role": "ID_ordene"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "finanzas_y_cuotas_have_ID_ordenes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ID_ordene"
+			            },
+			            "Object": {
+			              "Role": "finanzas_y_cuota"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ID_ordenes_have_finanzas_y_cuotas"
+			        }
+			      ]
+			    },
+			    "logística_y_entrega_has_ID_ordene": {
+			      "Binding": {
+			        "ConceptualEntity": "Logística y Entregas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "logística_y_entrega": {
+			          "Target": {
+			            "Entity": "logística_y_entrega"
+			          }
+			        },
+			        "ID_ordene": {
+			          "Target": {
+			            "Entity": "ID_ordene"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "logística_y_entrega"
+			            },
+			            "Object": {
+			              "Role": "ID_ordene"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "logística_y_entregas_have_ID_ordenes"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ID_ordene"
+			            },
+			            "Object": {
+			              "Role": "logística_y_entrega"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ID_ordenes_have_logística_y_entregas"
+			        }
+			      ]
+			    },
+			    "resumen_de_venta_has_dim_estado": {
+			      "Binding": {
+			        "ConceptualEntity": "Resumen de Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "resumen_de_venta": {
+			          "Target": {
+			            "Entity": "resumen_de_venta"
+			          }
+			        },
+			        "dim_estado": {
+			          "Target": {
+			            "Entity": "dim_estado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "resumen_de_venta"
+			            },
+			            "Object": {
+			              "Role": "dim_estado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "resumen_de_ventas_have_dim_estado"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_estado"
+			            },
+			            "Object": {
+			              "Role": "resumen_de_venta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_estado_have_resumen_de_ventas"
 			        }
 			      ]
 			    },
@@ -6200,20 +6619,20 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "ID_ordene_has_order_id": {
+			    "dim_estado_has_state": {
 			      "Binding": {
-			        "ConceptualEntity": "ID ordenes"
+			        "ConceptualEntity": "DimEstado"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "ID_ordene": {
+			        "dim_estado": {
 			          "Target": {
-			            "Entity": "ID_ordene"
+			            "Entity": "dim_estado"
 			          }
 			        },
-			        "ID_ordene.order_id": {
+			        "dim_estado.state": {
 			          "Target": {
-			            "Entity": "ID_ordene.order_id"
+			            "Entity": "dim_estado.state"
 			          }
 			        }
 			      },
@@ -6221,15 +6640,48 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "ID_ordene"
+			              "Role": "dim_estado"
 			            },
 			            "Object": {
-			              "Role": "ID_ordene.order_id"
+			              "Role": "dim_estado.state"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "ID_ordenes_have_order_ids"
+			          "ID": "dim_estado_have_states"
+			        }
+			      ]
+			    },
+			    "satisfacción_reviews_has_resumen_de_venta_promedio_score_por_categoria": {
+			      "Binding": {
+			        "ConceptualEntity": "Satisfacción (reviews)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "satisfacción_reviews": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews"
+			          }
+			        },
+			        "resumen_de_venta.promedio_score_por_categoria": {
+			          "Target": {
+			            "Entity": "resumen_de_venta.promedio_score_por_categoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "satisfacción_reviews"
+			            },
+			            "Object": {
+			              "Role": "resumen_de_venta.promedio_score_por_categoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "satisfacción_reviews_have_promedio_score_por_categoria"
 			        }
 			      ]
 			    },
@@ -6461,39 +6913,6 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "logística_y_entregas_have_is_on_time"
-			        }
-			      ]
-			    },
-			    "ubicaciones_por_ciudad_has_state": {
-			      "Binding": {
-			        "ConceptualEntity": "Ubicaciones por Ciudad"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "ubicaciones_por_ciudad": {
-			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad"
-			          }
-			        },
-			        "ubicaciones_por_ciudad.state": {
-			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad.state"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "ubicaciones_por_ciudad"
-			            },
-			            "Object": {
-			              "Role": "ubicaciones_por_ciudad.state"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "ubicaciones_por_ciudad_have_states"
 			        }
 			      ]
 			    },
@@ -7034,39 +7453,6 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "finanzas_y_cuota_has_order_id": {
-			      "Binding": {
-			        "ConceptualEntity": "Finanzas y Cuotas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "finanzas_y_cuota": {
-			          "Target": {
-			            "Entity": "finanzas_y_cuota"
-			          }
-			        },
-			        "finanzas_y_cuota.order_id": {
-			          "Target": {
-			            "Entity": "finanzas_y_cuota.order_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "finanzas_y_cuota"
-			            },
-			            "Object": {
-			              "Role": "finanzas_y_cuota.order_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "finanzas_y_cuotas_have_order_ids"
-			        }
-			      ]
-			    },
 			    "logística_y_entrega_has_semaforo_logistico": {
 			      "Binding": {
 			        "ConceptualEntity": "Logística y Entregas"
@@ -7265,39 +7651,6 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "logística_y_entrega_has_order_id": {
-			      "Binding": {
-			        "ConceptualEntity": "Logística y Entregas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "logística_y_entrega": {
-			          "Target": {
-			            "Entity": "logística_y_entrega"
-			          }
-			        },
-			        "logística_y_entrega.order_id": {
-			          "Target": {
-			            "Entity": "logística_y_entrega.order_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "logística_y_entrega"
-			            },
-			            "Object": {
-			              "Role": "logística_y_entrega.order_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "logística_y_entregas_have_order_ids"
-			        }
-			      ]
-			    },
 			    "resumen_de_venta_has_seller_state": {
 			      "Binding": {
 			        "ConceptualEntity": "Resumen de Ventas"
@@ -7328,39 +7681,6 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "resumen_de_ventas_have_seller_states"
-			        }
-			      ]
-			    },
-			    "resumen_de_venta_has_customer_state": {
-			      "Binding": {
-			        "ConceptualEntity": "Resumen de Ventas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "resumen_de_venta": {
-			          "Target": {
-			            "Entity": "resumen_de_venta"
-			          }
-			        },
-			        "resumen_de_venta.customer_state": {
-			          "Target": {
-			            "Entity": "resumen_de_venta.customer_state"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "resumen_de_venta"
-			            },
-			            "Object": {
-			              "Role": "resumen_de_venta.customer_state"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "resumen_de_ventas_have_customer_states"
 			        }
 			      ]
 			    },
@@ -7583,33 +7903,33 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "ubicaciones_por_ciudad_in_state": {
+			    "dim_estado_in_state": {
 			      "Binding": {
-			        "ConceptualEntity": "Ubicaciones por Ciudad"
+			        "ConceptualEntity": "DimEstado"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "ubicaciones_por_ciudad": {
+			        "dim_estado": {
 			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad"
+			            "Entity": "dim_estado"
 			          }
 			        },
-			        "ubicaciones_por_ciudad.state": {
+			        "dim_estado.state": {
 			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad.state"
+			            "Entity": "dim_estado.state"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "Where": {
-			          "Role": "ubicaciones_por_ciudad.state"
+			          "Role": "dim_estado.state"
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "ubicaciones_por_ciudad"
+			              "Role": "dim_estado"
 			            },
 			            "Prepositions": [
 			              {
@@ -7619,12 +7939,12 @@ cultureInfo es-ES
 			              }
 			            ],
 			            "Object": {
-			              "Role": "ubicaciones_por_ciudad.state"
+			              "Role": "dim_estado.state"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "ubicaciones_por_ciudad_are_in_states"
+			          "ID": "dim_estado_are_in_states"
 			        }
 			      ]
 			    },
@@ -7718,51 +8038,6 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "resumen_de_venta_in_customer_state": {
-			      "Binding": {
-			        "ConceptualEntity": "Resumen de Ventas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "resumen_de_venta": {
-			          "Target": {
-			            "Entity": "resumen_de_venta"
-			          }
-			        },
-			        "resumen_de_venta.customer_state": {
-			          "Target": {
-			            "Entity": "resumen_de_venta.customer_state"
-			          }
-			        }
-			      },
-			      "SemanticSlots": {
-			        "Where": {
-			          "Role": "resumen_de_venta.customer_state"
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "resumen_de_venta"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "resumen_de_venta.customer_state"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "resumen_de_ventas_are_in_customer_states"
-			        }
-			      ]
-			    },
 			    "logística_y_entrega_is_ordered_on_order_date": {
 			      "Binding": {
 			        "ConceptualEntity": "Logística y Entregas"
@@ -7844,336 +8119,6 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "resumen_de_ventas_are_ordered_on_order_dates"
-			        }
-			      ]
-			    },
-			    "logística_y_entrega_delivery_date_jerarquía_de_fecha_has_logística_y_entrega_delivery_date_me": {
-			      "Binding": {
-			        "ConceptualEntity": "Logística y Entregas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "logística_y_entrega.delivery_date.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "logística_y_entrega.delivery_date.jerarquía_de_fecha"
-			          }
-			        },
-			        "logística_y_entrega.delivery_date.me": {
-			          "Target": {
-			            "Entity": "logística_y_entrega.delivery_date.me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "logística_y_entrega.delivery_date.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "logística_y_entrega.delivery_date.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me2"
-			        }
-			      ]
-			    },
-			    "logística_y_entrega_delivery_date_jerarquía_de_fecha_has_logística_y_entrega_delivery_date_día": {
-			      "Binding": {
-			        "ConceptualEntity": "Logística y Entregas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "logística_y_entrega.delivery_date.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "logística_y_entrega.delivery_date.jerarquía_de_fecha"
-			          }
-			        },
-			        "logística_y_entrega.delivery_date.día": {
-			          "Target": {
-			            "Entity": "logística_y_entrega.delivery_date.día"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "logística_y_entrega.delivery_date.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "logística_y_entrega.delivery_date.día"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días2"
-			        }
-			      ]
-			    },
-			    "logística_y_entrega_delivery_date_año_has_logística_y_entrega_delivery_date_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "Logística y Entregas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "logística_y_entrega.delivery_date.año": {
-			          "Target": {
-			            "Entity": "logística_y_entrega.delivery_date.año"
-			          }
-			        },
-			        "logística_y_entrega.delivery_date.trimestre": {
-			          "Target": {
-			            "Entity": "logística_y_entrega.delivery_date.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "logística_y_entrega.delivery_date.año"
-			            },
-			            "Object": {
-			              "Role": "logística_y_entrega.delivery_date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "años_have_trimestres2"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "logística_y_entrega.delivery_date.trimestre"
-			            },
-			            "Object": {
-			              "Role": "logística_y_entrega.delivery_date.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_años2"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "logística_y_entrega.delivery_date.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "logística_y_entrega.delivery_date.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_años2"
-			        }
-			      ]
-			    },
-			    "logística_y_entrega_delivery_date_trimestre_has_logística_y_entrega_delivery_date_me": {
-			      "Binding": {
-			        "ConceptualEntity": "Logística y Entregas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "logística_y_entrega.delivery_date.trimestre": {
-			          "Target": {
-			            "Entity": "logística_y_entrega.delivery_date.trimestre"
-			          }
-			        },
-			        "logística_y_entrega.delivery_date.me": {
-			          "Target": {
-			            "Entity": "logística_y_entrega.delivery_date.me"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "logística_y_entrega.delivery_date.trimestre"
-			            },
-			            "Object": {
-			              "Role": "logística_y_entrega.delivery_date.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_me2"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "logística_y_entrega.delivery_date.me"
-			            },
-			            "Object": {
-			              "Role": "logística_y_entrega.delivery_date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_trimestres2"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "logística_y_entrega.delivery_date.me"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "logística_y_entrega.delivery_date.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_are_in_trimestres2"
-			        }
-			      ]
-			    },
-			    "logística_y_entrega_delivery_date_me_has_logística_y_entrega_delivery_date_día": {
-			      "Binding": {
-			        "ConceptualEntity": "Logística y Entregas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "logística_y_entrega.delivery_date.me": {
-			          "Target": {
-			            "Entity": "logística_y_entrega.delivery_date.me"
-			          }
-			        },
-			        "logística_y_entrega.delivery_date.día": {
-			          "Target": {
-			            "Entity": "logística_y_entrega.delivery_date.día"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "logística_y_entrega.delivery_date.me"
-			            },
-			            "Object": {
-			              "Role": "logística_y_entrega.delivery_date.día"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "me_have_días2"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "logística_y_entrega.delivery_date.día"
-			            },
-			            "Object": {
-			              "Role": "logística_y_entrega.delivery_date.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "días_have_me2"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "logística_y_entrega.delivery_date.día"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "logística_y_entrega.delivery_date.me"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "días_are_in_me2"
-			        }
-			      ]
-			    },
-			    "satisfacción_reviews_date_of_review_has_jerarquía_de_fecha": {
-			      "Binding": {
-			        "ConceptualEntity": "Satisfacción (reviews)"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "satisfacción_reviews.date_of_review": {
-			          "Target": {
-			            "Entity": "satisfacción_reviews.date_of_review"
-			          }
-			        },
-			        "satisfacción_reviews.date_of_review.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "satisfacción_reviews.date_of_review.jerarquía_de_fecha"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "satisfacción_reviews.date_of_review"
-			            },
-			            "Object": {
-			              "Role": "satisfacción_reviews.date_of_review.jerarquía_de_fecha"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_of_review_have_jerarquía_de_fechas"
-			        }
-			      ]
-			    },
-			    "satisfacción_reviews_date_of_review_jerarquía_de_fecha_has_satisfacción_reviews_date_of_review_año": {
-			      "Binding": {
-			        "ConceptualEntity": "Satisfacción (reviews)"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "satisfacción_reviews.date_of_review.jerarquía_de_fecha": {
-			          "Target": {
-			            "Entity": "satisfacción_reviews.date_of_review.jerarquía_de_fecha"
-			          }
-			        },
-			        "satisfacción_reviews.date_of_review.año": {
-			          "Target": {
-			            "Entity": "satisfacción_reviews.date_of_review.año"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "satisfacción_reviews.date_of_review.jerarquía_de_fecha"
-			            },
-			            "Object": {
-			              "Role": "satisfacción_reviews.date_of_review.año"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años3"
 			        }
 			      ]
 			    },

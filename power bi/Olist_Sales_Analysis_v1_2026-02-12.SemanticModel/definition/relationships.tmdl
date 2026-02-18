@@ -18,38 +18,35 @@ relationship d5f4f237-138e-4d5e-bbe4-04ff40ce0a6c
 	fromColumn: 'Satisfacción (reviews)'.date_of_review
 	toColumn: LocalDateTable_85f36177-54bf-433e-adae-82c0c7009e5e.Date
 
-relationship AutoDetected_d2471cc1-9925-4129-afc3-0d683e69becb
-	fromColumn: 'Resumen de Ventas'.order_id
-	toColumn: 'ID ordenes'.order_id
+relationship 4869e15c-813a-494b-837b-0e8bb1250e47
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'public fact_orders_bridge'.order_date
+	toColumn: LocalDateTable_193dbfdd-8c43-4f88-9cdb-be4edbae897b.Date
 
-relationship AutoDetected_7a6f5453-2f99-48ad-8e94-64fd82bc7487
-	isActive: false
-	fromColumn: 'Logística y Entregas'.order_id
-	toColumn: 'ID ordenes'.order_id
+relationship AutoDetected_c43ff90b-3438-4776-bf60-4d9c502d59b4
+	fromColumn: 'Logística y Entregas'.customer_id
+	toColumn: 'public fact_orders_bridge'.customer_id
 
-relationship AutoDetected_fd6fe0d1-6ce1-413b-9941-03fe4ddb571d
-	isActive: false
+relationship 372eee76-c59f-42cc-5110-e8e38985c074
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'public fact_orders_bridge'.zip_code_id
+	toColumn: 'Ubicaciones por Ciudad'.geolocation_zip_code_prefix
+
+relationship cfdc9a68-ee80-ce27-4d9d-1d6e7ec8072f
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: 'public fact_orders_bridge'.order_id
+	toColumn: 'Finanzas y Cuotas'.order_id
+
+relationship 279160ba-5f31-fa9f-5c61-de41a0c4ae53
 	fromColumn: 'Satisfacción (reviews)'.order_id
-	toColumn: 'ID ordenes'.order_id
+	toColumn: 'public fact_orders_bridge'.order_id
 
-relationship AutoDetected_81a55439-bb19-4374-bf92-33116d4dffd1
+relationship 7d945ace-7ccb-4f37-ce96-e0301b508a47
+	fromColumn: 'Resumen de Ventas'.freight_value
+	toColumn: 'public fact_orders_bridge'.order_id
+
+relationship 87d5c2b2-0b55-27da-6c7e-d1449914ff71
 	fromColumn: 'pagos de pedidos'.order_id
-	toColumn: 'ID ordenes'.order_id
-
-relationship f29fffa5-ea43-a06b-e079-535935a756a8
-	isActive: false
-	fromColumn: 'Finanzas y Cuotas'.order_id
-	toColumn: 'ID ordenes'.order_id
-
-relationship eec2f7da-ff5f-f63c-5fd1-10d16e62844d
-	fromColumn: 'Resumen de Ventas'.customer_state
-	toColumn: DimEstado.state
-
-relationship d7e7f4f2-cefe-5d50-6bf4-90b7106d35f7
-	fromColumn: 'Ubicaciones por Ciudad'.state
-	toColumn: DimEstado.state
-
-relationship ce39e410-2ead-291c-29fd-b1f9dd268f6e
-	fromColumn: 'Satisfacción (reviews)'.customer_state
-	toColumn: DimEstado.state
+	toColumn: 'public fact_orders_bridge'.order_id
 

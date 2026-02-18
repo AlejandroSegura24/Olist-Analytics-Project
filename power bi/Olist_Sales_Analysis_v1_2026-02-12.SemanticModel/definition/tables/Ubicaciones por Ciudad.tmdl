@@ -5,7 +5,7 @@ table 'Ubicaciones por Ciudad'
 		dataType: int64
 		formatString: 0
 		lineageTag: 73b8bf81-9f41-4ad9-aabe-7b437e706ea7
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: geolocation_zip_code_prefix
 
 		annotation SummarizationSetBy = Automatic

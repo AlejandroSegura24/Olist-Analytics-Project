@@ -32,7 +32,7 @@
                 }
               },
               "queryRef": "Sum(Logística y Entregas.delivery_time_days)",
-              "nativeQueryRef": "Promedio de Días de Entrega",
+              "nativeQueryRef": "Promedio de delivery_time_days",
               "displayName": "Promedio de Días de Entrega",
               "format": "0"
             }
