@@ -1,6 +1,16 @@
 table 'Satisfacción (reviews)'
 	lineageTag: 6eafd7af-5d1f-4c45-80aa-a98c9452a3fe
 
+	measure Average_Category_Score =
+			
+			CALCULATE(
+			    AVERAGE('Satisfacción (reviews)'[review_score]),
+			    CROSSFILTER('Resumen de Ventas'[order_id], 'Puente Ordenes'[order_id], Both)
+			)
+		lineageTag: dd3b04b4-f269-4662-8186-d9da82980e2f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column review_id
 		dataType: string
 		lineageTag: 8765b9dc-73c3-46c0-854e-4fd9a2c30f4d
@@ -59,4 +69,6 @@ table 'Satisfacción (reviews)'
 				    public_v_customer_satisfaction
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
 

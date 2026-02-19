@@ -5,21 +5,21 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 14.575201733827821
+        "y": 0
       },
       "nodes": [
         {
           "location": {
-            "x": 276.26373375573957,
-            "y": 0
+            "x": 225.98290403224189,
+            "y": 140.78632322579347
           },
           "nodeIndex": "Resumen de Ventas",
           "nodeLineageTag": "edfadd81-3842-47e5-834c-141a5a566b1a",
           "size": {
-            "height": 308.31746067972648,
+            "height": 283.17704581797761,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 5
         },
         {
           "location": {
@@ -42,28 +42,28 @@
           "nodeIndex": "Logística y Entregas",
           "nodeLineageTag": "f789019c-532e-4f3a-bce6-9b76e163b2f2",
           "size": {
-            "height": 307.88339411866139,
-            "width": 234
-          },
-          "zIndex": 1
-        },
-        {
-          "location": {
-            "x": 612.14622519223906,
-            "y": 629.77728470364434
-          },
-          "nodeIndex": "Satisfacción (reviews)",
-          "nodeLineageTag": "6eafd7af-5d1f-4c45-80aa-a98c9452a3fe",
-          "size": {
-            "height": 204.40598358871534,
+            "height": 284,
             "width": 234
           },
           "zIndex": 2
         },
         {
           "location": {
-            "x": 270.92303893423116,
-            "y": 543.15476525060615
+            "x": 222.46979483513212,
+            "y": 481.44883701932622
+          },
+          "nodeIndex": "Satisfacción (reviews)",
+          "nodeLineageTag": "6eafd7af-5d1f-4c45-80aa-a98c9452a3fe",
+          "size": {
+            "height": 238.34554365207623,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 620.37480551254,
+            "y": 662.57173584391307
           },
           "nodeIndex": "Ubicaciones por Ciudad",
           "nodeLineageTag": "5636e0e3-0eb4-4df1-a760-6d2ad2bae4c5",
@@ -71,7 +71,7 @@
             "height": 203.80341919355158,
             "width": 234
           },
-          "zIndex": 5
+          "zIndex": 4
         },
         {
           "location": {
@@ -81,30 +81,17 @@
           "nodeIndex": "pagos de pedidos",
           "nodeLineageTag": "8de090bf-a0eb-4127-becc-ad8cc03309a8",
           "size": {
-            "height": 236.45360154953579,
+            "height": 231.42551857718604,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 7
         },
         {
           "location": {
-            "x": 3.5305539013011611,
-            "y": 196.69703302606194
+            "x": 642.09794846178556,
+            "y": 359.91623524256755
           },
-          "nodeIndex": "DimEstado",
-          "nodeLineageTag": "cf09196f-bae6-4095-b408-f6b3bb75551b",
-          "size": {
-            "height": 145,
-            "width": 234
-          },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 613.18647137077437,
-            "y": 342.31794483934334
-          },
-          "nodeIndex": "public fact_orders_bridge",
+          "nodeIndex": "Puente Ordenes",
           "nodeLineageTag": "37cfacd7-32f2-4f61-963c-9041de411371",
           "size": {
             "height": 200,
@@ -114,8 +101,8 @@
         }
       ],
       "name": "Todas las tablas",
-      "zoomValue": 89.192590520569539,
-      "pinKeyFieldsToTop": false,
+      "zoomValue": 79.55318203769987,
+      "pinKeyFieldsToTop": true,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
       "tablesLocked": false

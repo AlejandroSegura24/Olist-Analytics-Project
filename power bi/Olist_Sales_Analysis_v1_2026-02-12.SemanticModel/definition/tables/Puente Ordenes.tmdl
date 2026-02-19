@@ -1,0 +1,72 @@
+table 'Puente Ordenes'
+	lineageTag: 37cfacd7-32f2-4f61-963c-9041de411371
+
+	column order_id
+		dataType: string
+		lineageTag: 2bbd32b8-a951-4b36-b073-8f43eb039ca7
+		summarizeBy: none
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column customer_id
+		dataType: string
+		lineageTag: 97f449e8-f966-4111-9517-ee9880dc07ce
+		summarizeBy: none
+		sourceColumn: customer_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column zip_code_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 7201ca73-dfab-48c8-a0d8-0e5fbd3c1a83
+		summarizeBy: none
+		sourceColumn: zip_code_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_status
+		dataType: string
+		lineageTag: 3137d426-376c-41cc-a22c-d68981b510d1
+		summarizeBy: none
+		sourceColumn: order_status
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 64105acc-47d7-46d6-8506-f40a94ceb479
+		summarizeBy: none
+		sourceColumn: order_date
+
+		variation Variación
+			isDefault
+			relationship: 4869e15c-813a-494b-837b-0e8bb1250e47
+			defaultHierarchy: LocalDateTable_193dbfdd-8c43-4f88-9cdb-be4edbae897b.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado_final
+		dataType: string
+		lineageTag: 210b2821-dd9b-4ffe-9ea2-5cd882a2d164
+		summarizeBy: none
+		sourceColumn: estado_final
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Puente Ordenes' = m
+		mode: import
+		source =
+				let
+				    Origen = PostgreSQL.Database("localhost", "olist_analytics"),
+				    public_fact_orders_bridge = Origen{[Schema="public",Item="fact_orders_bridge"]}[Data],
+				    #"Columna condicional agregada" = Table.AddColumn(public_fact_orders_bridge, "estado_final", each if [zip_code_id] = null then "N/A" else [zip_code_id])
+				in
+				    #"Columna condicional agregada"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

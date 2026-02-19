@@ -1,16 +1,6 @@
 table 'Logística y Entregas'
 	lineageTag: f789019c-532e-4f3a-bce6-9b76e163b2f2
 
-	measure 'Semaforo Logistico' =
-			
-			SWITCH(
-			    TRUE(),
-			    AVERAGE('Logística y Entregas'[delivery_time_days]) <= 15, "🟢 Entrega a Tiempo",
-			    AVERAGE('Logística y Entregas'[delivery_time_days]) <= 30, "🟡 Riesgo de Insatisfacción",
-			    "🔴 Crítico - Pérdida de Cliente"
-			)
-		lineageTag: 889b3e6a-bd0b-4339-8e6c-0651099aee38
-
 	measure '% Entregas a Tiempo' = ```
 			
 			DIVIDE(
@@ -103,4 +93,6 @@ table 'Logística y Entregas'
 				    public_v_orders_cleaned
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
 

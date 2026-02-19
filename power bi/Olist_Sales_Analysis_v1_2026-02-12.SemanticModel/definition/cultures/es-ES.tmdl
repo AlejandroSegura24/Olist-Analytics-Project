@@ -917,9 +917,6 @@ cultureInfo es-ES
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
 			          "customer state": {
@@ -1155,9 +1152,6 @@ cultureInfo es-ES
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
 			          "order id": {
@@ -1287,6 +1281,9 @@ cultureInfo es-ES
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "customer id": {
@@ -2154,22 +2151,6 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "logística_y_entrega.semaforo_logistico": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Logística y Entregas",
-			          "ConceptualProperty": "Semaforo Logistico"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "semaforo logistico": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "finanzas_y_cuota": {
 			      "Definition": {
 			        "Binding": {
@@ -2200,9 +2181,6 @@ cultureInfo es-ES
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
 			          "order id": {
@@ -3610,9 +3588,6 @@ cultureInfo es-ES
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
 			          "customer state": {
@@ -3757,75 +3732,137 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "ubicaciones_por_ciudad.geolocation_zip_code_prefix": {
+			    "ubicaciones_por_ciudad.zip_code_id": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Ubicaciones por Ciudad",
-			          "ConceptualProperty": "geolocation_zip_code_prefix"
+			          "ConceptualProperty": "zip_code_id"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "geolocation zip code prefix": {
+			          "zip code id": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "geolocation_zip_code_prefix": {
+			          "zip_code_id": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "geolocation zip id prefix": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
+			          "zip code": {
+			            "State": "Generated",
+			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "geolocation zip key prefix": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
+			          "code id": {
+			            "State": "Generated",
+			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "geolocation location prefix": {
+			          "zip code identification": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.555
+			            "Weight": 0.762
 			          }
 			        },
 			        {
-			          "geolocation postcode prefix": {
+			          "zip code identity": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.555
+			            "Weight": 0.762
 			          }
 			        },
 			        {
-			          "geolocation post code prefix": {
+			          "zip code identifier": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.549
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "zip id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "code identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "code identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "code identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "zip code credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "zip key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "code credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
 			          }
 			        }
 			      ]
@@ -4037,9 +4074,6 @@ cultureInfo es-ES
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
 			          "state": {
@@ -4110,6 +4144,16 @@ cultureInfo es-ES
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "Estado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ],
@@ -4974,66 +5018,344 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "resumen_de_venta.promedio_score_por_categoria": {
+			    "satisfacción_reviews.average_category_score": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Resumen de Ventas",
-			          "ConceptualProperty": "Promedio Score por Categoria"
+			          "ConceptualEntity": "Satisfacción (reviews)",
+			          "ConceptualProperty": "Average_Category_Score"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "promedio score por categoria": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "dim_estado": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "DimEstado"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "dim estado": {
+			          "average category score": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "DimEstado": {
+			          "Average_Category_Score": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "estado": {
+			          "score": {
 			            "State": "Generated",
 			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "category score": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "average classification score": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "classification score": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "average class score": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "average group score": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "average type score": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "average grouping score": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "average kind score": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "class score": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "group score": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "type score": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
 			          }
 			        }
 			      ]
 			    },
-			    "dim_estado.state": {
+			    "puente_ordene": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "DimEstado",
-			          "ConceptualProperty": "state"
+			          "ConceptualEntity": "Puente Ordenes"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "state": {
+			          "puente ordene": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "puente_ordene.order_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Puente Ordenes",
+			          "ConceptualProperty": "order_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order id": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "location": {
+			          "order_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "order": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "order identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "instruction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "edict": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "command": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "directive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "demand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "puente_ordene.customer_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Puente Ordenes",
+			          "ConceptualProperty": "customer_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "customer id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "customer_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "customer": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "customer identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "client": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5043,7 +5365,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "province": {
+			          "consumer": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5053,7 +5375,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "territory": {
+			          "user": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5063,7 +5385,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "nation": {
+			          "buyer": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5073,29 +5395,996 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "condition": {
+			          "patron": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.714
+			            "Weight": 0.736
 			          }
 			        },
 			        {
-			          "country": {
+			          "purchaser": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.714
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "shopper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "puente_ordene.zip_code_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Puente Ordenes",
+			          "ConceptualProperty": "zip_code_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "zip code id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "zip_code_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "zip code": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "code id": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "zip code identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "zip code identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "zip code identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "zip id": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "code identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "code identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "code identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "zip code credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "zip key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "code credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "puente_ordene.order_status": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Puente Ordenes",
+			          "ConceptualProperty": "order_status"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order status": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order_status": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "status": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "order category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order prestige": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order prominence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "prestige": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "prominence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "order condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "order class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "order grade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "puente_ordene.order_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Puente Ordenes",
+			          "ConceptualProperty": "order_date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order_date": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "order moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "puente_ordene.order_date.jerarquía_de_fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Puente Ordenes",
+			          "VariationSource": "order_date",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "jerarquía de fecha": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "puente_ordene.order_date.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Puente Ordenes",
+			          "VariationSource": "order_date",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order date año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order moment año": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "order period año": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "puente_ordene.order_date.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Puente Ordenes",
+			          "VariationSource": "order_date",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order date trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order moment trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "order period trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "puente_ordene.order_date.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Puente Ordenes",
+			          "VariationSource": "order_date",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order date me": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order moment me": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "order period me": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "puente_ordene.order_date.día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Puente Ordenes",
+			          "VariationSource": "order_date",
+			          "VariationSet": "Variación",
+			          "Hierarchy": "Jerarquía de fechas",
+			          "HierarchyLevel": "Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order date día": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order moment día": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "order period día": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "ubicaciones_por_ciudad.filtration_state": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Ubicaciones por Ciudad",
+			          "ConceptualProperty": "filtration_state"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "filtration state": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "filtration_state": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "filtration location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "filtration province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "filtration territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "filtration nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "filtration condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "filtration country": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
 			          }
 			        }
 			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "puente_ordene_order_date_jerarquía_de_fecha_has_puente_ordene_order_date_año": {
+			      "Binding": {
+			        "ConceptualEntity": "Puente Ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "puente_ordene.order_date.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "puente_ordene.order_date.jerarquía_de_fecha"
+			          }
+			        },
+			        "puente_ordene.order_date.año": {
+			          "Target": {
+			            "Entity": "puente_ordene.order_date.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "puente_ordene.order_date.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "puente_ordene.order_date.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_años"
+			        }
+			      ]
+			    },
+			    "puente_ordene_order_date_has_jerarquía_de_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "Puente Ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "puente_ordene.order_date": {
+			          "Target": {
+			            "Entity": "puente_ordene.order_date"
+			          }
+			        },
+			        "puente_ordene.order_date.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "puente_ordene.order_date.jerarquía_de_fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "puente_ordene.order_date"
+			            },
+			            "Object": {
+			              "Role": "puente_ordene.order_date.jerarquía_de_fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "order_dates_have_jerarquía_de_fechas"
+			        }
+			      ]
+			    },
+			    "satisfacción_reviews_date_of_review_me_has_satisfacción_reviews_date_of_review_día": {
+			      "Binding": {
+			        "ConceptualEntity": "Satisfacción (reviews)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "satisfacción_reviews.date_of_review.me": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews.date_of_review.me"
+			          }
+			        },
+			        "satisfacción_reviews.date_of_review.día": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews.date_of_review.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "satisfacción_reviews.date_of_review.me"
+			            },
+			            "Object": {
+			              "Role": "satisfacción_reviews.date_of_review.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_días"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "satisfacción_reviews.date_of_review.día"
+			            },
+			            "Object": {
+			              "Role": "satisfacción_reviews.date_of_review.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_have_me"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "satisfacción_reviews.date_of_review.día"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "satisfacción_reviews.date_of_review.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "días_are_in_me3"
+			        }
+			      ]
+			    },
+			    "satisfacción_reviews_date_of_review_trimestre_has_satisfacción_reviews_date_of_review_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Satisfacción (reviews)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "satisfacción_reviews.date_of_review.trimestre": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews.date_of_review.trimestre"
+			          }
+			        },
+			        "satisfacción_reviews.date_of_review.me": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews.date_of_review.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "satisfacción_reviews.date_of_review.trimestre"
+			            },
+			            "Object": {
+			              "Role": "satisfacción_reviews.date_of_review.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_me"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "satisfacción_reviews.date_of_review.me"
+			            },
+			            "Object": {
+			              "Role": "satisfacción_reviews.date_of_review.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "satisfacción_reviews.date_of_review.me"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "satisfacción_reviews.date_of_review.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "me_are_in_trimestres3"
+			        }
+			      ]
+			    },
+			    "satisfacción_reviews_date_of_review_año_has_satisfacción_reviews_date_of_review_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Satisfacción (reviews)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "satisfacción_reviews.date_of_review.año": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews.date_of_review.año"
+			          }
+			        },
+			        "satisfacción_reviews.date_of_review.trimestre": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews.date_of_review.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "satisfacción_reviews.date_of_review.año"
+			            },
+			            "Object": {
+			              "Role": "satisfacción_reviews.date_of_review.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "años_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "satisfacción_reviews.date_of_review.trimestre"
+			            },
+			            "Object": {
+			              "Role": "satisfacción_reviews.date_of_review.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_años"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "satisfacción_reviews.date_of_review.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "satisfacción_reviews.date_of_review.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_años3"
+			        }
+			      ]
+			    },
+			    "satisfacción_reviews_date_of_review_jerarquía_de_fecha_has_satisfacción_reviews_date_of_review_día": {
+			      "Binding": {
+			        "ConceptualEntity": "Satisfacción (reviews)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "satisfacción_reviews.date_of_review.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews.date_of_review.jerarquía_de_fecha"
+			          }
+			        },
+			        "satisfacción_reviews.date_of_review.día": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews.date_of_review.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "satisfacción_reviews.date_of_review.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "satisfacción_reviews.date_of_review.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_días"
+			        }
+			      ]
+			    },
+			    "satisfacción_reviews_date_of_review_jerarquía_de_fecha_has_satisfacción_reviews_date_of_review_me": {
+			      "Binding": {
+			        "ConceptualEntity": "Satisfacción (reviews)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "satisfacción_reviews.date_of_review.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews.date_of_review.jerarquía_de_fecha"
+			          }
+			        },
+			        "satisfacción_reviews.date_of_review.me": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews.date_of_review.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "satisfacción_reviews.date_of_review.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "satisfacción_reviews.date_of_review.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_me"
+			        }
+			      ]
+			    },
+			    "satisfacción_reviews_date_of_review_jerarquía_de_fecha_has_satisfacción_reviews_date_of_review_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "Satisfacción (reviews)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "satisfacción_reviews.date_of_review.jerarquía_de_fecha": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews.date_of_review.jerarquía_de_fecha"
+			          }
+			        },
+			        "satisfacción_reviews.date_of_review.trimestre": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews.date_of_review.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "satisfacción_reviews.date_of_review.jerarquía_de_fecha"
+			            },
+			            "Object": {
+			              "Role": "satisfacción_reviews.date_of_review.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jerarquía_de_fechas_have_trimestres"
+			        }
+			      ]
+			    },
 			    "satisfacción_reviews_date_of_review_jerarquía_de_fecha_has_satisfacción_reviews_date_of_review_año": {
 			      "Binding": {
 			        "ConceptualEntity": "Satisfacción (reviews)"
@@ -5125,7 +6414,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años"
+			          "ID": "jerarquía_de_fechas_have_años1"
 			        }
 			      ]
 			    },
@@ -5191,7 +6480,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días"
+			          "ID": "me_have_días1"
 			        },
 			        {
 			          "Attribute": {
@@ -5204,7 +6493,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me"
+			          "ID": "días_have_me1"
 			        },
 			        {
 			          "Preposition": {
@@ -5257,7 +6546,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me"
+			          "ID": "trimestres_have_me1"
 			        },
 			        {
 			          "Attribute": {
@@ -5270,7 +6559,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres"
+			          "ID": "me_have_trimestres1"
 			        },
 			        {
 			          "Preposition": {
@@ -5323,7 +6612,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "años_have_trimestres"
+			          "ID": "años_have_trimestres1"
 			        },
 			        {
 			          "Attribute": {
@@ -5336,7 +6625,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_años"
+			          "ID": "trimestres_have_años1"
 			        },
 			        {
 			          "Preposition": {
@@ -5389,7 +6678,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días"
+			          "ID": "jerarquía_de_fechas_have_días1"
 			        }
 			      ]
 			    },
@@ -5422,7 +6711,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me"
+			          "ID": "jerarquía_de_fechas_have_me1"
 			        }
 			      ]
 			    },
@@ -5455,7 +6744,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres"
+			          "ID": "jerarquía_de_fechas_have_trimestres1"
 			        }
 			      ]
 			    },
@@ -5488,7 +6777,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años1"
+			          "ID": "jerarquía_de_fechas_have_años2"
 			        }
 			      ]
 			    },
@@ -5554,7 +6843,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días1"
+			          "ID": "me_have_días2"
 			        },
 			        {
 			          "Attribute": {
@@ -5567,7 +6856,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me1"
+			          "ID": "días_have_me2"
 			        },
 			        {
 			          "Preposition": {
@@ -5620,7 +6909,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me1"
+			          "ID": "trimestres_have_me2"
 			        },
 			        {
 			          "Attribute": {
@@ -5633,7 +6922,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres1"
+			          "ID": "me_have_trimestres2"
 			        },
 			        {
 			          "Preposition": {
@@ -5686,7 +6975,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "años_have_trimestres1"
+			          "ID": "años_have_trimestres2"
 			        },
 			        {
 			          "Attribute": {
@@ -5699,7 +6988,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_años1"
+			          "ID": "trimestres_have_años2"
 			        },
 			        {
 			          "Preposition": {
@@ -5752,7 +7041,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días1"
+			          "ID": "jerarquía_de_fechas_have_días2"
 			        }
 			      ]
 			    },
@@ -5785,7 +7074,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me1"
+			          "ID": "jerarquía_de_fechas_have_me2"
 			        }
 			      ]
 			    },
@@ -5818,7 +7107,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres1"
+			          "ID": "jerarquía_de_fechas_have_trimestres2"
 			        }
 			      ]
 			    },
@@ -5851,7 +7140,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años2"
+			          "ID": "jerarquía_de_fechas_have_años3"
 			        }
 			      ]
 			    },
@@ -5884,7 +7173,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "order_dates_have_jerarquía_de_fechas"
+			          "ID": "order_dates_have_jerarquía_de_fechas1"
 			        }
 			      ]
 			    },
@@ -5917,7 +7206,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días2"
+			          "ID": "me_have_días3"
 			        },
 			        {
 			          "Attribute": {
@@ -5930,7 +7219,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me2"
+			          "ID": "días_have_me3"
 			        },
 			        {
 			          "Preposition": {
@@ -5983,7 +7272,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me2"
+			          "ID": "trimestres_have_me3"
 			        },
 			        {
 			          "Attribute": {
@@ -5996,7 +7285,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres2"
+			          "ID": "me_have_trimestres3"
 			        },
 			        {
 			          "Preposition": {
@@ -6049,7 +7338,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "años_have_trimestres2"
+			          "ID": "años_have_trimestres3"
 			        },
 			        {
 			          "Attribute": {
@@ -6062,7 +7351,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_años2"
+			          "ID": "trimestres_have_años3"
 			        },
 			        {
 			          "Preposition": {
@@ -6115,7 +7404,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días2"
+			          "ID": "jerarquía_de_fechas_have_días3"
 			        }
 			      ]
 			    },
@@ -6148,7 +7437,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me2"
+			          "ID": "jerarquía_de_fechas_have_me3"
 			        }
 			      ]
 			    },
@@ -6181,7 +7470,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres2"
+			          "ID": "jerarquía_de_fechas_have_trimestres3"
 			        }
 			      ]
 			    },
@@ -6214,7 +7503,7 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_años3"
+			          "ID": "jerarquía_de_fechas_have_años4"
 			        }
 			      ]
 			    },
@@ -6247,11 +7536,90 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "order_dates_have_jerarquía_de_fechas1"
+			          "ID": "order_dates_have_jerarquía_de_fechas2"
 			        }
 			      ]
 			    },
-			    "pagos_de_pedido_has_ID_ordene": {
+			    "puente_ordene_has_finanzas_y_cuota": {
+			      "Binding": {
+			        "ConceptualEntity": "Puente Ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "puente_ordene": {
+			          "Target": {
+			            "Entity": "puente_ordene"
+			          }
+			        },
+			        "finanzas_y_cuota": {
+			          "Target": {
+			            "Entity": "finanzas_y_cuota"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "puente_ordene"
+			            },
+			            "Object": {
+			              "Role": "finanzas_y_cuota"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "puente_ordenes_have_finanzas_y_cuotas"
+			        }
+			      ]
+			    },
+			    "puente_ordene_has_ubicaciones_por_ciudad": {
+			      "Binding": {
+			        "ConceptualEntity": "Puente Ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "puente_ordene": {
+			          "Target": {
+			            "Entity": "puente_ordene"
+			          }
+			        },
+			        "ubicaciones_por_ciudad": {
+			          "Target": {
+			            "Entity": "ubicaciones_por_ciudad"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "puente_ordene"
+			            },
+			            "Object": {
+			              "Role": "ubicaciones_por_ciudad"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "puente_ordenes_have_ubicaciones_por_ciudad"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ubicaciones_por_ciudad"
+			            },
+			            "Object": {
+			              "Role": "puente_ordene"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ubicaciones_por_ciudad_have_puente_ordenes"
+			        }
+			      ]
+			    },
+			    "pagos_de_pedido_has_puente_ordene": {
 			      "Binding": {
 			        "ConceptualEntity": "pagos de pedidos"
 			      },
@@ -6262,9 +7630,9 @@ cultureInfo es-ES
 			            "Entity": "pagos_de_pedido"
 			          }
 			        },
-			        "ID_ordene": {
+			        "puente_ordene": {
 			          "Target": {
-			            "Entity": "ID_ordene"
+			            "Entity": "puente_ordene"
 			          }
 			        }
 			      },
@@ -6275,17 +7643,17 @@ cultureInfo es-ES
 			              "Role": "pagos_de_pedido"
 			            },
 			            "Object": {
-			              "Role": "ID_ordene"
+			              "Role": "puente_ordene"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "pagos_de_pedidos_have_ID_ordenes"
+			          "ID": "pagos_de_pedidos_have_puente_ordenes"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "ID_ordene"
+			              "Role": "puente_ordene"
 			            },
 			            "Object": {
 			              "Role": "pagos_de_pedido"
@@ -6293,57 +7661,11 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "ID_ordenes_have_pagos_de_pedidos"
+			          "ID": "puente_ordenes_have_pagos_de_pedidos"
 			        }
 			      ]
 			    },
-			    "ubicaciones_por_ciudad_has_dim_estado": {
-			      "Binding": {
-			        "ConceptualEntity": "Ubicaciones por Ciudad"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "ubicaciones_por_ciudad": {
-			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad"
-			          }
-			        },
-			        "dim_estado": {
-			          "Target": {
-			            "Entity": "dim_estado"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "ubicaciones_por_ciudad"
-			            },
-			            "Object": {
-			              "Role": "dim_estado"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "ubicaciones_por_ciudad_have_dim_estado"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_estado"
-			            },
-			            "Object": {
-			              "Role": "ubicaciones_por_ciudad"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_estado_have_ubicaciones_por_ciudad"
-			        }
-			      ]
-			    },
-			    "satisfacción_reviews_has_dim_estado": {
+			    "satisfacción_reviews_has_puente_ordene": {
 			      "Binding": {
 			        "ConceptualEntity": "Satisfacción (reviews)"
 			      },
@@ -6354,9 +7676,9 @@ cultureInfo es-ES
 			            "Entity": "satisfacción_reviews"
 			          }
 			        },
-			        "dim_estado": {
+			        "puente_ordene": {
 			          "Target": {
-			            "Entity": "dim_estado"
+			            "Entity": "puente_ordene"
 			          }
 			        }
 			      },
@@ -6367,17 +7689,17 @@ cultureInfo es-ES
 			              "Role": "satisfacción_reviews"
 			            },
 			            "Object": {
-			              "Role": "dim_estado"
+			              "Role": "puente_ordene"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "satisfacción_reviews_have_dim_estado"
+			          "ID": "satisfacción_reviews_have_puente_ordenes"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dim_estado"
+			              "Role": "puente_ordene"
 			            },
 			            "Object": {
 			              "Role": "satisfacción_reviews"
@@ -6385,57 +7707,11 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_estado_have_satisfacción_reviews"
+			          "ID": "puente_ordenes_have_satisfacción_reviews"
 			        }
 			      ]
 			    },
-			    "satisfacción_reviews_has_ID_ordene": {
-			      "Binding": {
-			        "ConceptualEntity": "Satisfacción (reviews)"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "satisfacción_reviews": {
-			          "Target": {
-			            "Entity": "satisfacción_reviews"
-			          }
-			        },
-			        "ID_ordene": {
-			          "Target": {
-			            "Entity": "ID_ordene"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "satisfacción_reviews"
-			            },
-			            "Object": {
-			              "Role": "ID_ordene"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "satisfacción_reviews_have_ID_ordenes"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "ID_ordene"
-			            },
-			            "Object": {
-			              "Role": "satisfacción_reviews"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "ID_ordenes_have_satisfacción_reviews"
-			        }
-			      ]
-			    },
-			    "finanzas_y_cuota_has_ID_ordene": {
+			    "finanzas_y_cuota_has_puente_ordene": {
 			      "Binding": {
 			        "ConceptualEntity": "Finanzas y Cuotas"
 			      },
@@ -6446,9 +7722,9 @@ cultureInfo es-ES
 			            "Entity": "finanzas_y_cuota"
 			          }
 			        },
-			        "ID_ordene": {
+			        "puente_ordene": {
 			          "Target": {
-			            "Entity": "ID_ordene"
+			            "Entity": "puente_ordene"
 			          }
 			        }
 			      },
@@ -6459,29 +7735,16 @@ cultureInfo es-ES
 			              "Role": "finanzas_y_cuota"
 			            },
 			            "Object": {
-			              "Role": "ID_ordene"
+			              "Role": "puente_ordene"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "finanzas_y_cuotas_have_ID_ordenes"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "ID_ordene"
-			            },
-			            "Object": {
-			              "Role": "finanzas_y_cuota"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "ID_ordenes_have_finanzas_y_cuotas"
+			          "ID": "finanzas_y_cuotas_have_puente_ordenes"
 			        }
 			      ]
 			    },
-			    "logística_y_entrega_has_ID_ordene": {
+			    "logística_y_entrega_has_puente_ordene": {
 			      "Binding": {
 			        "ConceptualEntity": "Logística y Entregas"
 			      },
@@ -6492,10 +7755,17 @@ cultureInfo es-ES
 			            "Entity": "logística_y_entrega"
 			          }
 			        },
-			        "ID_ordene": {
+			        "puente_ordene": {
 			          "Target": {
-			            "Entity": "ID_ordene"
-			          }
+			            "Entity": "puente_ordene"
+			          },
+			          "Nouns": [
+			            {
+			              "customer": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
 			        }
 			      },
 			      "Phrasings": [
@@ -6505,17 +7775,17 @@ cultureInfo es-ES
 			              "Role": "logística_y_entrega"
 			            },
 			            "Object": {
-			              "Role": "ID_ordene"
+			              "Role": "puente_ordene"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "logística_y_entregas_have_ID_ordenes"
+			          "ID": "logística_y_entregas_have_puente_ordenes"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "ID_ordene"
+			              "Role": "puente_ordene"
 			            },
 			            "Object": {
 			              "Role": "logística_y_entrega"
@@ -6523,11 +7793,11 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "ID_ordenes_have_logística_y_entregas"
+			          "ID": "puente_ordenes_have_logística_y_entregas"
 			        }
 			      ]
 			    },
-			    "resumen_de_venta_has_dim_estado": {
+			    "resumen_de_venta_has_puente_ordene": {
 			      "Binding": {
 			        "ConceptualEntity": "Resumen de Ventas"
 			      },
@@ -6538,9 +7808,9 @@ cultureInfo es-ES
 			            "Entity": "resumen_de_venta"
 			          }
 			        },
-			        "dim_estado": {
+			        "puente_ordene": {
 			          "Target": {
-			            "Entity": "dim_estado"
+			            "Entity": "puente_ordene"
 			          }
 			        }
 			      },
@@ -6551,17 +7821,17 @@ cultureInfo es-ES
 			              "Role": "resumen_de_venta"
 			            },
 			            "Object": {
-			              "Role": "dim_estado"
+			              "Role": "puente_ordene"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "resumen_de_ventas_have_dim_estado"
+			          "ID": "resumen_de_ventas_have_puente_ordenes"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dim_estado"
+			              "Role": "puente_ordene"
 			            },
 			            "Object": {
 			              "Role": "resumen_de_venta"
@@ -6569,24 +7839,24 @@ cultureInfo es-ES
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_estado_have_resumen_de_ventas"
+			          "ID": "puente_ordenes_have_resumen_de_ventas"
 			        }
 			      ]
 			    },
-			    "resumen_de_venta_has_ID_ordene": {
+			    "ubicaciones_por_ciudad_has_filtration_state": {
 			      "Binding": {
-			        "ConceptualEntity": "Resumen de Ventas"
+			        "ConceptualEntity": "Ubicaciones por Ciudad"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "resumen_de_venta": {
+			        "ubicaciones_por_ciudad": {
 			          "Target": {
-			            "Entity": "resumen_de_venta"
+			            "Entity": "ubicaciones_por_ciudad"
 			          }
 			        },
-			        "ID_ordene": {
+			        "ubicaciones_por_ciudad.filtration_state": {
 			          "Target": {
-			            "Entity": "ID_ordene"
+			            "Entity": "ubicaciones_por_ciudad.filtration_state"
 			          }
 			        }
 			      },
@@ -6594,45 +7864,32 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "resumen_de_venta"
+			              "Role": "ubicaciones_por_ciudad"
 			            },
 			            "Object": {
-			              "Role": "ID_ordene"
+			              "Role": "ubicaciones_por_ciudad.filtration_state"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "resumen_de_ventas_have_ID_ordenes"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "ID_ordene"
-			            },
-			            "Object": {
-			              "Role": "resumen_de_venta"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "ID_ordenes_have_resumen_de_ventas"
+			          "ID": "ubicaciones_por_ciudad_have_filtration_states"
 			        }
 			      ]
 			    },
-			    "dim_estado_has_state": {
+			    "puente_ordene_has_order_date": {
 			      "Binding": {
-			        "ConceptualEntity": "DimEstado"
+			        "ConceptualEntity": "Puente Ordenes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "dim_estado": {
+			        "puente_ordene": {
 			          "Target": {
-			            "Entity": "dim_estado"
+			            "Entity": "puente_ordene"
 			          }
 			        },
-			        "dim_estado.state": {
+			        "puente_ordene.order_date": {
 			          "Target": {
-			            "Entity": "dim_estado.state"
+			            "Entity": "puente_ordene.order_date"
 			          }
 			        }
 			      },
@@ -6640,19 +7897,118 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dim_estado"
+			              "Role": "puente_ordene"
 			            },
 			            "Object": {
-			              "Role": "dim_estado.state"
+			              "Role": "puente_ordene.order_date"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_estado_have_states"
+			          "ID": "puente_ordenes_have_order_dates"
 			        }
 			      ]
 			    },
-			    "satisfacción_reviews_has_resumen_de_venta_promedio_score_por_categoria": {
+			    "puente_ordene_has_order_status": {
+			      "Binding": {
+			        "ConceptualEntity": "Puente Ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "puente_ordene": {
+			          "Target": {
+			            "Entity": "puente_ordene"
+			          }
+			        },
+			        "puente_ordene.order_status": {
+			          "Target": {
+			            "Entity": "puente_ordene.order_status"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "puente_ordene"
+			            },
+			            "Object": {
+			              "Role": "puente_ordene.order_status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "puente_ordenes_have_order_statuses"
+			        }
+			      ]
+			    },
+			    "puente_ordene_has_customer_id": {
+			      "Binding": {
+			        "ConceptualEntity": "Puente Ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "puente_ordene": {
+			          "Target": {
+			            "Entity": "puente_ordene"
+			          }
+			        },
+			        "puente_ordene.customer_id": {
+			          "Target": {
+			            "Entity": "puente_ordene.customer_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "puente_ordene"
+			            },
+			            "Object": {
+			              "Role": "puente_ordene.customer_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "puente_ordenes_have_customer_ids"
+			        }
+			      ]
+			    },
+			    "puente_ordene_has_order_id": {
+			      "Binding": {
+			        "ConceptualEntity": "Puente Ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "puente_ordene": {
+			          "Target": {
+			            "Entity": "puente_ordene"
+			          }
+			        },
+			        "puente_ordene.order_id": {
+			          "Target": {
+			            "Entity": "puente_ordene.order_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "puente_ordene"
+			            },
+			            "Object": {
+			              "Role": "puente_ordene.order_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "puente_ordenes_have_order_ids"
+			        }
+			      ]
+			    },
+			    "satisfacción_reviews_has_average_category_score": {
 			      "Binding": {
 			        "ConceptualEntity": "Satisfacción (reviews)"
 			      },
@@ -6663,9 +8019,9 @@ cultureInfo es-ES
 			            "Entity": "satisfacción_reviews"
 			          }
 			        },
-			        "resumen_de_venta.promedio_score_por_categoria": {
+			        "satisfacción_reviews.average_category_score": {
 			          "Target": {
-			            "Entity": "resumen_de_venta.promedio_score_por_categoria"
+			            "Entity": "satisfacción_reviews.average_category_score"
 			          }
 			        }
 			      },
@@ -6676,12 +8032,12 @@ cultureInfo es-ES
 			              "Role": "satisfacción_reviews"
 			            },
 			            "Object": {
-			              "Role": "resumen_de_venta.promedio_score_por_categoria"
+			              "Role": "satisfacción_reviews.average_category_score"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "satisfacción_reviews_have_promedio_score_por_categoria"
+			          "ID": "satisfacción_reviews_have_average_category_score"
 			        }
 			      ]
 			    },
@@ -6916,6 +8272,39 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
+			    "ubicaciones_por_ciudad_has_state": {
+			      "Binding": {
+			        "ConceptualEntity": "Ubicaciones por Ciudad"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ubicaciones_por_ciudad": {
+			          "Target": {
+			            "Entity": "ubicaciones_por_ciudad"
+			          }
+			        },
+			        "ubicaciones_por_ciudad.state": {
+			          "Target": {
+			            "Entity": "ubicaciones_por_ciudad.state"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "ubicaciones_por_ciudad"
+			            },
+			            "Object": {
+			              "Role": "ubicaciones_por_ciudad.state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ubicaciones_por_ciudad_have_states"
+			        }
+			      ]
+			    },
 			    "ubicaciones_por_ciudad_has_city": {
 			      "Binding": {
 			        "ConceptualEntity": "Ubicaciones por Ciudad"
@@ -7015,7 +8404,7 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "ubicaciones_por_ciudad_has_geolocation_zip_code_prefix": {
+			    "ubicaciones_por_ciudad_has_zip_code_id": {
 			      "Binding": {
 			        "ConceptualEntity": "Ubicaciones por Ciudad"
 			      },
@@ -7026,9 +8415,9 @@ cultureInfo es-ES
 			            "Entity": "ubicaciones_por_ciudad"
 			          }
 			        },
-			        "ubicaciones_por_ciudad.geolocation_zip_code_prefix": {
+			        "ubicaciones_por_ciudad.zip_code_id": {
 			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad.geolocation_zip_code_prefix"
+			            "Entity": "ubicaciones_por_ciudad.zip_code_id"
 			          }
 			        }
 			      },
@@ -7039,12 +8428,45 @@ cultureInfo es-ES
 			              "Role": "ubicaciones_por_ciudad"
 			            },
 			            "Object": {
-			              "Role": "ubicaciones_por_ciudad.geolocation_zip_code_prefix"
+			              "Role": "ubicaciones_por_ciudad.zip_code_id"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "ubicaciones_por_ciudad_have_geolocation_zip_code_prefixes"
+			          "ID": "ubicaciones_por_ciudad_have_zip_code_ids"
+			        }
+			      ]
+			    },
+			    "satisfacción_reviews_has_customer_state": {
+			      "Binding": {
+			        "ConceptualEntity": "Satisfacción (reviews)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "satisfacción_reviews": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews"
+			          }
+			        },
+			        "satisfacción_reviews.customer_state": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews.customer_state"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "satisfacción_reviews"
+			            },
+			            "Object": {
+			              "Role": "satisfacción_reviews.customer_state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "satisfacción_reviews_have_customer_states"
 			        }
 			      ]
 			    },
@@ -7453,20 +8875,20 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "logística_y_entrega_has_semaforo_logistico": {
+			    "finanzas_y_cuota_has_order_id": {
 			      "Binding": {
-			        "ConceptualEntity": "Logística y Entregas"
+			        "ConceptualEntity": "Finanzas y Cuotas"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "logística_y_entrega": {
+			        "finanzas_y_cuota": {
 			          "Target": {
-			            "Entity": "logística_y_entrega"
+			            "Entity": "finanzas_y_cuota"
 			          }
 			        },
-			        "logística_y_entrega.semaforo_logistico": {
+			        "finanzas_y_cuota.order_id": {
 			          "Target": {
-			            "Entity": "logística_y_entrega.semaforo_logistico"
+			            "Entity": "finanzas_y_cuota.order_id"
 			          }
 			        }
 			      },
@@ -7474,15 +8896,15 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "logística_y_entrega"
+			              "Role": "finanzas_y_cuota"
 			            },
 			            "Object": {
-			              "Role": "logística_y_entrega.semaforo_logistico"
+			              "Role": "finanzas_y_cuota.order_id"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "logística_y_entregas_have_semaforo_logistico"
+			          "ID": "finanzas_y_cuotas_have_order_ids"
 			        }
 			      ]
 			    },
@@ -7618,7 +9040,7 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "logística_y_entrega_has_customer_id": {
+			    "logística_y_entrega_has_order_id": {
 			      "Binding": {
 			        "ConceptualEntity": "Logística y Entregas"
 			      },
@@ -7629,9 +9051,9 @@ cultureInfo es-ES
 			            "Entity": "logística_y_entrega"
 			          }
 			        },
-			        "logística_y_entrega.customer_id": {
+			        "logística_y_entrega.order_id": {
 			          "Target": {
-			            "Entity": "logística_y_entrega.customer_id"
+			            "Entity": "logística_y_entrega.order_id"
 			          }
 			        }
 			      },
@@ -7642,12 +9064,12 @@ cultureInfo es-ES
 			              "Role": "logística_y_entrega"
 			            },
 			            "Object": {
-			              "Role": "logística_y_entrega.customer_id"
+			              "Role": "logística_y_entrega.order_id"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "logística_y_entregas_have_customer_ids"
+			          "ID": "logística_y_entregas_have_order_ids"
 			        }
 			      ]
 			    },
@@ -7681,6 +9103,39 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "resumen_de_ventas_have_seller_states"
+			        }
+			      ]
+			    },
+			    "resumen_de_venta_has_customer_state": {
+			      "Binding": {
+			        "ConceptualEntity": "Resumen de Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "resumen_de_venta": {
+			          "Target": {
+			            "Entity": "resumen_de_venta"
+			          }
+			        },
+			        "resumen_de_venta.customer_state": {
+			          "Target": {
+			            "Entity": "resumen_de_venta.customer_state"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "resumen_de_venta"
+			            },
+			            "Object": {
+			              "Role": "resumen_de_venta.customer_state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "resumen_de_ventas_have_customer_states"
 			        }
 			      ]
 			    },
@@ -7903,33 +9358,33 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "dim_estado_in_state": {
+			    "ubicaciones_por_ciudad_in_filtration_state": {
 			      "Binding": {
-			        "ConceptualEntity": "DimEstado"
+			        "ConceptualEntity": "Ubicaciones por Ciudad"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "dim_estado": {
+			        "ubicaciones_por_ciudad": {
 			          "Target": {
-			            "Entity": "dim_estado"
+			            "Entity": "ubicaciones_por_ciudad"
 			          }
 			        },
-			        "dim_estado.state": {
+			        "ubicaciones_por_ciudad.filtration_state": {
 			          "Target": {
-			            "Entity": "dim_estado.state"
+			            "Entity": "ubicaciones_por_ciudad.filtration_state"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "Where": {
-			          "Role": "dim_estado.state"
+			          "Role": "ubicaciones_por_ciudad.filtration_state"
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "dim_estado"
+			              "Role": "ubicaciones_por_ciudad"
 			            },
 			            "Prepositions": [
 			              {
@@ -7939,12 +9394,57 @@ cultureInfo es-ES
 			              }
 			            ],
 			            "Object": {
-			              "Role": "dim_estado.state"
+			              "Role": "ubicaciones_por_ciudad.filtration_state"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_estado_are_in_states"
+			          "ID": "ubicaciones_por_ciudad_are_in_filtration_states"
+			        }
+			      ]
+			    },
+			    "ubicaciones_por_ciudad_in_state": {
+			      "Binding": {
+			        "ConceptualEntity": "Ubicaciones por Ciudad"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "ubicaciones_por_ciudad": {
+			          "Target": {
+			            "Entity": "ubicaciones_por_ciudad"
+			          }
+			        },
+			        "ubicaciones_por_ciudad.state": {
+			          "Target": {
+			            "Entity": "ubicaciones_por_ciudad.state"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "ubicaciones_por_ciudad.state"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "ubicaciones_por_ciudad"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "ubicaciones_por_ciudad.state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "ubicaciones_por_ciudad_are_in_states"
 			        }
 			      ]
 			    },
@@ -7993,6 +9493,51 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
+			    "satisfacción_reviews_in_customer_state": {
+			      "Binding": {
+			        "ConceptualEntity": "Satisfacción (reviews)"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "satisfacción_reviews": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews"
+			          }
+			        },
+			        "satisfacción_reviews.customer_state": {
+			          "Target": {
+			            "Entity": "satisfacción_reviews.customer_state"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "satisfacción_reviews.customer_state"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "satisfacción_reviews"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "satisfacción_reviews.customer_state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "satisfacción_reviews_are_in_customer_states"
+			        }
+			      ]
+			    },
 			    "resumen_de_venta_in_seller_state": {
 			      "Binding": {
 			        "ConceptualEntity": "Resumen de Ventas"
@@ -8035,6 +9580,93 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "resumen_de_ventas_are_in_seller_states"
+			        }
+			      ]
+			    },
+			    "resumen_de_venta_in_customer_state": {
+			      "Binding": {
+			        "ConceptualEntity": "Resumen de Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "resumen_de_venta": {
+			          "Target": {
+			            "Entity": "resumen_de_venta"
+			          }
+			        },
+			        "resumen_de_venta.customer_state": {
+			          "Target": {
+			            "Entity": "resumen_de_venta.customer_state"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "resumen_de_venta.customer_state"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "resumen_de_venta"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "resumen_de_venta.customer_state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "resumen_de_ventas_are_in_customer_states"
+			        }
+			      ]
+			    },
+			    "puente_ordene_is_ordered_on_order_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Puente Ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "puente_ordene": {
+			          "Target": {
+			            "Entity": "puente_ordene"
+			          }
+			        },
+			        "puente_ordene.order_date": {
+			          "Target": {
+			            "Entity": "puente_ordene.order_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "puente_ordene.order_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "order": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "puente_ordene"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "puente_ordenes_are_ordered_on_order_dates"
 			        }
 			      ]
 			    },
@@ -8122,20 +9754,20 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "satisfacción_reviews_date_of_review_jerarquía_de_fecha_has_satisfacción_reviews_date_of_review_trimestre": {
+			    "puente_ordene_order_date_jerarquía_de_fecha_has_puente_ordene_order_date_trimestre": {
 			      "Binding": {
-			        "ConceptualEntity": "Satisfacción (reviews)"
+			        "ConceptualEntity": "Puente Ordenes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "satisfacción_reviews.date_of_review.jerarquía_de_fecha": {
+			        "puente_ordene.order_date.jerarquía_de_fecha": {
 			          "Target": {
-			            "Entity": "satisfacción_reviews.date_of_review.jerarquía_de_fecha"
+			            "Entity": "puente_ordene.order_date.jerarquía_de_fecha"
 			          }
 			        },
-			        "satisfacción_reviews.date_of_review.trimestre": {
+			        "puente_ordene.order_date.trimestre": {
 			          "Target": {
-			            "Entity": "satisfacción_reviews.date_of_review.trimestre"
+			            "Entity": "puente_ordene.order_date.trimestre"
 			          }
 			        }
 			      },
@@ -8143,32 +9775,32 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "satisfacción_reviews.date_of_review.jerarquía_de_fecha"
+			              "Role": "puente_ordene.order_date.jerarquía_de_fecha"
 			            },
 			            "Object": {
-			              "Role": "satisfacción_reviews.date_of_review.trimestre"
+			              "Role": "puente_ordene.order_date.trimestre"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_trimestres3"
+			          "ID": "jerarquía_de_fechas_have_trimestres4"
 			        }
 			      ]
 			    },
-			    "satisfacción_reviews_date_of_review_jerarquía_de_fecha_has_satisfacción_reviews_date_of_review_me": {
+			    "puente_ordene_order_date_jerarquía_de_fecha_has_puente_ordene_order_date_me": {
 			      "Binding": {
-			        "ConceptualEntity": "Satisfacción (reviews)"
+			        "ConceptualEntity": "Puente Ordenes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "satisfacción_reviews.date_of_review.jerarquía_de_fecha": {
+			        "puente_ordene.order_date.jerarquía_de_fecha": {
 			          "Target": {
-			            "Entity": "satisfacción_reviews.date_of_review.jerarquía_de_fecha"
+			            "Entity": "puente_ordene.order_date.jerarquía_de_fecha"
 			          }
 			        },
-			        "satisfacción_reviews.date_of_review.me": {
+			        "puente_ordene.order_date.me": {
 			          "Target": {
-			            "Entity": "satisfacción_reviews.date_of_review.me"
+			            "Entity": "puente_ordene.order_date.me"
 			          }
 			        }
 			      },
@@ -8176,32 +9808,32 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "satisfacción_reviews.date_of_review.jerarquía_de_fecha"
+			              "Role": "puente_ordene.order_date.jerarquía_de_fecha"
 			            },
 			            "Object": {
-			              "Role": "satisfacción_reviews.date_of_review.me"
+			              "Role": "puente_ordene.order_date.me"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_me3"
+			          "ID": "jerarquía_de_fechas_have_me4"
 			        }
 			      ]
 			    },
-			    "satisfacción_reviews_date_of_review_jerarquía_de_fecha_has_satisfacción_reviews_date_of_review_día": {
+			    "puente_ordene_order_date_jerarquía_de_fecha_has_puente_ordene_order_date_día": {
 			      "Binding": {
-			        "ConceptualEntity": "Satisfacción (reviews)"
+			        "ConceptualEntity": "Puente Ordenes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "satisfacción_reviews.date_of_review.jerarquía_de_fecha": {
+			        "puente_ordene.order_date.jerarquía_de_fecha": {
 			          "Target": {
-			            "Entity": "satisfacción_reviews.date_of_review.jerarquía_de_fecha"
+			            "Entity": "puente_ordene.order_date.jerarquía_de_fecha"
 			          }
 			        },
-			        "satisfacción_reviews.date_of_review.día": {
+			        "puente_ordene.order_date.día": {
 			          "Target": {
-			            "Entity": "satisfacción_reviews.date_of_review.día"
+			            "Entity": "puente_ordene.order_date.día"
 			          }
 			        }
 			      },
@@ -8209,32 +9841,32 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "satisfacción_reviews.date_of_review.jerarquía_de_fecha"
+			              "Role": "puente_ordene.order_date.jerarquía_de_fecha"
 			            },
 			            "Object": {
-			              "Role": "satisfacción_reviews.date_of_review.día"
+			              "Role": "puente_ordene.order_date.día"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jerarquía_de_fechas_have_días3"
+			          "ID": "jerarquía_de_fechas_have_días4"
 			        }
 			      ]
 			    },
-			    "satisfacción_reviews_date_of_review_año_has_satisfacción_reviews_date_of_review_trimestre": {
+			    "puente_ordene_order_date_año_has_puente_ordene_order_date_trimestre": {
 			      "Binding": {
-			        "ConceptualEntity": "Satisfacción (reviews)"
+			        "ConceptualEntity": "Puente Ordenes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "satisfacción_reviews.date_of_review.año": {
+			        "puente_ordene.order_date.año": {
 			          "Target": {
-			            "Entity": "satisfacción_reviews.date_of_review.año"
+			            "Entity": "puente_ordene.order_date.año"
 			          }
 			        },
-			        "satisfacción_reviews.date_of_review.trimestre": {
+			        "puente_ordene.order_date.trimestre": {
 			          "Target": {
-			            "Entity": "satisfacción_reviews.date_of_review.trimestre"
+			            "Entity": "puente_ordene.order_date.trimestre"
 			          }
 			        }
 			      },
@@ -8242,33 +9874,33 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "satisfacción_reviews.date_of_review.año"
+			              "Role": "puente_ordene.order_date.año"
 			            },
 			            "Object": {
-			              "Role": "satisfacción_reviews.date_of_review.trimestre"
+			              "Role": "puente_ordene.order_date.trimestre"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "años_have_trimestres3"
+			          "ID": "años_have_trimestres4"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "satisfacción_reviews.date_of_review.trimestre"
+			              "Role": "puente_ordene.order_date.trimestre"
 			            },
 			            "Object": {
-			              "Role": "satisfacción_reviews.date_of_review.año"
+			              "Role": "puente_ordene.order_date.año"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_años3"
+			          "ID": "trimestres_have_años4"
 			        },
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "satisfacción_reviews.date_of_review.trimestre"
+			              "Role": "puente_ordene.order_date.trimestre"
 			            },
 			            "Prepositions": [
 			              {
@@ -8278,29 +9910,29 @@ cultureInfo es-ES
 			              }
 			            ],
 			            "Object": {
-			              "Role": "satisfacción_reviews.date_of_review.año"
+			              "Role": "puente_ordene.order_date.año"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_años3"
+			          "ID": "trimestres_are_in_años4"
 			        }
 			      ]
 			    },
-			    "satisfacción_reviews_date_of_review_trimestre_has_satisfacción_reviews_date_of_review_me": {
+			    "puente_ordene_order_date_trimestre_has_puente_ordene_order_date_me": {
 			      "Binding": {
-			        "ConceptualEntity": "Satisfacción (reviews)"
+			        "ConceptualEntity": "Puente Ordenes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "satisfacción_reviews.date_of_review.trimestre": {
+			        "puente_ordene.order_date.trimestre": {
 			          "Target": {
-			            "Entity": "satisfacción_reviews.date_of_review.trimestre"
+			            "Entity": "puente_ordene.order_date.trimestre"
 			          }
 			        },
-			        "satisfacción_reviews.date_of_review.me": {
+			        "puente_ordene.order_date.me": {
 			          "Target": {
-			            "Entity": "satisfacción_reviews.date_of_review.me"
+			            "Entity": "puente_ordene.order_date.me"
 			          }
 			        }
 			      },
@@ -8308,33 +9940,33 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "satisfacción_reviews.date_of_review.trimestre"
+			              "Role": "puente_ordene.order_date.trimestre"
 			            },
 			            "Object": {
-			              "Role": "satisfacción_reviews.date_of_review.me"
+			              "Role": "puente_ordene.order_date.me"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "trimestres_have_me3"
+			          "ID": "trimestres_have_me4"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "satisfacción_reviews.date_of_review.me"
+			              "Role": "puente_ordene.order_date.me"
 			            },
 			            "Object": {
-			              "Role": "satisfacción_reviews.date_of_review.trimestre"
+			              "Role": "puente_ordene.order_date.trimestre"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_trimestres3"
+			          "ID": "me_have_trimestres4"
 			        },
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "satisfacción_reviews.date_of_review.me"
+			              "Role": "puente_ordene.order_date.me"
 			            },
 			            "Prepositions": [
 			              {
@@ -8344,29 +9976,29 @@ cultureInfo es-ES
 			              }
 			            ],
 			            "Object": {
-			              "Role": "satisfacción_reviews.date_of_review.trimestre"
+			              "Role": "puente_ordene.order_date.trimestre"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_are_in_trimestres3"
+			          "ID": "me_are_in_trimestres4"
 			        }
 			      ]
 			    },
-			    "satisfacción_reviews_date_of_review_me_has_satisfacción_reviews_date_of_review_día": {
+			    "puente_ordene_order_date_me_has_puente_ordene_order_date_día": {
 			      "Binding": {
-			        "ConceptualEntity": "Satisfacción (reviews)"
+			        "ConceptualEntity": "Puente Ordenes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "satisfacción_reviews.date_of_review.me": {
+			        "puente_ordene.order_date.me": {
 			          "Target": {
-			            "Entity": "satisfacción_reviews.date_of_review.me"
+			            "Entity": "puente_ordene.order_date.me"
 			          }
 			        },
-			        "satisfacción_reviews.date_of_review.día": {
+			        "puente_ordene.order_date.día": {
 			          "Target": {
-			            "Entity": "satisfacción_reviews.date_of_review.día"
+			            "Entity": "puente_ordene.order_date.día"
 			          }
 			        }
 			      },
@@ -8374,33 +10006,33 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "satisfacción_reviews.date_of_review.me"
+			              "Role": "puente_ordene.order_date.me"
 			            },
 			            "Object": {
-			              "Role": "satisfacción_reviews.date_of_review.día"
+			              "Role": "puente_ordene.order_date.día"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "me_have_días3"
+			          "ID": "me_have_días4"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "satisfacción_reviews.date_of_review.día"
+			              "Role": "puente_ordene.order_date.día"
 			            },
 			            "Object": {
-			              "Role": "satisfacción_reviews.date_of_review.me"
+			              "Role": "puente_ordene.order_date.me"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_have_me3"
+			          "ID": "días_have_me4"
 			        },
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "satisfacción_reviews.date_of_review.día"
+			              "Role": "puente_ordene.order_date.día"
 			            },
 			            "Prepositions": [
 			              {
@@ -8410,12 +10042,12 @@ cultureInfo es-ES
 			              }
 			            ],
 			            "Object": {
-			              "Role": "satisfacción_reviews.date_of_review.me"
+			              "Role": "puente_ordene.order_date.me"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "días_are_in_me3"
+			          "ID": "días_are_in_me4"
 			        }
 			      ]
 			    }

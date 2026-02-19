@@ -1,27 +1,6 @@
 table 'Resumen de Ventas'
 	lineageTag: edfadd81-3842-47e5-834c-141a5a566b1a
 
-	measure 'Promedio Score por Categoria' =
-			
-			VAR OrdenesFiltradas =
-			    VALUES ( 'Resumen de Ventas'[order_id] )
-			RETURN
-			CALCULATE (
-			    AVERAGE ( 'Satisfacción (reviews)'[review_score] ),
-			    KEEPFILTERS (
-			        TREATAS ( OrdenesFiltradas, 'Satisfacción (reviews)'[order_id] )
-			    )
-			)
-		lineageTag: 6e30a503-e353-4fb6-b65b-ee3b43bef0a8
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Conteo Ordenes Visibles' =
-			
-			DISTINCTCOUNT ( 'Resumen de Ventas'[order_id] )
-		formatString: 0
-		lineageTag: c12a51dd-4d6e-454d-a084-43681336ef56
-
 	column order_id
 		dataType: string
 		lineageTag: 96f39393-c7cc-4a76-8225-ffc3f1e22b71
@@ -73,7 +52,7 @@ table 'Resumen de Ventas'
 		dataType: double
 		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 965eb690-2586-4786-b1fc-9612db223363
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: freight_value
 
 		annotation SummarizationSetBy = Automatic
@@ -103,9 +82,11 @@ table 'Resumen de Ventas'
 		source =
 				let
 				    Origen = PostgreSQL.Database("localhost", "olist_analytics"),
-				    public_v_order_summary = Origen{[Schema="public",Item="v_order_summary"]}[Data]
+				    public_v_order_summary = Origen{[Schema="public",Item="v_order_summary"]}[Data],
+				    #"Valor reemplazado" = Table.ReplaceValue(public_v_order_summary,"_"," ",Replacer.ReplaceText,{"category_name"}),
+				    #"Poner En Mayúsculas Cada Palabra" = Table.TransformColumns(#"Valor reemplazado",{{"category_name", Text.Proper, type text}})
 				in
-				    public_v_order_summary
+				    #"Poner En Mayúsculas Cada Palabra"
 
 	annotation PBI_ResultType = Table
 

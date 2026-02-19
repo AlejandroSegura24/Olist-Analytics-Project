@@ -3,11 +3,11 @@
   "name": "e36fee7f2b570681cc6c",
   "position": {
     "x": 614.10579345088161,
-    "y": 532.9974811083124,
-    "z": 7000,
-    "height": 275.1889168765743,
+    "y": 575,
+    "z": 5000,
+    "height": 259.25692695214104,
     "width": 954.471032745592,
-    "tabOrder": 7000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "scatterChart",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Satisfacción (reviews)"
+                      "Entity": "Ubicaciones por Ciudad"
                     }
                   },
-                  "Property": "customer_state"
+                  "Property": "state"
                 }
               },
-              "queryRef": "Satisfacción (reviews).customer_state",
-              "nativeQueryRef": "customer_state"
+              "queryRef": "Ubicaciones por Ciudad.state",
+              "nativeQueryRef": "state"
             }
           ]
         },
@@ -428,5 +428,47 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "4259fb55160d037b7299",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Logística y Entregas"
+                  }
+                },
+                "Property": "delivery_time_days"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "09226ba6f8f2a42d0dc0",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Satisfacción (reviews)"
+                  }
+                },
+                "Property": "review_score"
+              }
+            },
+            "Function": 1
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

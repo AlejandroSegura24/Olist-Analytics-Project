@@ -136,7 +136,7 @@ SELECT * FROM dim_geography LIMIT 10;
 
 -- ----------------------------------------------------------------------------
 -- 6. VISTA: fact_sales
--- Objetivo: IDs unicos por orden.
+-- Objetivo: Vista principal para union de las demas vistas
 -- ----------------------------------------------------------------------------
 CREATE OR REPLACE VIEW fact_orders_bridge AS
 SELECT 
@@ -148,4 +148,5 @@ SELECT
 FROM orders o
 INNER JOIN customers c ON o.customer_id = c.customer_id;
 
+--  Verificación rápida de la vista creada
 SELECT COUNT(*) FROM fact_orders_bridge LIMIT 5

@@ -5,7 +5,7 @@ table 'pagos de pedidos'
 			
 			CALCULATE(
 			    SUM('Resumen de Ventas'[price]),
-			    TREATAS(VALUES('pagos de pedidos'[order_id]), 'ID ordenes'[order_id])
+			    TREATAS(VALUES('pagos de pedidos'[order_id]), 'Puente Ordenes'[order_id])
 			)
 		lineageTag: 32874fb9-183c-48d2-ae71-1f5a6155d3ce
 
@@ -63,4 +63,8 @@ table 'pagos de pedidos'
 				    public_order_payments = Origen{[Schema="public",Item="order_payments"]}[Data]
 				in
 				    public_order_payments
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
 

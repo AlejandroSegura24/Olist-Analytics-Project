@@ -4,10 +4,10 @@
   "position": {
     "x": 29.992790194664746,
     "y": 11.535688536409518,
-    "z": 5000,
+    "z": 4000,
     "height": 124.58543619322279,
     "width": 354.14563806777221,
-    "tabOrder": 5000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "card",
@@ -22,7 +22,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "public fact_orders_bridge"
+                          "Entity": "Puente Ordenes"
                         }
                       },
                       "Property": "order_id"
@@ -32,7 +32,8 @@
                 }
               },
               "queryRef": "Min(public fact_orders_bridge.order_id)",
-              "nativeQueryRef": "Recuento de order_id"
+              "nativeQueryRef": "Cantidad de Pedidos",
+              "displayName": "Cantidad de Pedidos"
             }
           ]
         }
@@ -46,7 +47,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "public fact_orders_bridge"
+                        "Entity": "Puente Ordenes"
                       }
                     },
                     "Property": "order_id"

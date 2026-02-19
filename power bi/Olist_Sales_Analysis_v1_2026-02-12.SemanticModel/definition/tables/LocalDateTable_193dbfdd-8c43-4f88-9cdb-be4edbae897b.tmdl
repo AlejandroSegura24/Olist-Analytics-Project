@@ -110,7 +110,7 @@ table LocalDateTable_193dbfdd-8c43-4f88-9cdb-be4edbae897b
 
 	partition LocalDateTable_193dbfdd-8c43-4f88-9cdb-be4edbae897b = calculated
 		mode: import
-		source = Calendar(Date(Year(MIN('public fact_orders_bridge'[order_date])), 1, 1), Date(Year(MAX('public fact_orders_bridge'[order_date])), 12, 31))
+		source = Calendar(Date(Year(MIN('Puente Ordenes'[order_date])), 1, 1), Date(Year(MAX('Puente Ordenes'[order_date])), 12, 31))
 
 	annotation __PBI_LocalDateTable = true
 

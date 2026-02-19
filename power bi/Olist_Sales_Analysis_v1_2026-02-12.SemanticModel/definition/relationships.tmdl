@@ -20,33 +20,34 @@ relationship d5f4f237-138e-4d5e-bbe4-04ff40ce0a6c
 
 relationship 4869e15c-813a-494b-837b-0e8bb1250e47
 	joinOnDateBehavior: datePartOnly
-	fromColumn: 'public fact_orders_bridge'.order_date
+	fromColumn: 'Puente Ordenes'.order_date
 	toColumn: LocalDateTable_193dbfdd-8c43-4f88-9cdb-be4edbae897b.Date
 
 relationship AutoDetected_c43ff90b-3438-4776-bf60-4d9c502d59b4
 	fromColumn: 'Logística y Entregas'.customer_id
-	toColumn: 'public fact_orders_bridge'.customer_id
+	toColumn: 'Puente Ordenes'.customer_id
 
 relationship 372eee76-c59f-42cc-5110-e8e38985c074
 	crossFilteringBehavior: bothDirections
-	fromColumn: 'public fact_orders_bridge'.zip_code_id
-	toColumn: 'Ubicaciones por Ciudad'.geolocation_zip_code_prefix
+	fromColumn: 'Puente Ordenes'.zip_code_id
+	toColumn: 'Ubicaciones por Ciudad'.zip_code_id
 
 relationship cfdc9a68-ee80-ce27-4d9d-1d6e7ec8072f
 	crossFilteringBehavior: bothDirections
 	fromCardinality: one
-	fromColumn: 'public fact_orders_bridge'.order_id
+	fromColumn: 'Puente Ordenes'.order_id
 	toColumn: 'Finanzas y Cuotas'.order_id
 
 relationship 279160ba-5f31-fa9f-5c61-de41a0c4ae53
 	fromColumn: 'Satisfacción (reviews)'.order_id
-	toColumn: 'public fact_orders_bridge'.order_id
-
-relationship 7d945ace-7ccb-4f37-ce96-e0301b508a47
-	fromColumn: 'Resumen de Ventas'.freight_value
-	toColumn: 'public fact_orders_bridge'.order_id
+	toColumn: 'Puente Ordenes'.order_id
 
 relationship 87d5c2b2-0b55-27da-6c7e-d1449914ff71
 	fromColumn: 'pagos de pedidos'.order_id
-	toColumn: 'public fact_orders_bridge'.order_id
+	toColumn: 'Puente Ordenes'.order_id
+
+relationship 32271e8b-6b8c-17aa-59ed-fab6e28ff18b
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'Resumen de Ventas'.order_id
+	toColumn: 'Puente Ordenes'.order_id
 
