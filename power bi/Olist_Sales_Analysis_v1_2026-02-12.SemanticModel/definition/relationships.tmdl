@@ -27,11 +27,6 @@ relationship AutoDetected_c43ff90b-3438-4776-bf60-4d9c502d59b4
 	fromColumn: 'Logística y Entregas'.customer_id
 	toColumn: 'Puente Ordenes'.customer_id
 
-relationship 372eee76-c59f-42cc-5110-e8e38985c074
-	crossFilteringBehavior: bothDirections
-	fromColumn: 'Puente Ordenes'.zip_code_id
-	toColumn: 'Ubicaciones por Ciudad'.zip_code_id
-
 relationship cfdc9a68-ee80-ce27-4d9d-1d6e7ec8072f
 	crossFilteringBehavior: bothDirections
 	fromCardinality: one
@@ -50,4 +45,9 @@ relationship 32271e8b-6b8c-17aa-59ed-fab6e28ff18b
 	crossFilteringBehavior: bothDirections
 	fromColumn: 'Resumen de Ventas'.order_id
 	toColumn: 'Puente Ordenes'.order_id
+
+relationship AutoDetected_26316faf-b414-4941-90f8-211a70d4297b
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'Puente Ordenes'.zip_code_id
+	toColumn: 'Ubicaciones por Ciudad'.zip_code_id
 

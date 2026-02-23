@@ -62,19 +62,6 @@
         },
         {
           "location": {
-            "x": 620.37480551254,
-            "y": 662.57173584391307
-          },
-          "nodeIndex": "Ubicaciones por Ciudad",
-          "nodeLineageTag": "5636e0e3-0eb4-4df1-a760-6d2ad2bae4c5",
-          "size": {
-            "height": 203.80341919355158,
-            "width": 234
-          },
-          "zIndex": 4
-        },
-        {
-          "location": {
             "x": 962.57478464444262,
             "y": 43.995726008060466
           },
@@ -93,6 +80,18 @@
           },
           "nodeIndex": "Puente Ordenes",
           "nodeLineageTag": "37cfacd7-32f2-4f61-963c-9041de411371",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 697.050658835838,
+            "y": 671.326157409254
+          },
+          "nodeIndex": "Ubicaciones por Ciudad",
           "size": {
             "height": 200,
             "width": 234

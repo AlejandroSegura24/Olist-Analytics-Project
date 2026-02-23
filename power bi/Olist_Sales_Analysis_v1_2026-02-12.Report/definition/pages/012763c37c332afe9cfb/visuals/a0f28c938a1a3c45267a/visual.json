@@ -26,7 +26,7 @@
                   "Property": "longitude"
                 }
               },
-              "queryRef": "Avg(Ubicaciones por Ciudad.longitude)",
+              "queryRef": "public v_clean_geolocation_enriched.longitude",
               "nativeQueryRef": "longitude"
             }
           ]
@@ -44,7 +44,7 @@
                   "Property": "latitude"
                 }
               },
-              "queryRef": "Avg(Ubicaciones por Ciudad.latitude)",
+              "queryRef": "public v_clean_geolocation_enriched.latitude",
               "nativeQueryRef": "latitude"
             }
           ]
@@ -236,7 +236,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -276,7 +276,7 @@
             "filterRadius": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "8D"
                 }
               }
             },
@@ -337,6 +337,32 @@
             }
           }
         }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -344,79 +370,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "ff1d56c0851851624276",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Ubicaciones por Ciudad"
-              }
-            },
-            "Property": "latitude"
-          }
-        },
-        "type": "Advanced",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "u",
-              "Entity": "Ubicaciones por Ciudad",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "And": {
-                  "Left": {
-                    "Comparison": {
-                      "ComparisonKind": 3,
-                      "Left": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "u"
-                            }
-                          },
-                          "Property": "latitude"
-                        }
-                      },
-                      "Right": {
-                        "Literal": {
-                          "Value": "5L"
-                        }
-                      }
-                    }
-                  },
-                  "Right": {
-                    "Comparison": {
-                      "ComparisonKind": 1,
-                      "Left": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "u"
-                            }
-                          },
-                          "Property": "latitude"
-                        }
-                      },
-                      "Right": {
-                        "Literal": {
-                          "Value": "-34L"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        }
-      },
-      {
-        "name": "01e8f4720ba98425ca5f",
+        "name": "c9df9669d6d3123e6d08",
         "field": {
           "Column": {
             "Expression": {
@@ -427,65 +381,21 @@
             "Property": "longitude"
           }
         },
-        "type": "Advanced",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "u",
-              "Entity": "Ubicaciones por Ciudad",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "And": {
-                  "Left": {
-                    "Comparison": {
-                      "ComparisonKind": 3,
-                      "Left": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "u"
-                            }
-                          },
-                          "Property": "longitude"
-                        }
-                      },
-                      "Right": {
-                        "Literal": {
-                          "Value": "-34L"
-                        }
-                      }
-                    }
-                  },
-                  "Right": {
-                    "Comparison": {
-                      "ComparisonKind": 1,
-                      "Left": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "u"
-                            }
-                          },
-                          "Property": "longitude"
-                        }
-                      },
-                      "Right": {
-                        "Literal": {
-                          "Value": "-73L"
-                        }
-                      }
-                    }
-                  }
-                }
+        "type": "Advanced"
+      },
+      {
+        "name": "f198de1fc32dae109134",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Ubicaciones por Ciudad"
               }
-            }
-          ]
-        }
+            },
+            "Property": "latitude"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

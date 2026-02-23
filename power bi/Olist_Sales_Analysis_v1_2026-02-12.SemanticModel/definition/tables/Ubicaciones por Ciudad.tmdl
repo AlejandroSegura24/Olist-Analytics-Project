@@ -1,10 +1,10 @@
 table 'Ubicaciones por Ciudad'
-	lineageTag: 5636e0e3-0eb4-4df1-a760-6d2ad2bae4c5
+	lineageTag: cc879205-8faa-4798-9b54-03cf544bc746
 
 	column zip_code_id
 		dataType: int64
 		formatString: 0
-		lineageTag: 73b8bf81-9f41-4ad9-aabe-7b437e706ea7
+		lineageTag: 26a4f8f9-837a-40a6-803d-83c679ca4c25
 		summarizeBy: none
 		sourceColumn: zip_code_id
 
@@ -12,29 +12,29 @@ table 'Ubicaciones por Ciudad'
 
 	column latitude
 		dataType: double
-		lineageTag: f09e6083-fa16-476b-8dc1-82fe7b7b805b
+		lineageTag: 3332a481-cd2c-439e-92ef-826a29a14d1b
 		dataCategory: Latitude
 		summarizeBy: none
 		sourceColumn: latitude
 
-		annotation SummarizationSetBy = User
+		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column longitude
 		dataType: double
-		lineageTag: 6f8aff1a-a1ba-4ed3-83b5-a0b98b0f45ef
+		lineageTag: 98a24dbd-b0b1-4257-9bb2-68359d8277fb
 		dataCategory: Longitude
 		summarizeBy: none
 		sourceColumn: longitude
 
-		annotation SummarizationSetBy = User
+		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column city
 		dataType: string
-		lineageTag: 68c0fd93-60d8-4033-afad-b58e8ab6905d
+		lineageTag: bea7eae8-879f-468f-8067-45ebce3c0035
 		dataCategory: City
 		summarizeBy: none
 		sourceColumn: city
@@ -43,18 +43,10 @@ table 'Ubicaciones por Ciudad'
 
 	column state
 		dataType: string
-		lineageTag: 5f2b4718-c2d2-46d2-9a66-f8c72d999718
+		lineageTag: 56afe528-4032-4039-8710-358e199ccdb8
 		dataCategory: StateOrProvince
 		summarizeBy: none
 		sourceColumn: state
-
-		annotation SummarizationSetBy = Automatic
-
-	column filtration_state
-		dataType: string
-		lineageTag: 052e897a-d7e7-485e-92aa-bca19c44702c
-		summarizeBy: none
-		sourceColumn: filtration_state
 
 		annotation SummarizationSetBy = Automatic
 
@@ -63,13 +55,9 @@ table 'Ubicaciones por Ciudad'
 		source =
 				let
 				    Origen = PostgreSQL.Database("localhost", "olist_analytics"),
-				    public_v_clean_geolocation = Origen{[Schema="public",Item="v_clean_geolocation"]}[Data],
-				    #"Columna condicional agregada" = Table.AddColumn(public_v_clean_geolocation, "filtration_state", each if [geolocation_zip_code_prefix] = null then "N/A" else [geolocation_zip_code_prefix]),
-				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Columna condicional agregada",{{"geolocation_zip_code_prefix", "zip_code_id"}})
+				    public_v_clean_geolocation_enriched = Origen{[Schema="public",Item="v_clean_geolocation_enriched"]}[Data]
 				in
-				    #"Columnas con nombre cambiado"
+				    public_v_clean_geolocation_enriched
 
-	annotation PBI_ResultType = Table
-
-	annotation PBI_NavigationStepName = Navegación
+	changedProperty = Name
 

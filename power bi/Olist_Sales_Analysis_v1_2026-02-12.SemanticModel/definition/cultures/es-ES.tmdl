@@ -3710,455 +3710,6 @@ cultureInfo es-ES
 			      ],
 			      "SemanticType": "Location"
 			    },
-			    "ubicaciones_por_ciudad": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Ubicaciones por Ciudad"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "ubicaciones por ciudad": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "ubicacione por ciudad": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.78
-			          }
-			        }
-			      ]
-			    },
-			    "ubicaciones_por_ciudad.zip_code_id": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Ubicaciones por Ciudad",
-			          "ConceptualProperty": "zip_code_id"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "zip code id": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "zip_code_id": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "zip code": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "code id": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "zip code identification": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "zip code identity": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "zip code identifier": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "zip id": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "code identification": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "code identity": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "code identifier": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "zip code credential": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.739
-			          }
-			        },
-			        {
-			          "zip key": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "code credential": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        }
-			      ]
-			    },
-			    "ubicaciones_por_ciudad.latitude": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Ubicaciones por Ciudad",
-			          "ConceptualProperty": "latitude"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "latitude": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "leeway": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "freedom": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "autonomy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "liberty": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "opportunity": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "room": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "scope": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "space": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "rope": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "location": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.466
-			          }
-			        }
-			      ]
-			    },
-			    "ubicaciones_por_ciudad.longitude": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Ubicaciones por Ciudad",
-			          "ConceptualProperty": "longitude"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "longitude": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "ubicaciones_por_ciudad.city": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Ubicaciones por Ciudad",
-			          "ConceptualProperty": "city"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "city": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "location": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "metropolis": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "municipality": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "town": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        },
-			        {
-			          "metropolitan": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        }
-			      ],
-			      "SemanticType": "Location"
-			    },
-			    "ubicaciones_por_ciudad.state": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Ubicaciones por Ciudad",
-			          "ConceptualProperty": "state"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "state": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "state or province": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        },
-			        {
-			          "location": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "province": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "territory": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "nation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "condition": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        },
-			        {
-			          "country": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        },
-			        {
-			          "Estado": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ],
-			      "SemanticType": "Location"
-			    },
 			    "logística_y_entrega.is_on_time": {
 			      "Definition": {
 			        "Binding": {
@@ -5937,29 +5488,175 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "ubicaciones_por_ciudad.filtration_state": {
+			    "puente_ordene.estado_final": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Ubicaciones por Ciudad",
-			          "ConceptualProperty": "filtration_state"
+			          "ConceptualEntity": "Puente Ordenes",
+			          "ConceptualProperty": "estado_final"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "filtration state": {
+			          "estado final": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "filtration_state": {
+			          "estado_final": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "filtration location": {
+			          "final": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "concluding": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "closing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "ultimate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "finishing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "absolute": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "estado decider": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.451
+			          }
+			        }
+			      ]
+			    },
+			    "public_v_clean_geolocation_enriched": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Ubicaciones por Ciudad"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "public v_clean_geolocation_enriched": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "public_v_clean_geolocation_enriched.zip_code_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Ubicaciones por Ciudad",
+			          "ConceptualProperty": "zip_code_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "zip code id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "zip_code_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "zip code": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "code id": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "zip code identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "zip code identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "zip code identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "zip id": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5969,7 +5666,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "filtration province": {
+			          "code identification": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5979,7 +5676,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "filtration territory": {
+			          "code identity": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5989,7 +5686,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "filtration nation": {
+			          "code identifier": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5999,7 +5696,17 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "filtration condition": {
+			          "zip code credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "zip key": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -6009,13 +5716,317 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "filtration country": {
+			          "code credential": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "public_v_clean_geolocation_enriched.latitude": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Ubicaciones por Ciudad",
+			          "ConceptualProperty": "latitude"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "latitude": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "leeway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "freedom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "autonomy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "liberty": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "opportunity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "room": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "scope": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "space": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "rope": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "Latitud": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "public_v_clean_geolocation_enriched.longitude": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Ubicaciones por Ciudad",
+			          "ConceptualProperty": "longitude"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "longitude": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Longitud": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "public_v_clean_geolocation_enriched.city": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Ubicaciones por Ciudad",
+			          "ConceptualProperty": "city"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "city": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "metropolis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "municipality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "town": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "metropolitan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "public_v_clean_geolocation_enriched.state": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Ubicaciones por Ciudad",
+			          "ConceptualProperty": "state"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "state": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "country": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "Estado": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -7540,6 +7551,52 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
+			    "puente_ordene_has_public_v_clean_geolocation_enriched": {
+			      "Binding": {
+			        "ConceptualEntity": "Puente Ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "puente_ordene": {
+			          "Target": {
+			            "Entity": "puente_ordene"
+			          }
+			        },
+			        "public_v_clean_geolocation_enriched": {
+			          "Target": {
+			            "Entity": "public_v_clean_geolocation_enriched"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "puente_ordene"
+			            },
+			            "Object": {
+			              "Role": "public_v_clean_geolocation_enriched"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "puente_ordenes_have_public_v_clean_geolocation_enricheds"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_v_clean_geolocation_enriched"
+			            },
+			            "Object": {
+			              "Role": "puente_ordene"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_v_clean_geolocation_enricheds_have_puente_ordenes"
+			        }
+			      ]
+			    },
 			    "puente_ordene_has_finanzas_y_cuota": {
 			      "Binding": {
 			        "ConceptualEntity": "Puente Ordenes"
@@ -7843,20 +7900,20 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "ubicaciones_por_ciudad_has_filtration_state": {
+			    "public_v_clean_geolocation_enriched_has_state": {
 			      "Binding": {
 			        "ConceptualEntity": "Ubicaciones por Ciudad"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "ubicaciones_por_ciudad": {
+			        "public_v_clean_geolocation_enriched": {
 			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad"
+			            "Entity": "public_v_clean_geolocation_enriched"
 			          }
 			        },
-			        "ubicaciones_por_ciudad.filtration_state": {
+			        "public_v_clean_geolocation_enriched.state": {
 			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad.filtration_state"
+			            "Entity": "public_v_clean_geolocation_enriched.state"
 			          }
 			        }
 			      },
@@ -7864,15 +7921,180 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "ubicaciones_por_ciudad"
+			              "Role": "public_v_clean_geolocation_enriched"
 			            },
 			            "Object": {
-			              "Role": "ubicaciones_por_ciudad.filtration_state"
+			              "Role": "public_v_clean_geolocation_enriched.state"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "ubicaciones_por_ciudad_have_filtration_states"
+			          "ID": "public_v_clean_geolocation_enricheds_have_states"
+			        }
+			      ]
+			    },
+			    "public_v_clean_geolocation_enriched_has_city": {
+			      "Binding": {
+			        "ConceptualEntity": "Ubicaciones por Ciudad"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_v_clean_geolocation_enriched": {
+			          "Target": {
+			            "Entity": "public_v_clean_geolocation_enriched"
+			          }
+			        },
+			        "public_v_clean_geolocation_enriched.city": {
+			          "Target": {
+			            "Entity": "public_v_clean_geolocation_enriched.city"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_v_clean_geolocation_enriched"
+			            },
+			            "Object": {
+			              "Role": "public_v_clean_geolocation_enriched.city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_v_clean_geolocation_enricheds_have_cities"
+			        }
+			      ]
+			    },
+			    "public_v_clean_geolocation_enriched_has_longitude": {
+			      "Binding": {
+			        "ConceptualEntity": "Ubicaciones por Ciudad"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_v_clean_geolocation_enriched": {
+			          "Target": {
+			            "Entity": "public_v_clean_geolocation_enriched"
+			          }
+			        },
+			        "public_v_clean_geolocation_enriched.longitude": {
+			          "Target": {
+			            "Entity": "public_v_clean_geolocation_enriched.longitude"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_v_clean_geolocation_enriched"
+			            },
+			            "Object": {
+			              "Role": "public_v_clean_geolocation_enriched.longitude"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_v_clean_geolocation_enricheds_have_longitudes"
+			        }
+			      ]
+			    },
+			    "public_v_clean_geolocation_enriched_has_latitude": {
+			      "Binding": {
+			        "ConceptualEntity": "Ubicaciones por Ciudad"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_v_clean_geolocation_enriched": {
+			          "Target": {
+			            "Entity": "public_v_clean_geolocation_enriched"
+			          }
+			        },
+			        "public_v_clean_geolocation_enriched.latitude": {
+			          "Target": {
+			            "Entity": "public_v_clean_geolocation_enriched.latitude"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_v_clean_geolocation_enriched"
+			            },
+			            "Object": {
+			              "Role": "public_v_clean_geolocation_enriched.latitude"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_v_clean_geolocation_enricheds_have_latitudes"
+			        }
+			      ]
+			    },
+			    "public_v_clean_geolocation_enriched_has_zip_code_id": {
+			      "Binding": {
+			        "ConceptualEntity": "Ubicaciones por Ciudad"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_v_clean_geolocation_enriched": {
+			          "Target": {
+			            "Entity": "public_v_clean_geolocation_enriched"
+			          }
+			        },
+			        "public_v_clean_geolocation_enriched.zip_code_id": {
+			          "Target": {
+			            "Entity": "public_v_clean_geolocation_enriched.zip_code_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_v_clean_geolocation_enriched"
+			            },
+			            "Object": {
+			              "Role": "public_v_clean_geolocation_enriched.zip_code_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_v_clean_geolocation_enricheds_have_zip_code_ids"
+			        }
+			      ]
+			    },
+			    "puente_ordene_has_estado_final": {
+			      "Binding": {
+			        "ConceptualEntity": "Puente Ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "puente_ordene": {
+			          "Target": {
+			            "Entity": "puente_ordene"
+			          }
+			        },
+			        "puente_ordene.estado_final": {
+			          "Target": {
+			            "Entity": "puente_ordene.estado_final"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "puente_ordene"
+			            },
+			            "Object": {
+			              "Role": "puente_ordene.estado_final"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "puente_ordenes_have_estado_finals"
 			        }
 			      ]
 			    },
@@ -8269,171 +8491,6 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "logística_y_entregas_have_is_on_time"
-			        }
-			      ]
-			    },
-			    "ubicaciones_por_ciudad_has_state": {
-			      "Binding": {
-			        "ConceptualEntity": "Ubicaciones por Ciudad"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "ubicaciones_por_ciudad": {
-			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad"
-			          }
-			        },
-			        "ubicaciones_por_ciudad.state": {
-			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad.state"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "ubicaciones_por_ciudad"
-			            },
-			            "Object": {
-			              "Role": "ubicaciones_por_ciudad.state"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "ubicaciones_por_ciudad_have_states"
-			        }
-			      ]
-			    },
-			    "ubicaciones_por_ciudad_has_city": {
-			      "Binding": {
-			        "ConceptualEntity": "Ubicaciones por Ciudad"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "ubicaciones_por_ciudad": {
-			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad"
-			          }
-			        },
-			        "ubicaciones_por_ciudad.city": {
-			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad.city"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "ubicaciones_por_ciudad"
-			            },
-			            "Object": {
-			              "Role": "ubicaciones_por_ciudad.city"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "ubicaciones_por_ciudad_have_cities"
-			        }
-			      ]
-			    },
-			    "ubicaciones_por_ciudad_has_longitude": {
-			      "Binding": {
-			        "ConceptualEntity": "Ubicaciones por Ciudad"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "ubicaciones_por_ciudad": {
-			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad"
-			          }
-			        },
-			        "ubicaciones_por_ciudad.longitude": {
-			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad.longitude"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "ubicaciones_por_ciudad"
-			            },
-			            "Object": {
-			              "Role": "ubicaciones_por_ciudad.longitude"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "ubicaciones_por_ciudad_have_longitudes"
-			        }
-			      ]
-			    },
-			    "ubicaciones_por_ciudad_has_latitude": {
-			      "Binding": {
-			        "ConceptualEntity": "Ubicaciones por Ciudad"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "ubicaciones_por_ciudad": {
-			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad"
-			          }
-			        },
-			        "ubicaciones_por_ciudad.latitude": {
-			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad.latitude"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "ubicaciones_por_ciudad"
-			            },
-			            "Object": {
-			              "Role": "ubicaciones_por_ciudad.latitude"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "ubicaciones_por_ciudad_have_latitudes"
-			        }
-			      ]
-			    },
-			    "ubicaciones_por_ciudad_has_zip_code_id": {
-			      "Binding": {
-			        "ConceptualEntity": "Ubicaciones por Ciudad"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "ubicaciones_por_ciudad": {
-			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad"
-			          }
-			        },
-			        "ubicaciones_por_ciudad.zip_code_id": {
-			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad.zip_code_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "ubicaciones_por_ciudad"
-			            },
-			            "Object": {
-			              "Role": "ubicaciones_por_ciudad.zip_code_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "ubicaciones_por_ciudad_have_zip_code_ids"
 			        }
 			      ]
 			    },
@@ -9358,33 +9415,33 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "ubicaciones_por_ciudad_in_filtration_state": {
+			    "public_v_clean_geolocation_enriched_in_state": {
 			      "Binding": {
 			        "ConceptualEntity": "Ubicaciones por Ciudad"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "ubicaciones_por_ciudad": {
+			        "public_v_clean_geolocation_enriched": {
 			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad"
+			            "Entity": "public_v_clean_geolocation_enriched"
 			          }
 			        },
-			        "ubicaciones_por_ciudad.filtration_state": {
+			        "public_v_clean_geolocation_enriched.state": {
 			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad.filtration_state"
+			            "Entity": "public_v_clean_geolocation_enriched.state"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "Where": {
-			          "Role": "ubicaciones_por_ciudad.filtration_state"
+			          "Role": "public_v_clean_geolocation_enriched.state"
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "ubicaciones_por_ciudad"
+			              "Role": "public_v_clean_geolocation_enriched"
 			            },
 			            "Prepositions": [
 			              {
@@ -9394,42 +9451,42 @@ cultureInfo es-ES
 			              }
 			            ],
 			            "Object": {
-			              "Role": "ubicaciones_por_ciudad.filtration_state"
+			              "Role": "public_v_clean_geolocation_enriched.state"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "ubicaciones_por_ciudad_are_in_filtration_states"
+			          "ID": "public_v_clean_geolocation_enricheds_are_in_states"
 			        }
 			      ]
 			    },
-			    "ubicaciones_por_ciudad_in_state": {
+			    "public_v_clean_geolocation_enriched_in_city": {
 			      "Binding": {
 			        "ConceptualEntity": "Ubicaciones por Ciudad"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "ubicaciones_por_ciudad": {
+			        "public_v_clean_geolocation_enriched": {
 			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad"
+			            "Entity": "public_v_clean_geolocation_enriched"
 			          }
 			        },
-			        "ubicaciones_por_ciudad.state": {
+			        "public_v_clean_geolocation_enriched.city": {
 			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad.state"
+			            "Entity": "public_v_clean_geolocation_enriched.city"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "Where": {
-			          "Role": "ubicaciones_por_ciudad.state"
+			          "Role": "public_v_clean_geolocation_enriched.city"
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "ubicaciones_por_ciudad"
+			              "Role": "public_v_clean_geolocation_enriched"
 			            },
 			            "Prepositions": [
 			              {
@@ -9439,57 +9496,12 @@ cultureInfo es-ES
 			              }
 			            ],
 			            "Object": {
-			              "Role": "ubicaciones_por_ciudad.state"
+			              "Role": "public_v_clean_geolocation_enriched.city"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "ubicaciones_por_ciudad_are_in_states"
-			        }
-			      ]
-			    },
-			    "ubicaciones_por_ciudad_in_city": {
-			      "Binding": {
-			        "ConceptualEntity": "Ubicaciones por Ciudad"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "ubicaciones_por_ciudad": {
-			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad"
-			          }
-			        },
-			        "ubicaciones_por_ciudad.city": {
-			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad.city"
-			          }
-			        }
-			      },
-			      "SemanticSlots": {
-			        "Where": {
-			          "Role": "ubicaciones_por_ciudad.city"
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "ubicaciones_por_ciudad"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "ubicaciones_por_ciudad.city"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "ubicaciones_por_ciudad_are_in_cities"
+			          "ID": "public_v_clean_geolocation_enricheds_are_in_cities"
 			        }
 			      ]
 			    },

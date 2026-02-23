@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "e36fee7f2b570681cc6c",
   "position": {
-    "x": 614.10579345088161,
+    "x": 603,
     "y": 575,
     "z": 5000,
-    "height": 259.25692695214104,
-    "width": 954.471032745592,
+    "height": 259,
+    "width": 955,
     "tabOrder": 5000
   },
   "visual": {
@@ -26,8 +26,9 @@
                   "Property": "state"
                 }
               },
-              "queryRef": "Ubicaciones por Ciudad.state",
-              "nativeQueryRef": "state"
+              "queryRef": "public v_clean_geolocation_enriched.state",
+              "nativeQueryRef": "Estado",
+              "displayName": "Estado"
             }
           ]
         },
