@@ -48,23 +48,16 @@ table 'Puente Ordenes'
 
 		annotation SummarizationSetBy = Automatic
 
-	column estado_final
-		dataType: string
-		lineageTag: 210b2821-dd9b-4ffe-9ea2-5cd882a2d164
-		summarizeBy: none
-		sourceColumn: estado_final
-
-		annotation SummarizationSetBy = Automatic
-
 	partition 'Puente Ordenes' = m
 		mode: import
 		source =
 				let
 				    Origen = PostgreSQL.Database("localhost", "olist_analytics"),
 				    public_fact_orders_bridge = Origen{[Schema="public",Item="fact_orders_bridge"]}[Data],
-				    #"Columna condicional agregada" = Table.AddColumn(public_fact_orders_bridge, "estado_final", each if [zip_code_id] = null then "N/A" else [zip_code_id])
+				    #"Columna condicional agregada" = Table.AddColumn(public_fact_orders_bridge, "estado_final", each if [zip_code_id] = null then "N/A" else [zip_code_id]),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Columna condicional agregada",{"estado_final"})
 				in
-				    #"Columna condicional agregada"
+				    #"Columnas quitadas"
 
 	annotation PBI_NavigationStepName = Navegación
 

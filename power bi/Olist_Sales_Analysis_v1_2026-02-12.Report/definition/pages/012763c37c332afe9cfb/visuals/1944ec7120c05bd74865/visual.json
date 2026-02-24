@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "1944ec7120c05bd74865",
   "position": {
     "x": 30.000000000000004,
@@ -192,23 +192,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "b9377fe8e2b7397bb60b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Resumen de Ventas"
-              }
-            },
-            "Property": "category_name"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

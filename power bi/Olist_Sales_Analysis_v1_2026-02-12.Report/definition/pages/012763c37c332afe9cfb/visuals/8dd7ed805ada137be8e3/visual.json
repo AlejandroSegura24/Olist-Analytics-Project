@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "8dd7ed805ada137be8e3",
   "position": {
     "x": 614.10579345088161,
@@ -372,25 +372,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "0fdf7879514f16242bd6",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Satisfacción (reviews)"
-                  }
-                },
-                "Property": "review_score"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Descending"

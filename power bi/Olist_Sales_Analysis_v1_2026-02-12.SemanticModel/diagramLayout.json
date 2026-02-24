@@ -5,7 +5,7 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 0
+        "y": 13.195521453125803
       },
       "nodes": [
         {
@@ -42,7 +42,7 @@
           "nodeIndex": "Logística y Entregas",
           "nodeLineageTag": "f789019c-532e-4f3a-bce6-9b76e163b2f2",
           "size": {
-            "height": 284,
+            "height": 256.34554365207623,
             "width": 234
           },
           "zIndex": 2
@@ -92,8 +92,9 @@
             "y": 671.326157409254
           },
           "nodeIndex": "Ubicaciones por Ciudad",
+          "nodeLineageTag": "cc879205-8faa-4798-9b54-03cf544bc746",
           "size": {
-            "height": 200,
+            "height": 206.28510371543723,
             "width": 234
           },
           "zIndex": 0

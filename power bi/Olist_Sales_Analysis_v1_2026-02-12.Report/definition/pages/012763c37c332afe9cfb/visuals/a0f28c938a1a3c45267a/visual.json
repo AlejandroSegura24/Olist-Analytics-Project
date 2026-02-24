@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "a0f28c938a1a3c45267a",
   "position": {
     "x": 30.000000000000004,
@@ -296,6 +296,33 @@
             }
           }
         }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "showTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -370,7 +397,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "c9df9669d6d3123e6d08",
+        "name": "20323170c0490dd4cbd1",
         "field": {
           "Column": {
             "Expression": {
@@ -384,7 +411,7 @@
         "type": "Advanced"
       },
       {
-        "name": "f198de1fc32dae109134",
+        "name": "daa1d3f7327a8371821c",
         "field": {
           "Column": {
             "Expression": {

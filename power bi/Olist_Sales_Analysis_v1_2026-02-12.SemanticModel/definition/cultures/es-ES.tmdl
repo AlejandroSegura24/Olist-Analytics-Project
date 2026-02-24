@@ -3783,42 +3783,6 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "logística_y_entrega.entregas_a_tiempo": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Logística y Entregas",
-			          "ConceptualProperty": "% Entregas a Tiempo"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "% entregas a tiempo": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "percentage entrega a tiempo": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "pct entrega a tiempo": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        }
-			      ]
-			    },
 			    "pagos_de_pedido": {
 			      "Definition": {
 			        "Binding": {
@@ -5488,95 +5452,6 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "puente_ordene.estado_final": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Puente Ordenes",
-			          "ConceptualProperty": "estado_final"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "estado final": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "estado_final": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "final": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "concluding": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "closing": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "ultimate": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "finishing": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "absolute": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.452
-			          }
-			        },
-			        {
-			          "estado decider": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.451
-			          }
-			        }
-			      ]
-			    },
 			    "public_v_clean_geolocation_enriched": {
 			      "Definition": {
 			        "Binding": {
@@ -5840,16 +5715,6 @@ cultureInfo es-ES
 			            },
 			            "Weight": 0.466
 			          }
-			        },
-			        {
-			          "Latitud": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -5865,16 +5730,6 @@ cultureInfo es-ES
 			        {
 			          "longitude": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Longitud": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
