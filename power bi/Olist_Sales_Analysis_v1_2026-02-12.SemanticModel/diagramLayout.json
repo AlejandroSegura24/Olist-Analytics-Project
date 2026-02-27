@@ -5,7 +5,7 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 13.195521453125803
+        "y": 0
       },
       "nodes": [
         {
@@ -19,7 +19,7 @@
             "height": 283.17704581797761,
             "width": 234
           },
-          "zIndex": 5
+          "zIndex": 4
         },
         {
           "location": {
@@ -42,10 +42,10 @@
           "nodeIndex": "Logística y Entregas",
           "nodeLineageTag": "f789019c-532e-4f3a-bce6-9b76e163b2f2",
           "size": {
-            "height": 256.34554365207623,
+            "height": 282.74297925691258,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 7
         },
         {
           "location": {
@@ -58,7 +58,7 @@
             "height": 238.34554365207623,
             "width": 234
           },
-          "zIndex": 6
+          "zIndex": 5
         },
         {
           "location": {
@@ -71,7 +71,7 @@
             "height": 231.42551857718604,
             "width": 234
           },
-          "zIndex": 7
+          "zIndex": 6
         },
         {
           "location": {
@@ -84,7 +84,7 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 1
+          "zIndex": 2
         },
         {
           "location": {
@@ -97,7 +97,7 @@
             "height": 206.28510371543723,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
         }
       ],
       "name": "Todas las tablas",

@@ -60,9 +60,10 @@ table 'pagos de pedidos'
 		source =
 				let
 				    Origen = PostgreSQL.Database("localhost", "olist_analytics"),
-				    public_order_payments = Origen{[Schema="public",Item="order_payments"]}[Data]
+				    public_order_payments = Origen{[Schema="public",Item="order_payments"]}[Data],
+				    #"Filas filtradas" = Table.SelectRows(public_order_payments, each [order_id] <> "eaec582d6403b30186964f6df957047e")
 				in
-				    public_order_payments
+				    #"Filas filtradas"
 
 	annotation PBI_NavigationStepName = Navegación
 

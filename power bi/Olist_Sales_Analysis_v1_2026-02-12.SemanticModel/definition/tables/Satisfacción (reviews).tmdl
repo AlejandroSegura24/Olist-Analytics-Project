@@ -64,9 +64,10 @@ table 'Satisfacción (reviews)'
 		source =
 				let
 				    Origen = PostgreSQL.Database("localhost", "olist_analytics"),
-				    public_v_customer_satisfaction = Origen{[Schema="public",Item="v_customer_satisfaction"]}[Data]
+				    public_v_customer_satisfaction = Origen{[Schema="public",Item="v_customer_satisfaction"]}[Data],
+				    #"Filas filtradas" = Table.SelectRows(public_v_customer_satisfaction, each [order_id] <> "eaec582d6403b30186964f6df957047e")
 				in
-				    public_v_customer_satisfaction
+				    #"Filas filtradas"
 
 	annotation PBI_ResultType = Table
 

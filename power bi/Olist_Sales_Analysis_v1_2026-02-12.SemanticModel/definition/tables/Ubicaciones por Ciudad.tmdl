@@ -55,9 +55,12 @@ table 'Ubicaciones por Ciudad'
 		source =
 				let
 				    Origen = PostgreSQL.Database("localhost", "olist_analytics"),
-				    public_v_clean_geolocation_enriched = Origen{[Schema="public",Item="v_clean_geolocation_enriched"]}[Data]
+				    public_v_clean_geolocation_enriched = Origen{[Schema="public",Item="v_clean_geolocation_enriched"]}[Data],
+				    #"Filas filtradas" = Table.SelectRows(public_v_clean_geolocation_enriched, each [zip_code_id] <> 95130 and [zip_code_id] <> 68379 and [zip_code_id] <> 78131 and [zip_code_id] <> 18243 and [zip_code_id] <> 57319 and [zip_code_id] <> 53990 and [zip_code_id] <> 45983 and [zip_code_id] <> 58441)
 				in
-				    public_v_clean_geolocation_enriched
+				    #"Filas filtradas"
 
-	changedProperty = Name
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
 

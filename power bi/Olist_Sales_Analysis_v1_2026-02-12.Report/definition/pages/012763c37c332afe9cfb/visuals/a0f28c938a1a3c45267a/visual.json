@@ -393,37 +393,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "20323170c0490dd4cbd1",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Ubicaciones por Ciudad"
-              }
-            },
-            "Property": "longitude"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "daa1d3f7327a8371821c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Ubicaciones por Ciudad"
-              }
-            },
-            "Property": "latitude"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
