@@ -54,11 +54,11 @@ table 'Puente Ordenes'
 				let
 				    Origen = PostgreSQL.Database("localhost", "olist_analytics"),
 				    public_fact_orders_bridge = Origen{[Schema="public",Item="fact_orders_bridge"]}[Data],
-				    #"Columna condicional agregada" = Table.AddColumn(public_fact_orders_bridge, "estado_final", each if [zip_code_id] = null then "N/A" else [zip_code_id]),
-				    #"Columnas quitadas" = Table.RemoveColumns(#"Columna condicional agregada",{"estado_final"}),
-				    #"Filas filtradas" = Table.SelectRows(#"Columnas quitadas", each [zip_code_id] <> 57319)
+				    #"Valor reemplazado" = Table.ReplaceValue(public_fact_orders_bridge,"eaec582d6403b30186964f6df957047e",null,Replacer.ReplaceValue,{"order_id"}),
+				    #"Filas ordenadas" = Table.Sort(#"Valor reemplazado",{{"order_id", Order.Descending}}),
+				    #"Filas superiores quitadas" = Table.Skip(#"Filas ordenadas",1)
 				in
-				    #"Filas filtradas"
+				    #"Filas superiores quitadas"
 
 	annotation PBI_NavigationStepName = Navegación
 

@@ -61,9 +61,11 @@ table 'pagos de pedidos'
 				let
 				    Origen = PostgreSQL.Database("localhost", "olist_analytics"),
 				    public_order_payments = Origen{[Schema="public",Item="order_payments"]}[Data],
-				    #"Filas filtradas" = Table.SelectRows(public_order_payments, each [order_id] <> "eaec582d6403b30186964f6df957047e")
+				    #"Valor reemplazado" = Table.ReplaceValue(public_order_payments,"eaec582d6403b30186964f6df957047e",null,Replacer.ReplaceValue,{"order_id"}),
+				    #"Filas ordenadas" = Table.Sort(#"Valor reemplazado",{{"order_id", Order.Descending}}),
+				    #"Filas superiores quitadas" = Table.Skip(#"Filas ordenadas",1)
 				in
-				    #"Filas filtradas"
+				    #"Filas superiores quitadas"
 
 	annotation PBI_NavigationStepName = Navegación
 

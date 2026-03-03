@@ -65,9 +65,11 @@ table 'Satisfacción (reviews)'
 				let
 				    Origen = PostgreSQL.Database("localhost", "olist_analytics"),
 				    public_v_customer_satisfaction = Origen{[Schema="public",Item="v_customer_satisfaction"]}[Data],
-				    #"Filas filtradas" = Table.SelectRows(public_v_customer_satisfaction, each [order_id] <> "eaec582d6403b30186964f6df957047e")
+				    #"Valor reemplazado" = Table.ReplaceValue(public_v_customer_satisfaction,"eaec582d6403b30186964f6df957047e",null,Replacer.ReplaceValue,{"order_id"}),
+				    #"Filas ordenadas" = Table.Sort(#"Valor reemplazado",{{"order_id", Order.Descending}}),
+				    #"Filas superiores quitadas" = Table.Skip(#"Filas ordenadas",1)
 				in
-				    #"Filas filtradas"
+				    #"Filas superiores quitadas"
 
 	annotation PBI_ResultType = Table
 

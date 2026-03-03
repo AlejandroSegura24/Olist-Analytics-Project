@@ -68,9 +68,12 @@ table 'Finanzas y Cuotas'
 		source =
 				let
 				    Origen = PostgreSQL.Database("localhost", "olist_analytics"),
-				    public_v_order_finance_details = Origen{[Schema="public",Item="v_order_finance_details"]}[Data]
+				    public_v_order_finance_details = Origen{[Schema="public",Item="v_order_finance_details"]}[Data],
+				    #"Valor reemplazado" = Table.ReplaceValue(public_v_order_finance_details,"eaec582d6403b30186964f6df957047e",null,Replacer.ReplaceValue,{"order_id"}),
+				    #"Filas ordenadas" = Table.Sort(#"Valor reemplazado",{{"order_id", Order.Descending}}),
+				    #"Filas superiores quitadas" = Table.Skip(#"Filas ordenadas",1)
 				in
-				    public_v_order_finance_details
+				    #"Filas superiores quitadas"
 
 	annotation PBI_ResultType = Table
 
