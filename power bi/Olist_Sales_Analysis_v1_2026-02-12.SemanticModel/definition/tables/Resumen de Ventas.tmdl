@@ -1,6 +1,30 @@
 table 'Resumen de Ventas'
 	lineageTag: edfadd81-3842-47e5-834c-141a5a566b1a
 
+	measure 'Total Sales' = SUM('Resumen de Ventas'[price])
+		lineageTag: 84dde880-5eed-4caa-ac23-915e31691ccc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Freight' = SUM('Resumen de Ventas'[freight_value])
+		lineageTag: 14895b77-48fb-4ea4-9b45-3f7ce8b24a6b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Order Count' = DISTINCTCOUNT('Resumen de Ventas'[order_id])
+		formatString: 0
+		lineageTag: 29d717f3-4b61-4969-a33c-989479313e4a
+
+	measure 'Avg Ticket' = DIVIDE([Total Sales], [Order Count])
+		lineageTag: f2a4d2c9-97bd-48fa-8621-aa44bcc0b9a2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'total mismo mes del año anterior' = CALCULATE([Total Sales], DATEADD('Resumen de Ventas'[order_date].[Date], -1, YEAR))
+		lineageTag: aeb0d96c-c83c-46a8-a2b2-453dcf90688e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column order_id
 		dataType: string
 		lineageTag: 96f39393-c7cc-4a76-8225-ffc3f1e22b71
@@ -74,6 +98,22 @@ table 'Resumen de Ventas'
 		dataCategory: StateOrProvince
 		summarizeBy: none
 		sourceColumn: seller_state
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Día de semana #' = WEEKDAY([order_date],1)
+		formatString: 0
+		lineageTag: 40b5ea36-6445-4968-af4b-17bd82d43df5
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Día de la semana texto' = SWITCH([Día de semana #],1,"Domingo",2,"Lunes",3,"Martes",4,"Miercoles",5,"Jueves",6,"Viernes",7,"Sábado")
+		lineageTag: 786e5cd5-748f-4ce9-b401-59e6ea777c6c
+		summarizeBy: none
+		sortByColumn: 'Día de semana #'
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 

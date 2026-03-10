@@ -1,0 +1,85 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "1fbab5f4986439741320",
+  "position": {
+    "x": 31.428571428571431,
+    "y": 425.71428571428572,
+    "z": 7000,
+    "height": 290,
+    "width": 815.71428571428578,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "scatterChart",
+    "query": {
+      "queryState": {
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Resumen de Ventas"
+                    }
+                  },
+                  "Property": "category_name"
+                }
+              },
+              "queryRef": "Resumen de Ventas.category_name",
+              "nativeQueryRef": "category_name"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Finanzas y Cuotas"
+                        }
+                      },
+                      "Property": "items_value"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Finanzas y Cuotas.items_value)",
+              "nativeQueryRef": "Suma de items_value",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Finanzas y Cuotas"
+                        }
+                      },
+                      "Property": "shipping_value"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Finanzas y Cuotas.shipping_value)",
+              "nativeQueryRef": "Suma de shipping_value"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

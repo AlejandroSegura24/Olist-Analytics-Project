@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "f7e5bdf2904c84a22825",
   "position": {
-    "x": 17.229219143576824,
-    "y": 38.085642317380348,
+    "x": 14.339058999253174,
+    "y": 21.030619865571321,
     "z": 0,
-    "height": 126.04534005037783,
-    "width": 363.62720403022666,
+    "height": 83.166542195668413,
+    "width": 289.64899178491413,
     "tabOrder": 0
   },
   "visual": {
@@ -17,22 +17,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Finanzas y Cuotas"
-                        }
-                      },
-                      "Property": "items_value"
+                    "SourceRef": {
+                      "Entity": "Resumen de Ventas"
                     }
                   },
-                  "Function": 0
+                  "Property": "Total Sales"
                 }
               },
-              "queryRef": "Sum(Finanzas y Cuotas.items_value)",
-              "nativeQueryRef": "Suma de items_value"
+              "queryRef": "Resumen de Ventas.Total Sales",
+              "nativeQueryRef": "Total Sales"
             }
           ]
         }
@@ -41,18 +36,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Finanzas y Cuotas"
-                      }
-                    },
-                    "Property": "items_value"
+                  "SourceRef": {
+                    "Entity": "Resumen de Ventas"
                   }
                 },
-                "Function": 0
+                "Property": "Total Sales"
               }
             },
             "direction": "Descending"

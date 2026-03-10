@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "f02696ec7ab6d6aa06bb",
   "position": {
-    "x": 448.86649874055411,
-    "y": 36.272040302267,
+    "x": 547.14285714285722,
+    "y": 20,
     "z": 1000,
-    "height": 127.85894206549118,
-    "width": 363.62720403022666,
+    "height": 90,
+    "width": 362.85714285714289,
     "tabOrder": 1000
   },
   "visual": {
@@ -17,22 +17,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Resumen de Ventas"
-                        }
-                      },
-                      "Property": "price"
+                    "SourceRef": {
+                      "Entity": "Resumen de Ventas"
                     }
                   },
-                  "Function": 0
+                  "Property": "Order Count"
                 }
               },
-              "queryRef": "Sum(Resumen de Ventas.price)",
-              "nativeQueryRef": "Suma de price"
+              "queryRef": "Resumen de Ventas.Order Count",
+              "nativeQueryRef": "Order Count"
             }
           ]
         }
@@ -41,18 +36,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Resumen de Ventas"
-                      }
-                    },
-                    "Property": "price"
+                  "SourceRef": {
+                    "Entity": "Resumen de Ventas"
                   }
                 },
-                "Function": 0
+                "Property": "Order Count"
               }
             },
             "direction": "Descending"

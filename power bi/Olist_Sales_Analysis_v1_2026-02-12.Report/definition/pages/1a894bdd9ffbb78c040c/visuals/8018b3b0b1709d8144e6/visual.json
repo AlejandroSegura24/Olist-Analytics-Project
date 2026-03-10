@@ -1,0 +1,56 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "8018b3b0b1709d8144e6",
+  "position": {
+    "x": 1107.1428571428571,
+    "y": 24.285714285714288,
+    "z": 3000,
+    "height": 81.428571428571431,
+    "width": 321.42857142857144,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Resumen de Ventas"
+                    }
+                  },
+                  "Property": "Avg Ticket"
+                }
+              },
+              "queryRef": "Resumen de Ventas.Avg Ticket",
+              "nativeQueryRef": "Avg Ticket"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Resumen de Ventas"
+                  }
+                },
+                "Property": "Avg Ticket"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
