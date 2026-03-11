@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "1fbab5f4986439741320",
   "position": {
-    "x": 31.428571428571431,
-    "y": 425.71428571428572,
-    "z": 7000,
+    "x": 13.75,
+    "y": 1210,
+    "z": 5000,
     "height": 290,
-    "width": 815.71428571428578,
-    "tabOrder": 7000
+    "width": 1467.5,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "scatterChart",
@@ -79,6 +79,41 @@
           ]
         }
       }
+    },
+    "objects": {
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

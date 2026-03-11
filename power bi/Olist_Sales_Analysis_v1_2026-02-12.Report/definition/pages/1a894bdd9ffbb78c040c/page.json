@@ -4,46 +4,17 @@
   "displayName": "Página 1",
   "displayOption": "FitToPage",
   "height": 1500,
-  "width": 2000,
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "36608625c07da17745d9",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Resumen de Ventas"
-              }
-            },
-            "Property": "category_name"
-          }
-        },
-        "type": "Categorical",
-        "howCreated": "Drillthrough"
-      }
-    ]
-  },
-  "pageBinding": {
-    "name": "15f738fc09e2c56e5b89",
-    "type": "Drillthrough",
-    "parameters": [
-      {
-        "name": "aa236815c50500794012",
-        "boundFilter": "36608625c07da17745d9",
-        "asAggregation": false,
-        "qnaSingleSelectRequired": false,
-        "fieldExpr": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Resumen de Ventas"
-              }
-            },
-            "Property": "category_name"
-          }
-        }
-      }
-    ]
-  }
+  "width": 1500,
+  "visualInteractions": [
+    {
+      "source": "0c875e7ae037b1d50510",
+      "target": "6ec00a3554104038bd58",
+      "type": "DataFilter"
+    },
+    {
+      "source": "0c875e7ae037b1d50510",
+      "target": "15bda1b750a513ade05d",
+      "type": "DataFilter"
+    }
+  ]
 }

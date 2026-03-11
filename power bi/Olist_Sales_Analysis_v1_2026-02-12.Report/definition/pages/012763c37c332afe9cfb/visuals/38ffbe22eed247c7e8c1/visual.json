@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "38ffbe22eed247c7e8c1",
   "position": {
     "x": 1213.5544340302813,
@@ -22,16 +22,16 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Resumen de Ventas"
+                          "Entity": "pagos de pedidos"
                         }
                       },
-                      "Property": "price"
+                      "Property": "payment_value"
                     }
                   },
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(Resumen de Ventas.price)",
+              "queryRef": "Sum(pagos de pedidos.payment_value)",
               "nativeQueryRef": "Volumen de Negocio ($)",
               "displayName": "Volumen de Negocio ($)"
             }
@@ -47,10 +47,10 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "Resumen de Ventas"
+                        "Entity": "pagos de pedidos"
                       }
                     },
-                    "Property": "price"
+                    "Property": "payment_value"
                   }
                 },
                 "Function": 0

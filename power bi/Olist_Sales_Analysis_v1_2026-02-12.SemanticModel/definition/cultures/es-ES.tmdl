@@ -661,6 +661,16 @@ cultureInfo es-ES
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Total de ventas por categoría": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -5452,7 +5462,7 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "public_v_clean_geolocation_enriched": {
+			    "ubicaciones_por_ciudad": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Ubicaciones por Ciudad"
@@ -5461,13 +5471,20 @@ cultureInfo es-ES
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "public v_clean_geolocation_enriched": {
+			          "ubicaciones por ciudad": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ubicacione por ciudad": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
 			          }
 			        }
 			      ]
 			    },
-			    "public_v_clean_geolocation_enriched.zip_code_id": {
+			    "ubicaciones_por_ciudad.zip_code_id": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Ubicaciones por Ciudad",
@@ -5602,7 +5619,7 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "public_v_clean_geolocation_enriched.latitude": {
+			    "ubicaciones_por_ciudad.latitude": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Ubicaciones por Ciudad",
@@ -5718,7 +5735,7 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "public_v_clean_geolocation_enriched.longitude": {
+			    "ubicaciones_por_ciudad.longitude": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Ubicaciones por Ciudad",
@@ -5734,7 +5751,7 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "public_v_clean_geolocation_enriched.city": {
+			    "ubicaciones_por_ciudad.city": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Ubicaciones por Ciudad",
@@ -5798,9 +5815,10 @@ cultureInfo es-ES
 			            "Weight": 0.714
 			          }
 			        }
-			      ]
+			      ],
+			      "SemanticType": "Location"
 			    },
-			    "public_v_clean_geolocation_enriched.state": {
+			    "ubicaciones_por_ciudad.state": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Ubicaciones por Ciudad",
@@ -5812,6 +5830,12 @@ cultureInfo es-ES
 			        {
 			          "state": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "state or province": {
+			            "State": "Generated",
+			            "Weight": 0.7
 			          }
 			        },
 			        {
@@ -5882,6 +5906,335 @@ cultureInfo es-ES
 			              "Agent": "PowerBI.VisualColumnRename"
 			            },
 			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "resumen_de_venta.día_de_semana_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Resumen de Ventas",
+			          "ConceptualProperty": "Día de semana #"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día de semana #": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "día de semana no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "día de semana num": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "día de semana number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "resumen_de_venta.día_de_la_semana_texto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Resumen de Ventas",
+			          "ConceptualProperty": "Día de la semana texto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día de la semana texto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "resumen_de_venta.total_sales": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Resumen de Ventas",
+			          "ConceptualProperty": "Total Sales"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total sales": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sales": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "total sale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "sale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "aggregate sale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall sale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "resumen_de_venta.order_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Resumen de Ventas",
+			          "ConceptualProperty": "Order Count"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "Cantidad de ordenes": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "resumen_de_venta.avg_ticket": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Resumen de Ventas",
+			          "ConceptualProperty": "Avg Ticket"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avg ticket": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "average ticket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "avg coupon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "avg permit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "avg voucher": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "avg receipt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "avg marker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "avg sticker": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "avg label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "avg tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "avg tab": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "resumen_de_venta.total_mismo_mes_del_año_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Resumen de Ventas",
+			          "ConceptualProperty": "total mismo mes del año anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total mismo mes del año anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "logística_y_entrega.entregas_a_tiempo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Logística y Entregas",
+			          "ConceptualProperty": "% Entregas a Tiempo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% entregas a tiempo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage entrega a tiempo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct entrega a tiempo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
 			          }
 			        }
 			      ]
@@ -7406,85 +7759,6 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "puente_ordene_has_public_v_clean_geolocation_enriched": {
-			      "Binding": {
-			        "ConceptualEntity": "Puente Ordenes"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "puente_ordene": {
-			          "Target": {
-			            "Entity": "puente_ordene"
-			          }
-			        },
-			        "public_v_clean_geolocation_enriched": {
-			          "Target": {
-			            "Entity": "public_v_clean_geolocation_enriched"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "puente_ordene"
-			            },
-			            "Object": {
-			              "Role": "public_v_clean_geolocation_enriched"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "puente_ordenes_have_public_v_clean_geolocation_enricheds"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_v_clean_geolocation_enriched"
-			            },
-			            "Object": {
-			              "Role": "puente_ordene"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "public_v_clean_geolocation_enricheds_have_puente_ordenes"
-			        }
-			      ]
-			    },
-			    "puente_ordene_has_finanzas_y_cuota": {
-			      "Binding": {
-			        "ConceptualEntity": "Puente Ordenes"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "puente_ordene": {
-			          "Target": {
-			            "Entity": "puente_ordene"
-			          }
-			        },
-			        "finanzas_y_cuota": {
-			          "Target": {
-			            "Entity": "finanzas_y_cuota"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "puente_ordene"
-			            },
-			            "Object": {
-			              "Role": "finanzas_y_cuota"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "puente_ordenes_have_finanzas_y_cuotas"
-			        }
-			      ]
-			    },
 			    "puente_ordene_has_ubicaciones_por_ciudad": {
 			      "Binding": {
 			        "ConceptualEntity": "Puente Ordenes"
@@ -7528,6 +7802,39 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "ubicaciones_por_ciudad_have_puente_ordenes"
+			        }
+			      ]
+			    },
+			    "puente_ordene_has_finanzas_y_cuota": {
+			      "Binding": {
+			        "ConceptualEntity": "Puente Ordenes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "puente_ordene": {
+			          "Target": {
+			            "Entity": "puente_ordene"
+			          }
+			        },
+			        "finanzas_y_cuota": {
+			          "Target": {
+			            "Entity": "finanzas_y_cuota"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "puente_ordene"
+			            },
+			            "Object": {
+			              "Role": "finanzas_y_cuota"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "puente_ordenes_have_finanzas_y_cuotas"
 			        }
 			      ]
 			    },
@@ -7755,20 +8062,251 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "public_v_clean_geolocation_enriched_has_state": {
+			    "logística_y_entrega_has_entregas_a_tiempo": {
+			      "Binding": {
+			        "ConceptualEntity": "Logística y Entregas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "logística_y_entrega": {
+			          "Target": {
+			            "Entity": "logística_y_entrega"
+			          }
+			        },
+			        "logística_y_entrega.entregas_a_tiempo": {
+			          "Target": {
+			            "Entity": "logística_y_entrega.entregas_a_tiempo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "logística_y_entrega"
+			            },
+			            "Object": {
+			              "Role": "logística_y_entrega.entregas_a_tiempo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "logística_y_entregas_have__entregas_a_tiempo"
+			        }
+			      ]
+			    },
+			    "resumen_de_venta_has_total_mismo_mes_del_año_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "Resumen de Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "resumen_de_venta": {
+			          "Target": {
+			            "Entity": "resumen_de_venta"
+			          }
+			        },
+			        "resumen_de_venta.total_mismo_mes_del_año_anterior": {
+			          "Target": {
+			            "Entity": "resumen_de_venta.total_mismo_mes_del_año_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "resumen_de_venta"
+			            },
+			            "Object": {
+			              "Role": "resumen_de_venta.total_mismo_mes_del_año_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "resumen_de_ventas_have_total_mismo_mes_del_año_anterior"
+			        }
+			      ]
+			    },
+			    "resumen_de_venta_has_avg_ticket": {
+			      "Binding": {
+			        "ConceptualEntity": "Resumen de Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "resumen_de_venta": {
+			          "Target": {
+			            "Entity": "resumen_de_venta"
+			          }
+			        },
+			        "resumen_de_venta.avg_ticket": {
+			          "Target": {
+			            "Entity": "resumen_de_venta.avg_ticket"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "resumen_de_venta"
+			            },
+			            "Object": {
+			              "Role": "resumen_de_venta.avg_ticket"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "resumen_de_ventas_have_avg_ticket"
+			        }
+			      ]
+			    },
+			    "resumen_de_venta_has_order_count": {
+			      "Binding": {
+			        "ConceptualEntity": "Resumen de Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "resumen_de_venta": {
+			          "Target": {
+			            "Entity": "resumen_de_venta"
+			          }
+			        },
+			        "resumen_de_venta.order_count": {
+			          "Target": {
+			            "Entity": "resumen_de_venta.order_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "resumen_de_venta"
+			            },
+			            "Object": {
+			              "Role": "resumen_de_venta.order_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "resumen_de_ventas_have_order_count"
+			        }
+			      ]
+			    },
+			    "resumen_de_venta_has_total_sales": {
+			      "Binding": {
+			        "ConceptualEntity": "Resumen de Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "resumen_de_venta": {
+			          "Target": {
+			            "Entity": "resumen_de_venta"
+			          }
+			        },
+			        "resumen_de_venta.total_sales": {
+			          "Target": {
+			            "Entity": "resumen_de_venta.total_sales"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "resumen_de_venta"
+			            },
+			            "Object": {
+			              "Role": "resumen_de_venta.total_sales"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "resumen_de_ventas_have_total_sales"
+			        }
+			      ]
+			    },
+			    "resumen_de_venta_has_día_de_la_semana_texto": {
+			      "Binding": {
+			        "ConceptualEntity": "Resumen de Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "resumen_de_venta": {
+			          "Target": {
+			            "Entity": "resumen_de_venta"
+			          }
+			        },
+			        "resumen_de_venta.día_de_la_semana_texto": {
+			          "Target": {
+			            "Entity": "resumen_de_venta.día_de_la_semana_texto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "resumen_de_venta"
+			            },
+			            "Object": {
+			              "Role": "resumen_de_venta.día_de_la_semana_texto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "resumen_de_ventas_have_día_de_la_semana_textos"
+			        }
+			      ]
+			    },
+			    "resumen_de_venta_has_día_de_semana_": {
+			      "Binding": {
+			        "ConceptualEntity": "Resumen de Ventas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "resumen_de_venta": {
+			          "Target": {
+			            "Entity": "resumen_de_venta"
+			          }
+			        },
+			        "resumen_de_venta.día_de_semana_": {
+			          "Target": {
+			            "Entity": "resumen_de_venta.día_de_semana_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "resumen_de_venta"
+			            },
+			            "Object": {
+			              "Role": "resumen_de_venta.día_de_semana_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "resumen_de_ventas_have_día_de_semana_"
+			        }
+			      ]
+			    },
+			    "ubicaciones_por_ciudad_has_state": {
 			      "Binding": {
 			        "ConceptualEntity": "Ubicaciones por Ciudad"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "public_v_clean_geolocation_enriched": {
+			        "ubicaciones_por_ciudad": {
 			          "Target": {
-			            "Entity": "public_v_clean_geolocation_enriched"
+			            "Entity": "ubicaciones_por_ciudad"
 			          }
 			        },
-			        "public_v_clean_geolocation_enriched.state": {
+			        "ubicaciones_por_ciudad.state": {
 			          "Target": {
-			            "Entity": "public_v_clean_geolocation_enriched.state"
+			            "Entity": "ubicaciones_por_ciudad.state"
 			          }
 			        }
 			      },
@@ -7776,32 +8314,32 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "public_v_clean_geolocation_enriched"
+			              "Role": "ubicaciones_por_ciudad"
 			            },
 			            "Object": {
-			              "Role": "public_v_clean_geolocation_enriched.state"
+			              "Role": "ubicaciones_por_ciudad.state"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "public_v_clean_geolocation_enricheds_have_states"
+			          "ID": "ubicaciones_por_ciudad_have_states"
 			        }
 			      ]
 			    },
-			    "public_v_clean_geolocation_enriched_has_city": {
+			    "ubicaciones_por_ciudad_has_city": {
 			      "Binding": {
 			        "ConceptualEntity": "Ubicaciones por Ciudad"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "public_v_clean_geolocation_enriched": {
+			        "ubicaciones_por_ciudad": {
 			          "Target": {
-			            "Entity": "public_v_clean_geolocation_enriched"
+			            "Entity": "ubicaciones_por_ciudad"
 			          }
 			        },
-			        "public_v_clean_geolocation_enriched.city": {
+			        "ubicaciones_por_ciudad.city": {
 			          "Target": {
-			            "Entity": "public_v_clean_geolocation_enriched.city"
+			            "Entity": "ubicaciones_por_ciudad.city"
 			          }
 			        }
 			      },
@@ -7809,32 +8347,32 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "public_v_clean_geolocation_enriched"
+			              "Role": "ubicaciones_por_ciudad"
 			            },
 			            "Object": {
-			              "Role": "public_v_clean_geolocation_enriched.city"
+			              "Role": "ubicaciones_por_ciudad.city"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "public_v_clean_geolocation_enricheds_have_cities"
+			          "ID": "ubicaciones_por_ciudad_have_cities"
 			        }
 			      ]
 			    },
-			    "public_v_clean_geolocation_enriched_has_longitude": {
+			    "ubicaciones_por_ciudad_has_longitude": {
 			      "Binding": {
 			        "ConceptualEntity": "Ubicaciones por Ciudad"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "public_v_clean_geolocation_enriched": {
+			        "ubicaciones_por_ciudad": {
 			          "Target": {
-			            "Entity": "public_v_clean_geolocation_enriched"
+			            "Entity": "ubicaciones_por_ciudad"
 			          }
 			        },
-			        "public_v_clean_geolocation_enriched.longitude": {
+			        "ubicaciones_por_ciudad.longitude": {
 			          "Target": {
-			            "Entity": "public_v_clean_geolocation_enriched.longitude"
+			            "Entity": "ubicaciones_por_ciudad.longitude"
 			          }
 			        }
 			      },
@@ -7842,32 +8380,32 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "public_v_clean_geolocation_enriched"
+			              "Role": "ubicaciones_por_ciudad"
 			            },
 			            "Object": {
-			              "Role": "public_v_clean_geolocation_enriched.longitude"
+			              "Role": "ubicaciones_por_ciudad.longitude"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "public_v_clean_geolocation_enricheds_have_longitudes"
+			          "ID": "ubicaciones_por_ciudad_have_longitudes"
 			        }
 			      ]
 			    },
-			    "public_v_clean_geolocation_enriched_has_latitude": {
+			    "ubicaciones_por_ciudad_has_latitude": {
 			      "Binding": {
 			        "ConceptualEntity": "Ubicaciones por Ciudad"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "public_v_clean_geolocation_enriched": {
+			        "ubicaciones_por_ciudad": {
 			          "Target": {
-			            "Entity": "public_v_clean_geolocation_enriched"
+			            "Entity": "ubicaciones_por_ciudad"
 			          }
 			        },
-			        "public_v_clean_geolocation_enriched.latitude": {
+			        "ubicaciones_por_ciudad.latitude": {
 			          "Target": {
-			            "Entity": "public_v_clean_geolocation_enriched.latitude"
+			            "Entity": "ubicaciones_por_ciudad.latitude"
 			          }
 			        }
 			      },
@@ -7875,32 +8413,32 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "public_v_clean_geolocation_enriched"
+			              "Role": "ubicaciones_por_ciudad"
 			            },
 			            "Object": {
-			              "Role": "public_v_clean_geolocation_enriched.latitude"
+			              "Role": "ubicaciones_por_ciudad.latitude"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "public_v_clean_geolocation_enricheds_have_latitudes"
+			          "ID": "ubicaciones_por_ciudad_have_latitudes"
 			        }
 			      ]
 			    },
-			    "public_v_clean_geolocation_enriched_has_zip_code_id": {
+			    "ubicaciones_por_ciudad_has_zip_code_id": {
 			      "Binding": {
 			        "ConceptualEntity": "Ubicaciones por Ciudad"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "public_v_clean_geolocation_enriched": {
+			        "ubicaciones_por_ciudad": {
 			          "Target": {
-			            "Entity": "public_v_clean_geolocation_enriched"
+			            "Entity": "ubicaciones_por_ciudad"
 			          }
 			        },
-			        "public_v_clean_geolocation_enriched.zip_code_id": {
+			        "ubicaciones_por_ciudad.zip_code_id": {
 			          "Target": {
-			            "Entity": "public_v_clean_geolocation_enriched.zip_code_id"
+			            "Entity": "ubicaciones_por_ciudad.zip_code_id"
 			          }
 			        }
 			      },
@@ -7908,48 +8446,15 @@ cultureInfo es-ES
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "public_v_clean_geolocation_enriched"
+			              "Role": "ubicaciones_por_ciudad"
 			            },
 			            "Object": {
-			              "Role": "public_v_clean_geolocation_enriched.zip_code_id"
+			              "Role": "ubicaciones_por_ciudad.zip_code_id"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "public_v_clean_geolocation_enricheds_have_zip_code_ids"
-			        }
-			      ]
-			    },
-			    "puente_ordene_has_estado_final": {
-			      "Binding": {
-			        "ConceptualEntity": "Puente Ordenes"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "puente_ordene": {
-			          "Target": {
-			            "Entity": "puente_ordene"
-			          }
-			        },
-			        "puente_ordene.estado_final": {
-			          "Target": {
-			            "Entity": "puente_ordene.estado_final"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "puente_ordene"
-			            },
-			            "Object": {
-			              "Role": "puente_ordene.estado_final"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "puente_ordenes_have_estado_finals"
+			          "ID": "ubicaciones_por_ciudad_have_zip_code_ids"
 			        }
 			      ]
 			    },
@@ -8280,39 +8785,6 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "pagos_de_pedidos_have_payment_sequential"
-			        }
-			      ]
-			    },
-			    "logística_y_entrega_has_entregas_a_tiempo": {
-			      "Binding": {
-			        "ConceptualEntity": "Logística y Entregas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "logística_y_entrega": {
-			          "Target": {
-			            "Entity": "logística_y_entrega"
-			          }
-			        },
-			        "logística_y_entrega.entregas_a_tiempo": {
-			          "Target": {
-			            "Entity": "logística_y_entrega.entregas_a_tiempo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "logística_y_entrega"
-			            },
-			            "Object": {
-			              "Role": "logística_y_entrega.entregas_a_tiempo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "logística_y_entregas_have__entregas_a_tiempo"
 			        }
 			      ]
 			    },
@@ -9270,33 +9742,33 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "public_v_clean_geolocation_enriched_in_state": {
+			    "ubicaciones_por_ciudad_in_state": {
 			      "Binding": {
 			        "ConceptualEntity": "Ubicaciones por Ciudad"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "public_v_clean_geolocation_enriched": {
+			        "ubicaciones_por_ciudad": {
 			          "Target": {
-			            "Entity": "public_v_clean_geolocation_enriched"
+			            "Entity": "ubicaciones_por_ciudad"
 			          }
 			        },
-			        "public_v_clean_geolocation_enriched.state": {
+			        "ubicaciones_por_ciudad.state": {
 			          "Target": {
-			            "Entity": "public_v_clean_geolocation_enriched.state"
+			            "Entity": "ubicaciones_por_ciudad.state"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "Where": {
-			          "Role": "public_v_clean_geolocation_enriched.state"
+			          "Role": "ubicaciones_por_ciudad.state"
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "public_v_clean_geolocation_enriched"
+			              "Role": "ubicaciones_por_ciudad"
 			            },
 			            "Prepositions": [
 			              {
@@ -9306,42 +9778,42 @@ cultureInfo es-ES
 			              }
 			            ],
 			            "Object": {
-			              "Role": "public_v_clean_geolocation_enriched.state"
+			              "Role": "ubicaciones_por_ciudad.state"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "public_v_clean_geolocation_enricheds_are_in_states"
+			          "ID": "ubicaciones_por_ciudad_are_in_states"
 			        }
 			      ]
 			    },
-			    "public_v_clean_geolocation_enriched_in_city": {
+			    "ubicaciones_por_ciudad_in_city": {
 			      "Binding": {
 			        "ConceptualEntity": "Ubicaciones por Ciudad"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "public_v_clean_geolocation_enriched": {
+			        "ubicaciones_por_ciudad": {
 			          "Target": {
-			            "Entity": "public_v_clean_geolocation_enriched"
+			            "Entity": "ubicaciones_por_ciudad"
 			          }
 			        },
-			        "public_v_clean_geolocation_enriched.city": {
+			        "ubicaciones_por_ciudad.city": {
 			          "Target": {
-			            "Entity": "public_v_clean_geolocation_enriched.city"
+			            "Entity": "ubicaciones_por_ciudad.city"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "Where": {
-			          "Role": "public_v_clean_geolocation_enriched.city"
+			          "Role": "ubicaciones_por_ciudad.city"
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "public_v_clean_geolocation_enriched"
+			              "Role": "ubicaciones_por_ciudad"
 			            },
 			            "Prepositions": [
 			              {
@@ -9351,12 +9823,12 @@ cultureInfo es-ES
 			              }
 			            ],
 			            "Object": {
-			              "Role": "public_v_clean_geolocation_enriched.city"
+			              "Role": "ubicaciones_por_ciudad.city"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "public_v_clean_geolocation_enricheds_are_in_cities"
+			          "ID": "ubicaciones_por_ciudad_are_in_cities"
 			        }
 			      ]
 			    },

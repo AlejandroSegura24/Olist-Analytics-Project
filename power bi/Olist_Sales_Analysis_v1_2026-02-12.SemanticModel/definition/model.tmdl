@@ -1,6 +1,7 @@
 model Model
 	culture: es-ES
 	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
 	sourceQueryCulture: es-CO
 	dataAccessOptions
 		legacyRedirects
@@ -10,7 +11,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_QueryOrder = ["Resumen de Ventas","Logística y Entregas","Finanzas y Cuotas","Satisfacción (reviews)","pagos de pedidos","Puente Ordenes","Ubicaciones por Ciudad"]
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","CalcGroup"]
 
 ref table 'Resumen de Ventas'
 ref table DateTableTemplate_d1f1d339-1737-4e2c-a421-7c28ab033797

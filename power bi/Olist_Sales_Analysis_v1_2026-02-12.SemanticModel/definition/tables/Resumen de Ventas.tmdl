@@ -6,11 +6,6 @@ table 'Resumen de Ventas'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Total Freight' = SUM('Resumen de Ventas'[freight_value])
-		lineageTag: 14895b77-48fb-4ea4-9b45-3f7ce8b24a6b
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure 'Order Count' = DISTINCTCOUNT('Resumen de Ventas'[order_id])
 		formatString: 0
 		lineageTag: 29d717f3-4b61-4969-a33c-989479313e4a

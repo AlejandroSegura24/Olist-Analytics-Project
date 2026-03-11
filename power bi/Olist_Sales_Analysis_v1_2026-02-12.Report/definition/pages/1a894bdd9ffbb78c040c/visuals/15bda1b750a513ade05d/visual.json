@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "15bda1b750a513ade05d",
   "position": {
-    "x": 31.428571428571431,
-    "y": 750,
-    "z": 7011,
-    "height": 295.71428571428572,
-    "width": 881.42857142857144,
-    "tabOrder": 7006
+    "x": 13.75,
+    "y": 900,
+    "z": 11000,
+    "height": 296.25,
+    "width": 871.25,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -66,17 +66,22 @@
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "Resumen de Ventas"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "pagos de pedidos"
+                        }
+                      },
+                      "Property": "payment_value"
                     }
                   },
-                  "Property": "Total Sales"
+                  "Function": 0
                 }
               },
-              "queryRef": "Resumen de Ventas.Total Sales",
-              "nativeQueryRef": "Total Sales",
+              "queryRef": "Sum(pagos de pedidos.payment_value)",
+              "nativeQueryRef": "Suma de payment_value",
               "format": "\"R$\" #,0.00;-\"R$\" #,0.00;\"R$\" #,0.00"
             }
           ]
@@ -93,11 +98,84 @@
                   "Value": "false"
                 }
               }
+            },
+            "perRowLevel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "applyToHeaders": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "Row"
           }
         }
       ],
       "values": [
+        {
+          "properties": {
+            "backColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         {
           "properties": {
             "backColor": {
@@ -106,13 +184,18 @@
                   "expr": {
                     "FillRule": {
                       "Input": {
-                        "Measure": {
+                        "Aggregation": {
                           "Expression": {
-                            "SourceRef": {
-                              "Entity": "Resumen de Ventas"
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "pagos de pedidos"
+                                }
+                              },
+                              "Property": "payment_value"
                             }
                           },
-                          "Property": "Total Sales"
+                          "Function": 0
                         }
                       },
                       "FillRule": {
@@ -154,68 +237,29 @@
                 }
               }
             ],
-            "metadata": "Resumen de Ventas.Total Sales"
+            "metadata": "Sum(pagos de pedidos.payment_value)"
+          }
+        }
+      ],
+      "rowTotal": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "3250616800a9e91c1aeb",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Resumen de Ventas"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "order_date"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Mes"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "e20a9787e12665d1e49b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Resumen de Ventas"
-              }
-            },
-            "Property": "Total Sales"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "fd655ac3eb76ae76b57e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Resumen de Ventas"
-              }
-            },
-            "Property": "Día de la semana texto"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

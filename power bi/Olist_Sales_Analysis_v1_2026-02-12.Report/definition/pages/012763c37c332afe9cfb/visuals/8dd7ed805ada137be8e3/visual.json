@@ -20,16 +20,16 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Resumen de Ventas"
+                      "Entity": "Satisfacción (reviews)"
                     }
                   },
-                  "Property": "category_name"
+                  "Property": "review_score"
                 }
               },
-              "queryRef": "Resumen de Ventas.category_name",
-              "nativeQueryRef": "category_name",
+              "queryRef": "Satisfacción (reviews).review_score",
+              "nativeQueryRef": "Promedio de review_score",
               "active": true,
-              "format": "G"
+              "format": "0"
             }
           ]
         },
@@ -45,15 +45,14 @@
                           "Entity": "Satisfacción (reviews)"
                         }
                       },
-                      "Property": "review_score"
+                      "Property": "order_id"
                     }
                   },
-                  "Function": 1
+                  "Function": 2
                 }
               },
-              "queryRef": "Sum(Satisfacción (reviews).review_score)",
-              "nativeQueryRef": "Promedio de review_score",
-              "format": "0.00"
+              "queryRef": "CountNonNull(Satisfacción (reviews).order_id)",
+              "nativeQueryRef": "Recuento de order_id1"
             }
           ]
         }
@@ -62,24 +61,18 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Column": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Satisfacción (reviews)"
-                      }
-                    },
-                    "Property": "review_score"
+                  "SourceRef": {
+                    "Entity": "Satisfacción (reviews)"
                   }
                 },
-                "Function": 1
+                "Property": "review_score"
               }
             },
             "direction": "Descending"
           }
-        ],
-        "isDefaultSort": true
+        ]
       }
     },
     "objects": {
@@ -118,20 +111,6 @@
       "valueAxis": [
         {
           "properties": {
-            "start": {
-              "expr": {
-                "Literal": {
-                  "Value": "3D"
-                }
-              }
-            },
-            "end": {
-              "expr": {
-                "Literal": {
-                  "Value": "5D"
-                }
-              }
-            },
             "show": {
               "expr": {
                 "Literal": {
@@ -191,6 +170,27 @@
                   }
                 }
               }
+            },
+            "switchAxisPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            },
+            "maxMarginFactor": {
+              "expr": {
+                "Literal": {
+                  "Value": "25L"
+                }
+              }
             }
           }
         }
@@ -204,6 +204,13 @@
               "expr": {
                 "Literal": {
                   "Value": "100D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -255,7 +262,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Promedio de Satisfacción por Categoria'"
+                  "Value": "'Conteo de Opiniones por Rango de Satisfacción'"
                 }
               }
             }
@@ -371,7 +378,8 @@
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
       }
     ],
     "filterSortOrder": "Descending"

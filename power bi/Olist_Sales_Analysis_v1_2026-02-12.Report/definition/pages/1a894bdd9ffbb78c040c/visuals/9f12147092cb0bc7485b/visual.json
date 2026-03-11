@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
   "name": "9f12147092cb0bc7485b",
   "position": {
-    "x": 1462.8571428571429,
-    "y": 40,
-    "z": 7002,
-    "height": 78.571428571428569,
-    "width": 288.57142857142861,
-    "tabOrder": 7002
+    "x": 13.75,
+    "y": 151.25,
+    "z": 7000,
+    "height": 78.75,
+    "width": 288.75,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "slicer",
@@ -123,34 +123,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "e0c82b1c91956d7ba19c",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Resumen de Ventas"
-                      }
-                    },
-                    "Name": "Variación",
-                    "Property": "order_date"
-                  }
-                },
-                "Hierarchy": "Jerarquía de fechas"
-              }
-            },
-            "Level": "Año"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
