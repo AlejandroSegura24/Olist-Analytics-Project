@@ -1,6 +1,34 @@
 table 'Finanzas y Cuotas'
 	lineageTag: 4e049a7e-8e3b-48cf-867d-c66ea2446cb0
 
+	measure 'Total Sale' = SUM('Finanzas y Cuotas'[total_paid])
+		lineageTag: 24f4bdb9-a86a-4933-8331-4dae7ce25eb3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Sales_Previous_Month = ```
+			
+			CALCULATE(
+			    'Resumen de Ventas'[Total Sales], 
+			    DATEADD('Resumen de Ventas'[order_date].[Date], -1, MONTH)
+			)
+			```
+		lineageTag: 370a0fd2-fd3d-4d91-8278-62d3fddaf5cd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Sales_Growth_Pct = ```
+			
+			DIVIDE(
+			    'Resumen de Ventas'[Total Sales] - [Sales_Previous_Month], 
+			    [Sales_Previous_Month], 
+			    0
+			)
+			```
+		lineageTag: 39e3ba16-bc86-4cb8-bb63-f952f4c712da
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column order_id
 		dataType: string
 		lineageTag: f95fd874-86bc-434d-968a-88be063ab749

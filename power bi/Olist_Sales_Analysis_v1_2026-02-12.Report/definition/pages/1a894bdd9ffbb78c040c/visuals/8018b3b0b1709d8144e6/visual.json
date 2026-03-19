@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "8018b3b0b1709d8144e6",
   "position": {
-    "x": 739.21935987509755,
-    "y": 21.07728337236534,
+    "x": 750.15873015873012,
+    "y": 101.07728337236534,
     "z": 2000,
     "height": 103.62997658079625,
-    "width": 358.31381733021078,
+    "width": 360,
     "tabOrder": 2000
   },
   "visual": {
@@ -32,7 +32,9 @@
                 }
               },
               "queryRef": "Sum(Finanzas y Cuotas.shipping_value)",
-              "nativeQueryRef": "Suma de shipping_value"
+              "nativeQueryRef": "Valor Total del Costo de Envio",
+              "displayName": "Valor Total del Costo de Envio",
+              "format": "\"R$\" #,0.00;-\"R$\" #,0.00;\"R$\" #,0.00"
             }
           ]
         }
@@ -74,6 +76,83 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1E293B'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "100D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#334155'"
+                    }
+                  }
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }

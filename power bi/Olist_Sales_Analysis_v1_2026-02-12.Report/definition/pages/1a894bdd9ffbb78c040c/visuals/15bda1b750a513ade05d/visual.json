@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "15bda1b750a513ade05d",
   "position": {
     "x": 13.75,
-    "y": 900,
-    "z": 11000,
-    "height": 296.25,
-    "width": 871.25,
-    "tabOrder": 10000
+    "y": 978.75,
+    "z": 9000,
+    "height": 273.75,
+    "width": 752.5,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -23,12 +23,13 @@
                       "Entity": "Resumen de Ventas"
                     }
                   },
-                  "Property": "Día de la semana texto"
+                  "Property": "Día Nombre"
                 }
               },
               "queryRef": "Resumen de Ventas.Día de la semana texto",
-              "nativeQueryRef": "Día de la semana texto",
-              "active": true
+              "nativeQueryRef": "Día",
+              "active": true,
+              "displayName": "Día"
             }
           ]
         },
@@ -36,29 +37,19 @@
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Resumen de Ventas"
-                            }
-                          },
-                          "Name": "Variación",
-                          "Property": "order_date"
-                        }
-                      },
-                      "Hierarchy": "Jerarquía de fechas"
+                    "SourceRef": {
+                      "Entity": "Resumen de Ventas"
                     }
                   },
-                  "Level": "Mes"
+                  "Property": "Mes Nombre"
                 }
               },
-              "queryRef": "Resumen de Ventas.order_date.Variación.Jerarquía de fechas.Mes",
-              "nativeQueryRef": "order_date Mes",
-              "active": true
+              "queryRef": "Resumen de Ventas.Mes Nombre",
+              "nativeQueryRef": "Mes",
+              "active": true,
+              "displayName": "Mes"
             }
           ]
         },
@@ -66,22 +57,18 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "pagos de pedidos"
-                        }
-                      },
-                      "Property": "payment_value"
+                    "SourceRef": {
+                      "Entity": "Resumen de Ventas"
                     }
                   },
-                  "Function": 0
+                  "Property": "Total Sales"
                 }
               },
-              "queryRef": "Sum(pagos de pedidos.payment_value)",
-              "nativeQueryRef": "Suma de payment_value",
+              "queryRef": "Resumen de Ventas.Total Sales",
+              "nativeQueryRef": "Ventas",
+              "displayName": "Ventas",
               "format": "\"R$\" #,0.00;-\"R$\" #,0.00;\"R$\" #,0.00"
             }
           ]
@@ -100,6 +87,13 @@
               }
             },
             "perRowLevel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "rowSubtotals": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -184,18 +178,13 @@
                   "expr": {
                     "FillRule": {
                       "Input": {
-                        "Aggregation": {
+                        "Measure": {
                           "Expression": {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Entity": "pagos de pedidos"
-                                }
-                              },
-                              "Property": "payment_value"
+                            "SourceRef": {
+                              "Entity": "Resumen de Ventas"
                             }
                           },
-                          "Function": 0
+                          "Property": "Total Sales"
                         }
                       },
                       "FillRule": {
@@ -203,14 +192,14 @@
                           "min": {
                             "color": {
                               "Literal": {
-                                "Value": "'#FFFFFF'"
+                                "Value": "'#FF5252'"
                               }
                             }
                           },
                           "max": {
                             "color": {
                               "Literal": {
-                                "Value": "'#10B981'"
+                                "Value": "'#00E676'"
                               }
                             }
                           },
@@ -237,7 +226,7 @@
                 }
               }
             ],
-            "metadata": "Sum(pagos de pedidos.payment_value)"
+            "metadata": "Resumen de Ventas.Total Sales"
           }
         }
       ],
@@ -253,6 +242,34 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

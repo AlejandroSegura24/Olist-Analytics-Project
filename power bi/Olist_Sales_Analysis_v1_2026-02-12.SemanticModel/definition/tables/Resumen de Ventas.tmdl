@@ -1,11 +1,6 @@
 table 'Resumen de Ventas'
 	lineageTag: edfadd81-3842-47e5-834c-141a5a566b1a
 
-	measure 'Total Sales' = SUM('Resumen de Ventas'[price])
-		lineageTag: 84dde880-5eed-4caa-ac23-915e31691ccc
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure 'Order Count' = DISTINCTCOUNT('Resumen de Ventas'[order_id])
 		formatString: 0
 		lineageTag: 29d717f3-4b61-4969-a33c-989479313e4a
@@ -17,6 +12,58 @@ table 'Resumen de Ventas'
 
 	measure 'total mismo mes del año anterior' = CALCULATE([Total Sales], DATEADD('Resumen de Ventas'[order_date].[Date], -1, YEAR))
 		lineageTag: aeb0d96c-c83c-46a8-a2b2-453dcf90688e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Sales' = SUM('Finanzas y Cuotas'[total_paid])
+		lineageTag: d99aaf90-fb29-4d57-ad93-2006e1c73cf6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Average_Unit_Price =
+			
+			DIVIDE([Total Sales], [Order Count], 0)
+		lineageTag: f1d9a4d2-8375-41f9-8077-0906e274d9a6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Variación % Mes Anterior' =
+			
+			VAR _mesActual =
+			    SELECTEDVALUE('Resumen de Ventas'[Mes Numero])
+			VAR _ventasActual = [Total Sales]
+			VAR _ventasAnterior =
+			    CALCULATE(
+			        [Total Sales],
+			        FILTER(
+			            ALL('Resumen de Ventas'),
+			            MONTH('Resumen de Ventas'[order_date]) = _mesActual - 1
+			        )
+			    )
+			RETURN
+			    IF(
+			        NOT ISBLANK(_ventasAnterior) && _ventasAnterior <> 0,
+			        DIVIDE(_ventasActual - _ventasAnterior, _ventasAnterior),
+			        BLANK()
+			    )
+		lineageTag: c30e507e-757c-4605-9d79-ae5b8330d62c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Ticket Promedio vs Promedio General' = ```
+			
+			VAR _promedioGeneral = 
+			    CALCULATE(
+			        [Avg Ticket],
+			        ALL('Resumen de Ventas')
+			    )
+			RETURN
+			    DIVIDE(
+			        [Avg Ticket] - _promedioGeneral,
+			        _promedioGeneral
+			    )
+			```
+		lineageTag: 5ceae6b8-2b86-4d8b-a5b9-de258efafe96
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
@@ -96,17 +143,41 @@ table 'Resumen de Ventas'
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Día de semana #' = WEEKDAY([order_date],1)
+	column 'Día Numero' = WEEKDAY([order_date],1)
 		formatString: 0
 		lineageTag: 40b5ea36-6445-4968-af4b-17bd82d43df5
 		summarizeBy: sum
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Día de la semana texto' = SWITCH([Día de semana #],1,"Domingo",2,"Lunes",3,"Martes",4,"Miercoles",5,"Jueves",6,"Viernes",7,"Sábado")
+	column 'Día Nombre' = SWITCH([Día Numero],1,"Domingo",2,"Lunes",3,"Martes",4,"Miercoles",5,"Jueves",6,"Viernes",7,"Sábado")
 		lineageTag: 786e5cd5-748f-4ce9-b401-59e6ea777c6c
 		summarizeBy: none
-		sortByColumn: 'Día de semana #'
+		sortByColumn: 'Día Numero'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes Numero' = MONTH('Resumen de Ventas'[order_date])
+		formatString: 0
+		lineageTag: 9f30d570-d7d2-4cac-ad10-c6f8298e4da7
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes Nombre' =
+			
+			SWITCH(
+			    MONTH('Resumen de Ventas'[order_date]),
+			    1, "Enero",    2, "Febrero",  3, "Marzo",
+			    4, "Abril",    5, "Mayo",     6, "Junio",
+			    7, "Julio",    8, "Agosto",   9, "Septiembre",
+			    10, "Octubre", 11, "Noviembre", 12, "Diciembre"
+			)
+		lineageTag: e6a9927b-7858-4af6-a59d-16bdf392de4a
+		summarizeBy: none
+		sortByColumn: 'Mes Numero'
 
 		changedProperty = SortByColumn
 

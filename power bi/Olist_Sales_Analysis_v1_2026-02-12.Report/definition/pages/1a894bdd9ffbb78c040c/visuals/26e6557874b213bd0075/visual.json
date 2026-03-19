@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "26e6557874b213bd0075",
   "position": {
-    "x": 14.285714285714286,
-    "y": 21.428571428571431,
-    "z": 15000,
-    "height": 102.85714285714286,
-    "width": 351.42857142857144,
-    "tabOrder": 14000
+    "x": 13.333333333333332,
+    "y": 101.11111111111111,
+    "z": 11000,
+    "height": 103.33333333333333,
+    "width": 360,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "card",
@@ -17,22 +17,19 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Finanzas y Cuotas"
-                        }
-                      },
-                      "Property": "total_paid"
+                    "SourceRef": {
+                      "Entity": "Finanzas y Cuotas"
                     }
                   },
-                  "Function": 0
+                  "Property": "Total Sale"
                 }
               },
-              "queryRef": "Sum(Finanzas y Cuotas.total_paid)",
-              "nativeQueryRef": "Suma de total_paid"
+              "queryRef": "Finanzas y Cuotas.Total Sale",
+              "nativeQueryRef": "Ventas Totales",
+              "displayName": "Ventas Totales",
+              "format": "\"R$\" #,0.00;-\"R$\" #,0.00;\"R$\" #,0.00"
             }
           ]
         }
@@ -41,18 +38,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Finanzas y Cuotas"
-                      }
-                    },
-                    "Property": "total_paid"
+                  "SourceRef": {
+                    "Entity": "Finanzas y Cuotas"
                   }
                 },
-                "Function": 0
+                "Property": "Total Sale"
               }
             },
             "direction": "Descending"
@@ -119,7 +111,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "100D"
                 }
               }
             }
@@ -132,7 +124,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },

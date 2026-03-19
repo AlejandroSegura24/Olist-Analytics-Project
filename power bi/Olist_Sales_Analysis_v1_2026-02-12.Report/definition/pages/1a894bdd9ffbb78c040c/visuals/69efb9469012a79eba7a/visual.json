@@ -1,0 +1,211 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "69efb9469012a79eba7a",
+  "position": {
+    "x": 14.285714285714285,
+    "y": 364.28571428571428,
+    "z": 14000,
+    "height": 272.85714285714289,
+    "width": 322.85714285714289,
+    "tabOrder": 14000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Resumen de Ventas"
+                    }
+                  },
+                  "Property": "Mes Nombre"
+                }
+              },
+              "queryRef": "Resumen de Ventas.Mes Nombre",
+              "nativeQueryRef": "Mes",
+              "active": true,
+              "displayName": "Mes"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Resumen de Ventas"
+                    }
+                  },
+                  "Property": "Total Sales"
+                }
+              },
+              "queryRef": "Resumen de Ventas.Total Sales",
+              "nativeQueryRef": "Ventas",
+              "displayName": "Ventas",
+              "format": "\"R$\" #,0.00;-\"R$\" #,0.00;\"R$\" #,0.00"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Resumen de Ventas"
+                    }
+                  },
+                  "Property": "Variación % Mes Anterior"
+                }
+              },
+              "queryRef": "Resumen de Ventas.Variación % Mes Anterior",
+              "nativeQueryRef": "Var. % vs Mes Ant.",
+              "displayName": "Var. % vs Mes Ant.",
+              "format": "0.0 %;-0.0 %;0.0 %"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Resumen de Ventas"
+                  }
+                },
+                "Property": "Mes Nombre"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "FillRule": {
+                      "Input": {
+                        "Measure": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Resumen de Ventas"
+                            }
+                          },
+                          "Property": "Variación % Mes Anterior"
+                        }
+                      },
+                      "FillRule": {
+                        "linearGradient3": {
+                          "min": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#FF5252'"
+                              }
+                            }
+                          },
+                          "mid": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#B0BEC5'"
+                              }
+                            }
+                          },
+                          "max": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#00E676'"
+                              }
+                            }
+                          },
+                          "nullColoringStrategy": {
+                            "strategy": {
+                              "Literal": {
+                                "Value": "'asZero'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "Resumen de Ventas.Variación % Mes Anterior"
+          }
+        }
+      ],
+      "subTotals": [
+        {
+          "properties": {
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

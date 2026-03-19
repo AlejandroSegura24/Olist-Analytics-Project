@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "f7e5bdf2904c84a22825",
   "position": {
-    "x": 386.75253708040594,
-    "y": 21.428571428571431,
+    "x": 381.74603174603169,
+    "y": 101.11111111111111,
     "z": 0,
-    "height": 102.85714285714286,
-    "width": 331.42857142857144,
+    "height": 103.33333333333333,
+    "width": 360,
     "tabOrder": 0
   },
   "visual": {
@@ -32,7 +32,9 @@
                 }
               },
               "queryRef": "Sum(Finanzas y Cuotas.items_value)",
-              "nativeQueryRef": "Suma de items_value"
+              "nativeQueryRef": "Valor Total de los productos vendidos",
+              "displayName": "Valor Total de los productos vendidos",
+              "format": "\"R$\" #,0.00;-\"R$\" #,0.00;\"R$\" #,0.00"
             }
           ]
         }
@@ -74,6 +76,13 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }
@@ -119,7 +128,7 @@
             "transparency": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "100D"
                 }
               }
             }
@@ -132,7 +141,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },

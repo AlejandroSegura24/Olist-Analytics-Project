@@ -38,6 +38,7 @@ relationship 279160ba-5f31-fa9f-5c61-de41a0c4ae53
 	toColumn: 'Puente Ordenes'.order_id
 
 relationship 87d5c2b2-0b55-27da-6c7e-d1449914ff71
+	crossFilteringBehavior: bothDirections
 	fromColumn: 'pagos de pedidos'.order_id
 	toColumn: 'Puente Ordenes'.order_id
 

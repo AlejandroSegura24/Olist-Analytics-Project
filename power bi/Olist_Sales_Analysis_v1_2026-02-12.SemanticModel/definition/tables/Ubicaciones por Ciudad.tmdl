@@ -1,6 +1,10 @@
 table 'Ubicaciones por Ciudad'
 	lineageTag: cc879205-8faa-4798-9b54-03cf544bc746
 
+	measure Conteo = COUNT('Ubicaciones por Ciudad'[zip_code_id])
+		formatString: 0
+		lineageTag: 1c6eb5cb-435d-4390-ae08-c2eae91fc005
+
 	column zip_code_id
 		dataType: int64
 		formatString: 0

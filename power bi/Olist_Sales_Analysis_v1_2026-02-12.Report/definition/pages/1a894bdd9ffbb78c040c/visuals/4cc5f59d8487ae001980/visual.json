@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "4cc5f59d8487ae001980",
   "position": {
-    "x": 896.25,
-    "y": 902.5,
-    "z": 4000,
-    "height": 293.75,
-    "width": 585,
-    "tabOrder": 4000
+    "x": 785,
+    "y": 981.25,
+    "z": 3000,
+    "height": 271.25,
+    "width": 693.75,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "donutChart",
@@ -27,10 +27,14 @@
                 }
               },
               "queryRef": "pagos de pedidos.payment_type",
-              "nativeQueryRef": "payment_type",
-              "active": true
+              "nativeQueryRef": "Tipo de Pago",
+              "active": true,
+              "displayName": "Tipo de Pago"
             }
           ]
+        },
+        "Series": {
+          "projections": []
         },
         "Y": {
           "projections": [
@@ -39,14 +43,14 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "pagos de pedidos"
+                      "Entity": "Resumen de Ventas"
                     }
                   },
-                  "Property": "Sales by Payment Type"
+                  "Property": "Order Count"
                 }
               },
-              "queryRef": "pagos de pedidos.Sales by Payment Type",
-              "nativeQueryRef": "Sales by Payment Type"
+              "queryRef": "Resumen de Ventas.Order Count",
+              "nativeQueryRef": "Order Count"
             }
           ]
         }
@@ -58,10 +62,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "pagos de pedidos"
+                    "Entity": "Resumen de Ventas"
                   }
                 },
-                "Property": "Sales by Payment Type"
+                "Property": "Order Count"
               }
             },
             "direction": "Descending"
@@ -80,11 +84,283 @@
                   "Value": "true"
                 }
               }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
             }
           }
         }
       ],
       "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pagos de pedidos"
+                          }
+                        },
+                        "Property": "payment_type"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'boleto'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 7,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pagos de pedidos"
+                          }
+                        },
+                        "Property": "payment_type"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'debit_card'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pagos de pedidos"
+                          }
+                        },
+                        "Property": "payment_type"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'voucher'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pagos de pedidos"
+                          }
+                        },
+                        "Property": "payment_type"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'credit card'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 7,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "pagos de pedidos"
+                          }
+                        },
+                        "Property": "payment_type"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'debit card'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Ventas por Tipo de Pago'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "18D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
         {
           "properties": {
             "show": {

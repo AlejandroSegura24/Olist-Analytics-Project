@@ -1,9 +1,9 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "012763c37c332afe9cfb",
-  "displayName": "Satisfacción y Calidad",
-  "displayOption": "FitToPage",
-  "height": 1150,
+  "displayName": "Satisfacción",
+  "displayOption": "ActualSize",
+  "height": 1250,
   "width": 1600,
   "objects": {
     "outspacePane": [
