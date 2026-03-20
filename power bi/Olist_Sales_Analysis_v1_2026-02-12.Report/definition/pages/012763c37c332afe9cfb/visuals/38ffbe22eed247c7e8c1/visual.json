@@ -23,7 +23,7 @@
                       "Entity": "Finanzas y Cuotas"
                     }
                   },
-                  "Property": "Total Sale"
+                  "Property": "Total Sales"
                 }
               },
               "queryRef": "Finanzas y Cuotas.Total Sale",
@@ -44,7 +44,7 @@
                     "Entity": "Finanzas y Cuotas"
                   }
                 },
-                "Property": "Total Sale"
+                "Property": "Total Sales"
               }
             },
             "direction": "Descending"

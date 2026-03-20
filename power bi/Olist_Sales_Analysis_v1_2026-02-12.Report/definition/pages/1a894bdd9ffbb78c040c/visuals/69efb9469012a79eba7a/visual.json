@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "69efb9469012a79eba7a",
   "position": {
-    "x": 14.285714285714285,
-    "y": 364.28571428571428,
-    "z": 14000,
-    "height": 272.85714285714289,
-    "width": 322.85714285714289,
-    "tabOrder": 14000
+    "x": 13.75,
+    "y": 331.25,
+    "z": 12000,
+    "height": 318.75,
+    "width": 331.25,
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -40,16 +40,15 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Resumen de Ventas"
+                      "Entity": "Finanzas y Cuotas"
                     }
                   },
                   "Property": "Total Sales"
                 }
               },
-              "queryRef": "Resumen de Ventas.Total Sales",
+              "queryRef": "Finanzas y Cuotas.Total Sale",
               "nativeQueryRef": "Ventas",
-              "displayName": "Ventas",
-              "format": "\"R$\" #,0.00;-\"R$\" #,0.00;\"R$\" #,0.00"
+              "displayName": "Ventas"
             },
             {
               "field": {
@@ -155,6 +154,61 @@
             ],
             "metadata": "Resumen de Ventas.Variación % Mes Anterior"
           }
+        },
+        {
+          "properties": {
+            "fontColorPrimary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "backColorPrimary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1E1E2E'"
+                    }
+                  }
+                }
+              }
+            },
+            "backColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#252535'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
         }
       ],
       "subTotals": [
@@ -174,6 +228,55 @@
                 }
               }
             }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#2A2A3E'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Resumen de Ventas.Variación % Mes Anterior"
           }
         }
       ]

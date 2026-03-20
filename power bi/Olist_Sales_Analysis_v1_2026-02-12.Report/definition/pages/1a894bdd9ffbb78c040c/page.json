@@ -5,6 +5,21 @@
   "displayOption": "ActualSize",
   "height": 1300,
   "width": 1500,
+  "objects": {
+    "outspacePane": [
+      {
+        "properties": {
+          "width": {
+            "expr": {
+              "Literal": {
+                "Value": "277L"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
   "visualInteractions": [
     {
       "source": "0c875e7ae037b1d50510",

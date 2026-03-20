@@ -88,7 +88,8 @@
                 }
               },
               "queryRef": "CountNonNull(Satisfacción (reviews).order_id)",
-              "nativeQueryRef": "Recuento de order_id"
+              "nativeQueryRef": "Pedidos",
+              "displayName": "Pedidos"
             }
           ]
         }

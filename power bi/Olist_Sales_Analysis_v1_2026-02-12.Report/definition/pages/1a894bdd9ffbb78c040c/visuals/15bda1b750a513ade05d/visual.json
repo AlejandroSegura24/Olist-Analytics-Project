@@ -4,10 +4,10 @@
   "position": {
     "x": 13.75,
     "y": 978.75,
-    "z": 9000,
-    "height": 273.75,
-    "width": 752.5,
-    "tabOrder": 8000
+    "z": 7000,
+    "height": 310,
+    "width": 808.75,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -60,19 +60,36 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Resumen de Ventas"
+                      "Entity": "Finanzas y Cuotas"
                     }
                   },
                   "Property": "Total Sales"
                 }
               },
-              "queryRef": "Resumen de Ventas.Total Sales",
+              "queryRef": "Finanzas y Cuotas.Total Sale",
               "nativeQueryRef": "Ventas",
               "displayName": "Ventas",
               "format": "\"R$\" #,0.00;-\"R$\" #,0.00;\"R$\" #,0.00"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Resumen de Ventas"
+                  }
+                },
+                "Property": "Mes Nombre"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
     },
     "objects": {
@@ -148,9 +165,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#252535'"
                     }
                   }
                 }
@@ -160,11 +176,39 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
                     }
                   }
+                }
+              }
+            },
+            "backColorPrimary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#1E1E2E'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColorPrimary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
                 }
               }
             }
@@ -181,7 +225,7 @@
                         "Measure": {
                           "Expression": {
                             "SourceRef": {
-                              "Entity": "Resumen de Ventas"
+                              "Entity": "Finanzas y Cuotas"
                             }
                           },
                           "Property": "Total Sales"
@@ -226,13 +270,129 @@
                 }
               }
             ],
-            "metadata": "Resumen de Ventas.Total Sales"
+            "metadata": "Finanzas y Cuotas.Total Sale"
           }
         }
       ],
       "rowTotal": [
         {
           "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#2A2A3E'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "blankRows": [
+        {
+          "properties": {
+            "showBlankRows": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnTotal": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "styleSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "fontColor": {
               "solid": {
                 "color": {
@@ -245,6 +405,9 @@
                 }
               }
             }
+          },
+          "selector": {
+            "metadata": "Finanzas y Cuotas.Total Sale"
           }
         }
       ]

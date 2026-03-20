@@ -3333,6 +3333,16 @@ cultureInfo es-ES
 			            },
 			            "Weight": 0.476
 			          }
+			        },
+			        {
+			          "Puntuación de Satisfacción": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -4437,122 +4447,6 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "pagos_de_pedido.sales_by_payment_type": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "pagos de pedidos",
-			          "ConceptualProperty": "Sales by Payment Type"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "sales by payment type": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "sale by payment type": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.748
-			          }
-			        },
-			        {
-			          "sale by payment category": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "sale by payment genre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "sale by payment manner": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "sale by payment variety": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "sale by payment brand": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "sale by payment class": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "sale by payment kind": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "sale by payment style": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "sale by payment form": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        }
-			      ]
-			    },
 			    "satisfacción_reviews.average_category_score": {
 			      "Definition": {
 			        "Binding": {
@@ -4684,6 +4578,16 @@ cultureInfo es-ES
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "Promedio de Satisfacción": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -6009,138 +5913,6 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "resumen_de_venta.avg_ticket": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Resumen de Ventas",
-			          "ConceptualProperty": "Avg Ticket"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "avg ticket": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "average ticket": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "avg coupon": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "avg permit": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "avg voucher": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "avg receipt": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "avg marker": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.475
-			          }
-			        },
-			        {
-			          "avg sticker": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.475
-			          }
-			        },
-			        {
-			          "avg label": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.461
-			          }
-			        },
-			        {
-			          "avg tag": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.461
-			          }
-			        },
-			        {
-			          "avg tab": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.461
-			          }
-			        }
-			      ]
-			    },
-			    "resumen_de_venta.total_mismo_mes_del_año_anterior": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Resumen de Ventas",
-			          "ConceptualProperty": "total mismo mes del año anterior"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "total mismo mes del año anterior": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "logística_y_entrega.entregas_a_tiempo": {
 			      "Definition": {
 			        "Binding": {
@@ -6177,10 +5949,10 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "resumen_de_venta.total_sales": {
+			    "finanzas_y_cuota.total_sales": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "Resumen de Ventas",
+			          "ConceptualEntity": "Finanzas y Cuotas",
 			          "ConceptualProperty": "Total Sales"
 			        }
 			      },
@@ -6198,55 +5970,23 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "aggregate sale": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "overall sale": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "Ventas": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "finanzas_y_cuota.total_sale": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Finanzas y Cuotas",
-			          "ConceptualProperty": "Total Sale"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
 			          "total sale": {
-			            "State": "Generated"
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
 			          }
 			        },
 			        {
 			          "sale": {
-			            "State": "Generated",
-			            "Weight": 0.97
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
 			          }
 			        },
 			        {
@@ -6267,86 +6007,6 @@ cultureInfo es-ES
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "total auction": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "auction": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "total transaction": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.475
-			          }
-			        },
-			        {
-			          "transaction": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.466
-			          }
-			        },
-			        {
-			          "total deal": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.461
-			          }
-			        },
-			        {
-			          "total trade": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.461
-			          }
-			        },
-			        {
-			          "total vending": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.461
-			          }
-			        },
-			        {
-			          "total retailing": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.461
 			          }
 			        },
 			        {
@@ -6367,98 +6027,6 @@ cultureInfo es-ES
 			              "Agent": "PowerBI.VisualColumnRename"
 			            },
 			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "ubicaciones_por_ciudad.conteo": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Ubicaciones por Ciudad",
-			          "ConceptualProperty": "Conteo"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "conteo": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "finanzas_y_cuota.sales_previous_month": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Finanzas y Cuotas",
-			          "ConceptualProperty": "Sales_Previous_Month"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "sales previous month": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Sales_Previous_Month": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "sale previous mth": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "sale previous month": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        }
-			      ]
-			    },
-			    "finanzas_y_cuota.sales_growth_pct": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Finanzas y Cuotas",
-			          "ConceptualProperty": "Sales_Growth_Pct"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "sales growth pct": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Sales_Growth_Pct": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "sale growth pct": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
 			          }
 			        }
 			      ]
@@ -6700,22 +6268,6 @@ cultureInfo es-ES
 			              "Agent": "PowerBI.VisualColumnRename"
 			            },
 			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "resumen_de_venta.ticket_promedio_vs_promedio_general": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Resumen de Ventas",
-			          "ConceptualProperty": "Ticket Promedio vs Promedio General"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "ticket promedio vs promedio general": {
-			            "State": "Generated"
 			          }
 			        }
 			      ]
@@ -8543,72 +8095,6 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "resumen_de_venta_has_ticket_promedio_vs_promedio_general": {
-			      "Binding": {
-			        "ConceptualEntity": "Resumen de Ventas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "resumen_de_venta": {
-			          "Target": {
-			            "Entity": "resumen_de_venta"
-			          }
-			        },
-			        "resumen_de_venta.ticket_promedio_vs_promedio_general": {
-			          "Target": {
-			            "Entity": "resumen_de_venta.ticket_promedio_vs_promedio_general"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "resumen_de_venta"
-			            },
-			            "Object": {
-			              "Role": "resumen_de_venta.ticket_promedio_vs_promedio_general"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "resumen_de_ventas_have_ticket_promedio_vs_promedio_general"
-			        }
-			      ]
-			    },
-			    "finanzas_y_cuota_has_resumen_de_venta_ticket_promedio_vs_promedio_general": {
-			      "Binding": {
-			        "ConceptualEntity": "Finanzas y Cuotas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "finanzas_y_cuota": {
-			          "Target": {
-			            "Entity": "finanzas_y_cuota"
-			          }
-			        },
-			        "resumen_de_venta.ticket_promedio_vs_promedio_general": {
-			          "Target": {
-			            "Entity": "resumen_de_venta.ticket_promedio_vs_promedio_general"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "finanzas_y_cuota"
-			            },
-			            "Object": {
-			              "Role": "resumen_de_venta.ticket_promedio_vs_promedio_general"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "finanzas_y_cuotas_have_ticket_promedio_vs_promedio_general"
-			        }
-			      ]
-			    },
 			    "finanzas_y_cuota_has_resumen_de_venta_variación__mes_anterior": {
 			      "Binding": {
 			        "ConceptualEntity": "Finanzas y Cuotas"
@@ -8774,7 +8260,7 @@ cultureInfo es-ES
 			        }
 			      ]
 			    },
-			    "finanzas_y_cuota_has_sales_growth_pct": {
+			    "finanzas_y_cuota_has_total_sales": {
 			      "Binding": {
 			        "ConceptualEntity": "Finanzas y Cuotas"
 			      },
@@ -8785,9 +8271,9 @@ cultureInfo es-ES
 			            "Entity": "finanzas_y_cuota"
 			          }
 			        },
-			        "finanzas_y_cuota.sales_growth_pct": {
+			        "finanzas_y_cuota.total_sales": {
 			          "Target": {
-			            "Entity": "finanzas_y_cuota.sales_growth_pct"
+			            "Entity": "finanzas_y_cuota.total_sales"
 			          }
 			        }
 			      },
@@ -8798,139 +8284,7 @@ cultureInfo es-ES
 			              "Role": "finanzas_y_cuota"
 			            },
 			            "Object": {
-			              "Role": "finanzas_y_cuota.sales_growth_pct"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "finanzas_y_cuotas_have_sales_growth_pct"
-			        }
-			      ]
-			    },
-			    "finanzas_y_cuota_has_sales_previous_month": {
-			      "Binding": {
-			        "ConceptualEntity": "Finanzas y Cuotas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "finanzas_y_cuota": {
-			          "Target": {
-			            "Entity": "finanzas_y_cuota"
-			          }
-			        },
-			        "finanzas_y_cuota.sales_previous_month": {
-			          "Target": {
-			            "Entity": "finanzas_y_cuota.sales_previous_month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "finanzas_y_cuota"
-			            },
-			            "Object": {
-			              "Role": "finanzas_y_cuota.sales_previous_month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "finanzas_y_cuotas_have_sales_previous_month"
-			        }
-			      ]
-			    },
-			    "ubicaciones_por_ciudad_has_conteo": {
-			      "Binding": {
-			        "ConceptualEntity": "Ubicaciones por Ciudad"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "ubicaciones_por_ciudad": {
-			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad"
-			          }
-			        },
-			        "ubicaciones_por_ciudad.conteo": {
-			          "Target": {
-			            "Entity": "ubicaciones_por_ciudad.conteo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "ubicaciones_por_ciudad"
-			            },
-			            "Object": {
-			              "Role": "ubicaciones_por_ciudad.conteo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "ubicaciones_por_ciudad_have_conteo"
-			        }
-			      ]
-			    },
-			    "finanzas_y_cuota_has_total_sale": {
-			      "Binding": {
-			        "ConceptualEntity": "Finanzas y Cuotas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "finanzas_y_cuota": {
-			          "Target": {
-			            "Entity": "finanzas_y_cuota"
-			          }
-			        },
-			        "finanzas_y_cuota.total_sale": {
-			          "Target": {
-			            "Entity": "finanzas_y_cuota.total_sale"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "finanzas_y_cuota"
-			            },
-			            "Object": {
-			              "Role": "finanzas_y_cuota.total_sale"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "finanzas_y_cuotas_have_total_sale"
-			        }
-			      ]
-			    },
-			    "finanzas_y_cuota_has_resumen_de_venta_total_sales": {
-			      "Binding": {
-			        "ConceptualEntity": "Finanzas y Cuotas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "finanzas_y_cuota": {
-			          "Target": {
-			            "Entity": "finanzas_y_cuota"
-			          }
-			        },
-			        "resumen_de_venta.total_sales": {
-			          "Target": {
-			            "Entity": "resumen_de_venta.total_sales"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "finanzas_y_cuota"
-			            },
-			            "Object": {
-			              "Role": "resumen_de_venta.total_sales"
+			              "Role": "finanzas_y_cuota.total_sales"
 			            }
 			          },
 			          "State": "Generated",
@@ -8969,105 +8323,6 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "logística_y_entregas_have__entregas_a_tiempo"
-			        }
-			      ]
-			    },
-			    "finanzas_y_cuota_has_resumen_de_venta_total_mismo_mes_del_año_anterior": {
-			      "Binding": {
-			        "ConceptualEntity": "Finanzas y Cuotas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "finanzas_y_cuota": {
-			          "Target": {
-			            "Entity": "finanzas_y_cuota"
-			          }
-			        },
-			        "resumen_de_venta.total_mismo_mes_del_año_anterior": {
-			          "Target": {
-			            "Entity": "resumen_de_venta.total_mismo_mes_del_año_anterior"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "finanzas_y_cuota"
-			            },
-			            "Object": {
-			              "Role": "resumen_de_venta.total_mismo_mes_del_año_anterior"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "finanzas_y_cuotas_have_total_mismo_mes_del_año_anterior"
-			        }
-			      ]
-			    },
-			    "resumen_de_venta_has_avg_ticket": {
-			      "Binding": {
-			        "ConceptualEntity": "Resumen de Ventas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "resumen_de_venta": {
-			          "Target": {
-			            "Entity": "resumen_de_venta"
-			          }
-			        },
-			        "resumen_de_venta.avg_ticket": {
-			          "Target": {
-			            "Entity": "resumen_de_venta.avg_ticket"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "resumen_de_venta"
-			            },
-			            "Object": {
-			              "Role": "resumen_de_venta.avg_ticket"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "resumen_de_ventas_have_avg_ticket"
-			        }
-			      ]
-			    },
-			    "finanzas_y_cuota_has_resumen_de_venta_avg_ticket": {
-			      "Binding": {
-			        "ConceptualEntity": "Finanzas y Cuotas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "finanzas_y_cuota": {
-			          "Target": {
-			            "Entity": "finanzas_y_cuota"
-			          }
-			        },
-			        "resumen_de_venta.avg_ticket": {
-			          "Target": {
-			            "Entity": "resumen_de_venta.avg_ticket"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "finanzas_y_cuota"
-			            },
-			            "Object": {
-			              "Role": "resumen_de_venta.avg_ticket"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "finanzas_y_cuotas_have_avg_ticket"
 			        }
 			      ]
 			    },
@@ -9497,39 +8752,6 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "satisfacción_reviews_have_average_category_score"
-			        }
-			      ]
-			    },
-			    "resumen_de_venta_has_pagos_de_pedido_sales_by_payment_type": {
-			      "Binding": {
-			        "ConceptualEntity": "Resumen de Ventas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "resumen_de_venta": {
-			          "Target": {
-			            "Entity": "resumen_de_venta"
-			          }
-			        },
-			        "pagos_de_pedido.sales_by_payment_type": {
-			          "Target": {
-			            "Entity": "pagos_de_pedido.sales_by_payment_type"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "resumen_de_venta"
-			            },
-			            "Object": {
-			              "Role": "pagos_de_pedido.sales_by_payment_type"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "resumen_de_ventas_have_sales_by_payment_type"
 			        }
 			      ]
 			    },

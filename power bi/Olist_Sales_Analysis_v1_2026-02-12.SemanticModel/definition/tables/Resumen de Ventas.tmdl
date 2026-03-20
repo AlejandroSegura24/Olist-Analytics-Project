@@ -5,24 +5,9 @@ table 'Resumen de Ventas'
 		formatString: 0
 		lineageTag: 29d717f3-4b61-4969-a33c-989479313e4a
 
-	measure 'Avg Ticket' = DIVIDE([Total Sales], [Order Count])
-		lineageTag: f2a4d2c9-97bd-48fa-8621-aa44bcc0b9a2
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'total mismo mes del año anterior' = CALCULATE([Total Sales], DATEADD('Resumen de Ventas'[order_date].[Date], -1, YEAR))
-		lineageTag: aeb0d96c-c83c-46a8-a2b2-453dcf90688e
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Total Sales' = SUM('Finanzas y Cuotas'[total_paid])
-		lineageTag: d99aaf90-fb29-4d57-ad93-2006e1c73cf6
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	measure Average_Unit_Price =
 			
-			DIVIDE([Total Sales], [Order Count], 0)
+			DIVIDE('Finanzas y Cuotas'[Total Sales], [Order Count], 0)
 		lineageTag: f1d9a4d2-8375-41f9-8077-0906e274d9a6
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -31,10 +16,10 @@ table 'Resumen de Ventas'
 			
 			VAR _mesActual =
 			    SELECTEDVALUE('Resumen de Ventas'[Mes Numero])
-			VAR _ventasActual = [Total Sales]
+			VAR _ventasActual = 'Finanzas y Cuotas'[Total Sales]
 			VAR _ventasAnterior =
 			    CALCULATE(
-			        [Total Sales],
+			        'Finanzas y Cuotas'[Total Sales],
 			        FILTER(
 			            ALL('Resumen de Ventas'),
 			            MONTH('Resumen de Ventas'[order_date]) = _mesActual - 1
@@ -47,23 +32,6 @@ table 'Resumen de Ventas'
 			        BLANK()
 			    )
 		lineageTag: c30e507e-757c-4605-9d79-ae5b8330d62c
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Ticket Promedio vs Promedio General' = ```
-			
-			VAR _promedioGeneral = 
-			    CALCULATE(
-			        [Avg Ticket],
-			        ALL('Resumen de Ventas')
-			    )
-			RETURN
-			    DIVIDE(
-			        [Avg Ticket] - _promedioGeneral,
-			        _promedioGeneral
-			    )
-			```
-		lineageTag: 5ceae6b8-2b86-4d8b-a5b9-de258efafe96
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 

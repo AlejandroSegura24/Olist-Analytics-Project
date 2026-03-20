@@ -4,7 +4,7 @@
   "position": {
     "x": 817.88031723143479,
     "y": 105.38211968276858,
-    "z": 9000,
+    "z": 8000,
     "height": 124,
     "width": 354.14563806777221,
     "tabOrder": 8000
@@ -17,21 +17,16 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Satisfacción (reviews)"
-                        }
-                      },
-                      "Property": "review_score"
+                    "SourceRef": {
+                      "Entity": "Satisfacción (reviews)"
                     }
                   },
-                  "Function": 1
+                  "Property": "Average_Category_Score"
                 }
               },
-              "queryRef": "Sum(Satisfacción (reviews).review_score)",
+              "queryRef": "Satisfacción (reviews).Average_Category_Score",
               "nativeQueryRef": "Promedio de Satisfacción",
               "displayName": "Promedio de Satisfacción"
             }
@@ -42,18 +37,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Satisfacción (reviews)"
-                      }
-                    },
-                    "Property": "review_score"
+                  "SourceRef": {
+                    "Entity": "Satisfacción (reviews)"
                   }
                 },
-                "Function": 1
+                "Property": "Average_Category_Score"
               }
             },
             "direction": "Descending"

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "4cc5f59d8487ae001980",
   "position": {
-    "x": 785,
+    "x": 822.5,
     "y": 981.25,
     "z": 3000,
-    "height": 271.25,
-    "width": 693.75,
+    "height": 291.25,
+    "width": 656.25,
     "tabOrder": 3000
   },
   "visual": {
@@ -33,9 +33,6 @@
             }
           ]
         },
-        "Series": {
-          "projections": []
-        },
         "Y": {
           "projections": [
             {
@@ -50,7 +47,8 @@
                 }
               },
               "queryRef": "Resumen de Ventas.Order Count",
-              "nativeQueryRef": "Order Count"
+              "nativeQueryRef": "Ordenes",
+              "displayName": "Ordenes"
             }
           ]
         }
@@ -96,6 +94,13 @@
                   }
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
             }
           }
         }
@@ -106,10 +111,48 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "labelStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Data value, percent of total'"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'outside'"
                 }
               }
             }
+          }
+        },
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
           }
         }
       ],
@@ -333,7 +376,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Ventas por Tipo de Pago'"
+                  "Value": "'Cantidad de ordenes por Tipo de Pago'"
                 }
               }
             },

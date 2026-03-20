@@ -4,10 +4,10 @@
   "position": {
     "x": 13.75,
     "y": 655,
-    "z": 12000,
+    "z": 10000,
     "height": 306.25,
     "width": 1466.25,
-    "tabOrder": 12000
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -82,7 +82,7 @@
                       "Entity": "Finanzas y Cuotas"
                     }
                   },
-                  "Property": "Total Sale"
+                  "Property": "Total Sales"
                 }
               },
               "queryRef": "Finanzas y Cuotas.Total Sale",
@@ -800,6 +800,11 @@
                         "Name": "r",
                         "Entity": "Resumen de Ventas",
                         "Type": 0
+                      },
+                      {
+                        "Name": "f",
+                        "Entity": "Finanzas y Cuotas",
+                        "Type": 0
                       }
                     ],
                     "Select": [
@@ -822,7 +827,7 @@
                           "Measure": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "r"
+                                "Source": "f"
                               }
                             },
                             "Property": "Total Sales"

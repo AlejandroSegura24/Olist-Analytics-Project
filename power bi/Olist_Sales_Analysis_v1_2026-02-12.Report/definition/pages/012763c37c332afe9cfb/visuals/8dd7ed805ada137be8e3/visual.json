@@ -4,7 +4,7 @@
   "position": {
     "x": 614.10579345088161,
     "y": 338.32493702770785,
-    "z": 11000,
+    "z": 10000,
     "height": 295.46599496221666,
     "width": 441.75062972292193,
     "tabOrder": 10000
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "Satisfacción (reviews).review_score",
-              "nativeQueryRef": "Promedio de review_score",
+              "nativeQueryRef": "Puntuación de Satisfacción",
               "active": true,
+              "displayName": "Puntuación de Satisfacción",
               "format": "0"
             }
           ]
@@ -52,7 +53,8 @@
                 }
               },
               "queryRef": "CountNonNull(Satisfacción (reviews).order_id)",
-              "nativeQueryRef": "Recuento de order_id1"
+              "nativeQueryRef": "Pedidos",
+              "displayName": "Pedidos"
             }
           ]
         }

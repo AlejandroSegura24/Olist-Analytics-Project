@@ -1,16 +1,6 @@
 table 'pagos de pedidos'
 	lineageTag: 8de090bf-a0eb-4127-becc-ad8cc03309a8
 
-	measure 'Sales by Payment Type' =
-			
-			CALCULATE(
-			    SUM('Resumen de Ventas'[price]),
-			    TREATAS(VALUES('pagos de pedidos'[order_id]), 'Puente Ordenes'[order_id])
-			)
-		lineageTag: 32874fb9-183c-48d2-ae71-1f5a6155d3ce
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column order_id
 		dataType: string
 		lineageTag: 249e32bf-83ae-40ce-bce2-0ea8e338e0dd

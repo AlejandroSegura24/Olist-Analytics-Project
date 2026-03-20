@@ -4,10 +4,10 @@
   "position": {
     "x": 13.333333333333332,
     "y": 101.11111111111111,
-    "z": 11000,
+    "z": 9000,
     "height": 103.33333333333333,
     "width": 360,
-    "tabOrder": 10000
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "card",
@@ -23,7 +23,7 @@
                       "Entity": "Finanzas y Cuotas"
                     }
                   },
-                  "Property": "Total Sale"
+                  "Property": "Total Sales"
                 }
               },
               "queryRef": "Finanzas y Cuotas.Total Sale",
@@ -44,7 +44,7 @@
                     "Entity": "Finanzas y Cuotas"
                   }
                 },
-                "Property": "Total Sale"
+                "Property": "Total Sales"
               }
             },
             "direction": "Descending"

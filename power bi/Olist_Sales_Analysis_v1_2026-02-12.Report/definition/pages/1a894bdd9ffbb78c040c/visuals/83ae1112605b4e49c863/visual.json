@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "83ae1112605b4e49c863",
   "position": {
-    "x": 364.28571428571433,
-    "y": 331.42857142857144,
-    "z": 13000,
-    "height": 305.71428571428572,
-    "width": 1115.7142857142858,
-    "tabOrder": 13000
+    "x": 373.75,
+    "y": 331.25,
+    "z": 11000,
+    "height": 306.25,
+    "width": 1106.25,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -82,7 +82,7 @@
                       "Entity": "Finanzas y Cuotas"
                     }
                   },
-                  "Property": "Total Sale"
+                  "Property": "Total Sales"
                 }
               },
               "queryRef": "Finanzas y Cuotas.Total Sale",
@@ -189,7 +189,7 @@
             "end": {
               "expr": {
                 "Literal": {
-                  "Value": "9300D"
+                  "Value": "12000D"
                 }
               }
             },
@@ -203,7 +203,7 @@
             "secEnd": {
               "expr": {
                 "Literal": {
-                  "Value": "1500000D"
+                  "Value": "2000000D"
                 }
               }
             },
@@ -752,106 +752,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "18876256c11ae0205d0e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Resumen de Ventas"
-              }
-            },
-            "Property": "category_name"
-          }
-        },
-        "type": "TopN",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "subquery",
-              "Expression": {
-                "Subquery": {
-                  "Query": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "r",
-                        "Entity": "Resumen de Ventas",
-                        "Type": 0
-                      }
-                    ],
-                    "Select": [
-                      {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "r"
-                            }
-                          },
-                          "Property": "category_name"
-                        },
-                        "Name": "field"
-                      }
-                    ],
-                    "OrderBy": [
-                      {
-                        "Direction": 2,
-                        "Expression": {
-                          "Measure": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "r"
-                              }
-                            },
-                            "Property": "Total Sales"
-                          }
-                        }
-                      }
-                    ],
-                    "Top": 10
-                  }
-                }
-              },
-              "Type": 2
-            },
-            {
-              "Name": "r",
-              "Entity": "Resumen de Ventas",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "r"
-                          }
-                        },
-                        "Property": "category_name"
-                      }
-                    }
-                  ],
-                  "Table": {
-                    "SourceRef": {
-                      "Source": "subquery"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      }
-    ]
   }
 }
