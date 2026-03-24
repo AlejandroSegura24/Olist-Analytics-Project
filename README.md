@@ -1,59 +1,118 @@
 # 🚀 Olist E-commerce Analytics: De Datos Crudos a Insights de Negocio
 
-## 📝 Descripción
-Este proyecto consiste en el diseño e implementación de una solución de **Analytics Engineering** para el dataset real de **Olist**, el marketplace más grande de Brasil. El objetivo principal es transformar una estructura de datos fragmentada en archivos CSV en una base de datos relacional optimizada en **PostgreSQL**, culminando en un dashboard estratégico para la toma de decisiones.
-
-A través de este pipeline, se resuelven desafíos de normalización, integridad referencial y limpieza de datos, permitiendo analizar el ciclo de vida completo de una orden: desde la captación del cliente hasta la post-venta.
+Análisis integral de datos de ventas del e-commerce brasileño **Olist**, abarcando el período 2016–2018. El proyecto cubre desde la carga y limpieza de datos en PostgreSQL hasta la visualización interactiva en Power BI, con el objetivo de demostrar un flujo de análisis de datos end-to-end.
 
 ---
 
-## 🛠️ Tecnologías Usadas
-* **Base de Datos:** PostgreSQL 16.
-* **Lenguajes:** SQL (PostgreSQL Dialect).
-* **Visualización:** Power BI (DAX & Data Modeling).
-* **Metodologías:** Analytics Engineering, Documentación Técnica y Diseño de ERD.
+## 🏢 Contexto del negocio
+
+[Olist](https://olist.com/) es una plataforma brasileña de e-commerce que conecta pequeños comerciantes con los principales marketplaces del país. El dataset utilizado es público y contiene información sobre órdenes, productos, clientes, vendedores, pagos y reseñas entre 2016 y 2018.
+
+Este análisis busca responder preguntas clave de negocio como:
+- ¿Qué meses y categorías generan más ingresos?
+- ¿Cómo se comportan las ventas a lo largo del tiempo?
+- ¿Cuáles son los métodos de pago preferidos por los clientes?
 
 ---
 
-## 🔄 Flujo del Proyecto
-Para garantizar la calidad de los insights, el proyecto sigue una metodología estructurada en 4 etapas:
+## 🎯 Objetivo del proyecto
 
-1.  **Ingesta e Infraestructura (DDL) 🏗️:** Definición de esquemas, tipos de datos precisos (`DECIMAL`, `TIMESTAMP`) y carga masiva mediante comandos `COPY`.
-2.  **Auditoría y Calidad (Profiling) 🔍:** Identificación de nulos, eliminación de duplicados geográficos y validación de integridad financiera (análisis de intereses por cuotas).
-3.  **Modelado Semántico (Vistas) 📈:** Creación de capas de abstracción lógicas en SQL para simplificar el consumo de datos desde herramientas de BI.
-4.  **Visualización Estratégica 🖥️:** Construcción de KPIs clave (SLA de entrega, Revenue, Satisfacción) en Power BI.
+Demostrar un flujo completo de análisis de datos que incluye:
+- Modelado y carga de datos relacionales en PostgreSQL
+- Limpieza y validación de calidad de datos con SQL
+- Generación de vistas optimizadas para consumo en herramientas de BI
+- Construcción de un dashboard interactivo y profesional en Power BI
 
 ---
 
-## 📂 Estructura del Repositorio
-
-Para mantener el código limpio, modular y fácil de mantener, el proyecto se organiza de la siguiente manera:
-
-```text
-PROYECTO_OLIST/
-├── database/                         # Infraestructura de datos en PostgreSQL
-│   ├── 01_schema_and_load.sql          # DDL y scripts de ingesta (COPY)
-│   ├── 02_pre_processing_analysis.sql  # Auditoría de calidad y nulos
-|   └── README.md                       # Documentación de cada etapa
-├── sql_queries/                      # Laboratorio de experimentación SQL
-│   ├── 01_views.sql                    # Análisis inicial y hallazgos
-│   ├── 02_business_logic.sql           # Prototipos de joins complejos
-|   └── README.md                       # Documentación de cada etapa
-├── power_bi/                         # Archivos fuente de Power BI
-│   ├── olist_report.pbip               # Proyecto maestro
-│   └── .SemanticModel/                 # Medidas DAX y relaciones
-└── assets/                           # Recursos visuales y documentación (Capturas)
+## 🔄 Arquitectura del proyecto
+```
+Archivos CSV (Olist)
+       ↓
+PostgreSQL — Carga y modelado del schema
+       ↓
+SQL — Limpieza, validación y vistas
+       ↓
+Power BI — Visualización e insights
 ```
 
 ---
 
-## 📊 Resultados e Insights Destacados
+## 📁 Estructura del proyecto
+```
+OLIST-ANALYTICS-PROJECT/
+│
+├── assets/                          # Imágenes de soporte para la documentación
+│   ├── erd_diagram.png              # Diagrama entidad-relación del modelo de datos
+│   ├── financial_audit_results.png  # Resultados del análisis financiero
+│   ├── logistics_impact.png         # Análisis de impacto logístico
+│   ├── top_categories.png           # Visualización de categorías principales
+│   └── view_finance.png             # Vista de la consulta financiera en PostgreSQL
+│
+├── database/                           # Scripts de carga y preprocesamiento
+│   ├── 01_schema_and_load.sql          # Creación del schema y carga de archivos CSV
+│   ├── 02_pre_processing_analysis.sql  # Validación de nulos, duplicados y faltantes
+│   └── README.md
+│
+├── power bi/                                              # Dashboard interactivo de ventas
+│   ├── Olist_Sales_Analysis_v1_2026-02-12.Report/         # Carpeta de reporte
+│   ├── Olist_Sales_Analysis_v1_2026-02-12.SemanticModel/  # Modelo semántico
+│   ├── Olist_Sales_Analysis_v1_2026-02-12.pbip            # Archivo principal Power BI
+│   └── README.md
+│
+├── sql_queries/                     # Consultas y lógica de negocio
+│   ├── 01_views.sql                 # Vistas optimizadas para Power BI (excluye nulos)
+│   ├── 02_business_logic.sql        # Consultas de análisis exploratorio
+│   └── README.md
+│
+├── .gitignore
+└── README.md
+```
 
-### 1. El Costo de la Espera 🚚
-A través de nuestro análisis de correlación, identificamos que las órdenes calificadas como **"Críticas" (+30 días)** tienen una satisfacción promedio de **~1.2 estrellas**, mientras que las entregas en menos de una semana mantienen un promedio de **4.2+**. Esto valida que la logística es el principal motor del NPS en Olist.
+---
 
-### 2. Financiamiento como Motor de Venta 💳
-El análisis financiero reveló que el excedente pagado por los clientes no es un error de datos, sino un **modelo de cuotas con intereses**. Las ventas en 10+ cuotas representan un flujo de caja constante, pero con un costo financiero para el cliente que debe ser monitoreado para evitar tasas de cancelación.
+## 🛠️ Herramientas utilizadas
 
-### 3. Concentración de Mercado 📍
-El **Market Share** está fuertemente concentrado en estados específicos (ej. SP), lo que sugiere oportunidades de optimización en centros de distribución regionales para reducir el "Nudo Crítico Logístico".
+| Herramienta | Uso |
+|---|---|
+| PostgreSQL | Base de datos relacional, carga y modelado |
+| SQL | Limpieza, validación y generación de vistas |
+| Power BI | Visualización e interactividad |
+
+---
+
+## 🔍 Hallazgos principales
+
+Los siguientes insights fueron extraídos del dashboard de ventas:
+
+**Comportamiento mensual**
+- **Mayo** fue el mes con mayor volumen de ventas del período, alcanzando **R$ 1.7** millones.
+- Los meses posteriores a agosto registraron los niveles de ventas más bajos del año, con excepción de noviembre, que presentó la mayor subida porcentual intermensual con un **+44.6%** respecto al mes anterior.
+- **Agosto** concentra la mayor cantidad de productos vendidos (**10.544** órdenes), sin embargo su valor total de ventas es inferior al de **Mayo**, lo que sugiere un ticket promedio más bajo en ese período.
+
+**Comportamiento por categoría**
+- **Health Beauty** es la categoría que genera mayores ingresos totales, con **R$ 1.42** millones.
+- **Bed Bath Table** lidera en volumen de productos vendidos con **9.272** órdenes.
+- **Watches gifts** es una categoría destacada: siendo la **N° 7** en volumen de ventas, se posiciona como la **N° 2** categoría con mayor valor de ingresos, situándose por encima del promedio general productos, con un volumen de ventas de **R$ 1.27** millones.
+
+**Métodos de pago**
+- Aproximadamente el **75,3%** de las compras se realizan con tarjeta de crédito, siendo el método de pago ampliamente dominante frente a boleto, voucher y débito.
+
+---
+
+## ▶️ Cómo reproducir el proyecto
+
+1. Clona el repositorio
+2. Crea una base de datos en PostgreSQL
+3. Ejecuta `/database/01_schema_and_load.sql` para crear el schema y cargar los datos
+4. Ejecuta `/database/02_pre_processing_analysis.sql` para validar la calidad de los datos
+5. Ejecuta `/sql_queries/01_views.sql` para generar las vistas
+6. Ejecuta `/sql_queries/02_business_logic.sql` para los análisis adicionales
+7. Abre el archivo `.pbip` en Power BI Desktop y conecta a tu instancia de PostgreSQL
+
+---
+
+## 👤 Autor
+
+**David Alejandro Segura**
+[LinkedIn](#) · [GitHub](#)
