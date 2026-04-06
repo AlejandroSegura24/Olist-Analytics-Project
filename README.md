@@ -6,7 +6,7 @@ Análisis integral de datos de ventas del e-commerce brasileño **Olist**, abarc
 
 ## 🏢 Contexto del negocio
 
-[Olist](https://olist.com/) es una plataforma brasileña de e-commerce que conecta pequeños comerciantes con los principales marketplaces del país. El dataset utilizado es público y contiene información sobre órdenes, productos, clientes, vendedores, pagos y reseñas entre 2016 y 2018.
+**Olist** es una plataforma brasileña de e-commerce que conecta pequeños comerciantes con los principales marketplaces del país. El dataset utilizado proviene de [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) y contiene información real de la empresa, debidamente anonimizada, sobre órdenes, productos, clientes, vendedores, pagos y reseñas entre 2016 y 2018.
 
 Este análisis busca responder preguntas clave de negocio como:
 - ¿Qué meses y categorías generan más ingresos?
@@ -53,7 +53,7 @@ OLIST-ANALYTICS-PROJECT/
 │   ├── 01_schema_and_load.sql          # Creación del schema y carga de archivos CSV
 │   ├── 02_pre_processing_analysis.sql  # Validación de nulos, duplicados y faltantes
 │   └── README.md
-│
+│z
 ├── power bi/                                              # Dashboard interactivo de ventas
 │   ├── Olist_Sales_Analysis_v1_2026-02-12.Report/         # Carpeta de reporte
 │   ├── Olist_Sales_Analysis_v1_2026-02-12.SemanticModel/  # Modelo semántico
@@ -86,14 +86,10 @@ OLIST-ANALYTICS-PROJECT/
 Los siguientes insights fueron extraídos del dashboard de ventas:
 
 **Comportamiento mensual**
-- **Mayo** fue el mes con mayor volumen de ventas del período, alcanzando **R$ 1.7** millones.
-- Los meses posteriores a agosto registraron los niveles de ventas más bajos del año, con excepción de noviembre, que presentó la mayor subida porcentual intermensual con un **+44.6%** respecto al mes anterior.
-- **Agosto** concentra la mayor cantidad de productos vendidos (**10.544** órdenes), sin embargo su valor total de ventas es inferior al de **Mayo**, lo que sugiere un ticket promedio más bajo en ese período.
+- Noviembre presentó la mayor subida porcentual del período, con un **+44.6%** respecto al mes anterior.
 
 **Comportamiento por categoría**
-- **Health Beauty** es la categoría que genera mayores ingresos totales, con **R$ 1.42** millones.
-- **Bed Bath Table** lidera en volumen de productos vendidos con **9.272** órdenes.
-- **Watches gifts** es una categoría destacada: siendo la **N° 7** en volumen de ventas, se posiciona como la **N° 2** categoría con mayor valor de ingresos, situándose por encima del promedio general productos, con un volumen de ventas de **R$ 1.27** millones.
+- **Watches Gifts** es una categoría destacada: siendo la **N°7** en volumen de ventas, se posiciona como la **N°2** categoría con mayor valor de ingresos, situándose por encima del promedio general de **R$ 1.27** millones.
 
 **Métodos de pago**
 - Aproximadamente el **75,3%** de las compras se realizan con tarjeta de crédito, siendo el método de pago ampliamente dominante frente a boleto, voucher y débito.
@@ -115,4 +111,4 @@ Los siguientes insights fueron extraídos del dashboard de ventas:
 ## 👤 Autor
 
 **David Alejandro Segura**
-[LinkedIn](#) · [GitHub](#)
+[LinkedIn](http://www.linkedin.com/in/david-alejandro-segura) · [GitHub](https://github.com/AlejandroSegura24)
